@@ -191,7 +191,7 @@ const Hero = () => {
 
     const options = {
       method: "POST",
-      url: import.meta.env.OURSERVERURL,
+      url: import.meta.env.VITE_OURSERVERURL,
       data: dataToSend,
     };
 
