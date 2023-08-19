@@ -1,5 +1,5 @@
 import React from "react";
-import "./mostPopularFLightDest.scss";
+import "./mostPopularFlightDest.scss";
 
 const MostPopularFlightDest = () => {
   return (
