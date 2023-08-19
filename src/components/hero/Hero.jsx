@@ -14,6 +14,8 @@ import { RiArrowDropDownLine } from "react-icons/ri";
 const images = ["/f-c-1.jpg", "f-c-2.jpg", "f-c-3.jpg", "f-c-4.jpg"];
 
 const Hero = () => {
+  console.log(import.meta.env.VITE_OURSERVERURL);
+
   const [tripType, setTripType] = useState("ONE_WAY");
   const [departFrom, setDepartFrom] = useState("");
   const [flyingTo, setFlyingTo] = useState("");
