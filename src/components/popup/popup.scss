@@ -5,6 +5,31 @@ $c-back : #1D1F20;
 $c-back-light : #383838;
 $c-hilight : #0066ff;
 
+
+$small : 600px;
+$medium : 768px;
+$large : 992px;
+
+
+@mixin for-small{
+    @media only screen and (max-width: $small) {
+        @content
+      }  
+}
+
+@mixin for-medium{
+    @media only screen and (max-width: $medium) {
+        @content
+      }  
+}
+
+@mixin for-large{
+    @media only screen and (max-width: $large) {
+        @content
+      }  
+}
+
+
 .popup{
     position: fixed;
     top: 0;
@@ -22,6 +47,12 @@ $c-hilight : #0066ff;
         background-color: #fff;
         width: 80%;
         height: 80%;
+
+        @include for-small(){
+            width: 100%;
+            height: 100%;
+        }
+
 
         .inner-container{
             width: 100%;
@@ -99,6 +130,18 @@ $c-hilight : #0066ff;
             p{
                 font-size: 2rem;
                 text-align: center;
+            }
+
+            .contact{
+                margin-top: 2rem;
+                display: flex;
+                flex-direction: column;
+
+
+                &>:last-child{
+                    color: #0066ff;
+                    font-size: 3rem;
+                }
             }
         }
     }

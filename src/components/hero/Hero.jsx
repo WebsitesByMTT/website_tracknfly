@@ -291,7 +291,7 @@ const Hero = () => {
                 </label>
               </div>
               <form className="middle" onSubmit={submitFormHandler}>
-                <div className="item">
+                <div className="item depart-from">
                   <label htmlFor="">Depart from</label>
                   <div className="input">
                     <MdOutlineLocationOn />
@@ -306,7 +306,7 @@ const Hero = () => {
                     />
                   </div>
                 </div>
-                <div className="item">
+                <div className="item flying-to">
                   <label htmlFor="">Flying to</label>
                   <div className="input">
                     <MdOutlineLocationOn />
@@ -423,7 +423,7 @@ const Hero = () => {
               </div> */}
             </div>
 
-            <div className="airport-search">
+            <div className="airport-search-depart">
               {airportFitsDepart.length > 0 &&
                 airportFitsDepart.map((fit) => (
                   <div
@@ -439,7 +439,7 @@ const Hero = () => {
                 ))}
             </div>
 
-            <div className="airport-search">
+            <div className="airport-search-flying">
               {airportFitsFlying.length > 0 &&
                 airportFitsFlying.map((fit) => (
                   <div

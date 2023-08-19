@@ -34,6 +34,10 @@ const Popup = () => {
           <div className="text">
             <h2>Tracknfly</h2>
             <p>Fetching Best Flights for you ...</p>
+            <p className="contact">
+              <span>Contact us for Extra discounts</span>{" "}
+              <span className="number">1-800-123-4567</span>{" "}
+            </p>
           </div>
         </div>
       </div>

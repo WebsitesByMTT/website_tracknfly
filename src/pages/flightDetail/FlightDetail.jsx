@@ -4,6 +4,7 @@ import "./flightDetail.scss";
 import { Convert } from "easy-currencies";
 import axios from "axios";
 import { useNavigate } from "react-router-dom";
+import { IoMdCall } from "react-icons/io";
 
 const FlightDetail = () => {
   const { flightData } = useFlightContext();
@@ -382,6 +383,10 @@ const FlightDetail = () => {
           )}
 
           <div className="additonal-info">
+            <h3 className="call">
+              <IoMdCall className="icon"/>
+              <span className="contact">1-800-123-4567</span>
+            </h3>
             <p>
               For exclusive deals and extra discounts, call our toll-free
               number: <span className="contact">1-800-123-4567</span>. Our

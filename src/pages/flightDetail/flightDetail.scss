@@ -260,6 +260,23 @@ $large : 992px;
                         font-weight: bold;
                     }
                 }
+
+                .call{
+                    font-size: 2.5rem;
+                    display: flex;
+                    gap: 1rem;
+                    align-items: center;
+                    color: #0c487c;
+
+
+                    .icon{
+                        font-size: 3rem;
+                        border-radius: 50%;
+                        padding: .5rem;
+                        background-color: #0c487c;
+                        color: white;
+                    }
+                }
                 
             }
         }
