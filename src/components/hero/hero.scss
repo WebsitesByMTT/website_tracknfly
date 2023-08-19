@@ -1,0 +1,370 @@
+$small : 600px;
+$medium : 768px;
+$large : 992px;
+
+
+@mixin for-small{
+    @media only screen and (max-width: $small) {
+        @content
+      }  
+}
+
+@mixin for-medium{
+    @media only screen and (max-width: $medium) {
+        @content
+      }  
+}
+
+@mixin for-large{
+    @media only screen and (max-width: $large) {
+        @content
+      }  
+}
+
+
+.hero{
+    position: relative;
+    height: calc(100vh - 10.9rem);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    transition:  background-image 1s ease-out;
+    // z-index: 99;
+
+    .container{
+        height: 100%;
+        background-color: #0000003f;
+
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        gap: 4rem;
+        position: relative;
+
+
+
+
+        .title{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            color: #fff;
+
+            h1{
+                font-weight: 700;
+                font-size: 3.2rem;
+                margin-bottom: 1rem;
+
+                display: flex;
+                flex-direction: row;
+                align-items: center;
+                justify-content: center;
+                gap: 2rem;
+                text-align: center;
+                flex-wrap: wrap;
+
+                .icon{
+                    border: .4rem solid white;
+                    border-radius: 50%;
+                    height: 5rem;
+                    width: 5rem;
+
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+
+                    svg{
+                        font-size: 2.5rem;
+                    }
+                }
+            }
+
+            h2{
+                margin: 0;
+                padding: 0;
+                font-size: 2rem;
+            }
+       
+        }
+
+        .content{
+            backdrop-filter: blur(.5rem) saturate(180%);
+            -webkit-backdrop-filter: blur(1.6rem) saturate(180%);
+            // background-color: #345c87e3;
+            background-color: white;
+            border-radius: 1.2rem;
+
+            width: 90%;
+            padding: 1rem;
+
+
+
+            &-container{
+                border: .1rem dashed #111;
+                padding: 1rem;
+                display: flex;
+                flex-direction: column;
+                gap: 2rem;
+
+                .top{
+                    display: flex;
+                    gap: 2rem;
+
+                    label{
+                        font-size: 1.5rem;
+                        color: #111;
+                        display: flex;
+                        flex-direction: row;
+                        gap: .5rem;
+                        cursor: pointer;
+                    }
+                }
+
+                .middle{
+                    display: flex;
+                    align-items: flex-end;
+                    // justify-content: space-between;
+                    flex-wrap: wrap;
+                    gap: 2rem;
+
+                    @include for-small(){
+                        align-items: flex-start;
+                        justify-content: space-around;
+                        flex-direction: column;
+                        gap: 1rem;
+
+                        &>*{
+                            flex: 1;
+                        }
+                    }
+                    
+
+                    .item{
+                        display: flex;
+                        flex-direction: column;
+                        align-items: flex-start;
+                        justify-content: center;
+                        gap: .2rem;
+
+                        @include for-small(){
+                            width: 100%;
+                        }
+
+                       select{
+                        background-color: white;
+                        padding: .5rem;
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                        gap: .5rem;
+                        border-radius: 2rem;
+                        border: .05rem solid gray;
+                        font-size: 1.5rem;
+
+
+                        @include for-small(){
+                            width: 100%;
+                        }
+
+
+
+                       }
+
+                        label{
+                            font-size: 1.6rem;
+                            color: #111;
+                        }
+
+                        .input{
+                            background-color: white;
+                            padding: .5rem;
+                            display: flex;
+                            align-items: center;
+                            justify-content: center;
+                            gap: .5rem;
+                            border-radius: 2rem;
+                            border: .05rem solid gray;
+
+                            @include for-small(){
+                                width: 100%;
+                            }
+
+                            svg{
+                                font-size: 2.1rem;
+                                fill: gray;
+                            }
+                          
+
+                            input{
+                                border: none;
+                                font-size: 1.5rem;
+
+                                outline: none;
+
+                                @include for-small(){
+                                   width: 100%;
+                                }
+                            }
+
+                           
+                        }
+
+
+                       
+                    }
+
+                    .search{
+                        
+                        button{
+                            border-radius: 2rem;
+                            display: flex;
+                            align-items: center;
+                            justify-content: center;
+                            width: 100%;
+                            cursor: pointer;
+                            padding: .5rem 1rem;
+                            background-color: #0c487c;
+                            // border-radius: 50%;
+                            transition: .2s all ease-in-out;
+                            color: white;
+
+                            svg{
+                                font-size: 3rem;
+                                fill: white;
+                            }
+                            font-size: 1.5rem;
+                            border: none;
+
+                            &:hover{
+                                background-color: #002c52;
+                            }
+                        }
+
+                    }
+                }
+
+                .bottom{
+                    select{
+                        background-color: white;
+                        padding: .5rem;
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                        gap: .5rem;
+                        border-radius: 2rem;
+                        border: .05rem solid gray;
+                    }
+                }
+            }
+
+            .error{
+                padding: 1rem;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                font-size: 1.5rem;
+                color: red;
+                transition: all .2s ease-in-out;
+            }
+
+             .airport-search{
+                width: 100%;
+                max-height: 20rem;
+                overflow-y: scroll;
+
+                &::-webkit-scrollbar {
+                    display: none;
+                }
+
+                .airport-search__result{
+                    display: flex;
+                    flex-direction: row;
+                    transition: .2s all ease-in-out;
+                    cursor: pointer;
+
+                    
+                        &:hover{
+                            background-color:whitesmoke
+                        }
+
+                    &>*{
+                        flex: 1;
+                        font-size: 1.5rem;
+                        padding: 1rem;
+
+                    }
+
+                    .airport__iata{
+                        flex: .5;
+                    }
+                }
+                
+            }
+
+            .airport-search {
+                -ms-overflow-style: none;  /* IE and Edge */
+                scrollbar-width: none;  /* Firefox */
+            }
+
+          
+
+            .passenger{
+                position: relative;
+                
+                .input{
+                    
+                    border: .1rem solid red;
+                }
+
+                .passenger-counter{
+                    width: 100%;
+                    position: absolute;
+                    display: flex;
+                    bottom: -12rem;
+                    flex-direction: column;
+                    background-color: white;
+                    padding: 1.5rem;
+                    gap: .5rem;
+    
+                    .counter{
+                        display: flex;
+                        align-items: center;
+                        justify-content: space-between;
+
+                        &>*{
+                            flex: 1;
+                        }
+                        
+    
+                        label{
+                            font-size: 1.5rem;
+                        }
+
+                        .actions{
+                            display: flex;
+                            align-items: center;
+                            justify-content: space-between;
+
+                            &>:not(:nth-child(2)){
+                                background-color: #0c487c;
+                                color: white;
+                                cursor: pointer;
+
+                            }
+
+                            &>*{
+                                flex:1;
+                                display: flex;
+                                align-items: center;
+                                justify-content: center;
+                                font-size: 1.5rem;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,143 @@
+$small : 600px;
+$medium : 768px;
+$large : 992px;
+
+
+@mixin for-small{
+    @media only screen and (max-width: $small) {
+        @content
+      }  
+}
+
+@mixin for-medium{
+    @media only screen and (max-width: $medium) {
+        @content
+      }  
+}
+
+@mixin for-large{
+    @media only screen and (max-width: $large) {
+        @content
+      }  
+}
+
+
+.flights{
+    overflow: hidden;
+
+    padding: 10rem 4rem;
+
+    @include for-small{
+        padding: 5rem 2rem;
+
+    }
+
+    .container{
+        height: 100%;
+        width: 100%;
+
+        h2{
+            font-size: 5rem;
+            padding: 4rem;
+            text-align: center;
+        }
+
+        .content{
+
+            .cards{
+                display: flex;
+                flex-direction: row;
+                flex-wrap: wrap;
+                gap: 4rem;
+
+                @include for-medium{
+                    flex-direction: column;
+                }
+
+                .card{
+                    // flex: 1;
+                    // width: 22.4%;
+                    flex: 1;
+                    height: 50rem;
+                    display: flex;
+
+                    @include for-large{
+                        width: 100%;
+                        overflow: hidden;
+                    }
+
+                 
+
+
+
+                    .card-container{
+                        height: 100%;
+                        display: flex;
+                        width: 100%;
+                        overflow: hidden;
+
+                        &:hover img{
+                            transform: scale(1.1);
+                            transition: all 0.3s ease-in-out;
+                            filter: brightness(50%);
+                        }
+
+                        .card-content{
+                            height: 90%;
+                            width: 100%;
+                            border-radius: 1rem;
+                            overflow: hidden;
+                            position: relative;
+                            overflow: hidden;
+
+                            @include for-medium{
+                                height: 100%;
+                            }
+
+
+                            .card-title{
+                                position: absolute;
+                                z-index: 999;
+                                padding: .5rem 1rem;
+                                background-color: white;
+                                right: 1rem;
+                                top: 1rem;
+                                border-radius: 2rem;
+                                font-size: 1.5rem;
+
+                                display: flex;
+                                align-items: center;
+                                justify-content: center;
+                                gap: .2rem;
+                            }
+                            img{
+                                border-radius: 2rem;
+
+                                z-index: 9;
+                                width: 100%;
+                                height: 100%;
+                                object-fit: cover;
+                            }
+                        }
+                    }
+                    
+                }
+
+
+                &>:nth-child(odd){
+                        .card-container{
+                            align-items: flex-start;
+    
+                    }
+                }
+
+                &>:nth-child(even){
+                    .card-container{
+                        align-items: flex-end;
+                    }
+                }
+                
+            }
+        }
+    }
+}

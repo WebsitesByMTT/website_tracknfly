@@ -1,0 +1,96 @@
+$small : 600px;
+$medium : 768px;
+$large : 992px;
+
+
+@mixin for-small{
+    @media only screen and (max-width: $small) {
+        @content
+      }  
+}
+
+@mixin for-medium{
+    @media only screen and (max-width: $medium) {
+        @content
+      }  
+}
+
+@mixin for-large{
+    @media only screen and (max-width: $large) {
+        @content
+      }  
+}
+
+
+.benefits{
+    background-color: #ececec;
+
+    .container{
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 4rem 0rem;
+
+        .cards{
+            display: flex;
+            width: 100%;
+            flex-wrap: wrap;
+
+            @include for-small{
+                flex-direction: column;
+                align-items: center;
+            }
+
+
+            .card{
+                flex: 1;
+
+                display: flex;
+                flex-direction: row;
+                align-items: flex-start;
+                justify-content: center;
+                gap: 1rem;
+                padding: 4rem;
+
+                @include for-small{
+                    flex-direction: column;
+                    align-items: center;
+                }
+
+
+             
+                .img{
+                    img{
+                        width: 6.6rem;
+                        height: 7rem;
+                        object-fit: contain;
+                    }
+                }
+
+                .text{
+
+                    .title{
+                        font-size: 1.8rem;
+                        font-weight: 500;
+                        text-align: left;
+
+                        @include for-small{
+                           text-align: center;
+                        }
+                    }
+
+                    .subtitle{
+                        font-size: 1.2rem;
+                        font-weight: 400;
+                        color: gray;
+
+                        @include for-small{
+                            text-align: center;
+                         }
+                    }
+                }
+            }
+        }
+    }
+}

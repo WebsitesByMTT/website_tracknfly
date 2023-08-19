@@ -1,0 +1,257 @@
+$small : 600px;
+$medium : 768px;
+$large : 992px;
+
+
+@mixin for-small{
+    @media only screen and (max-width: $small) {
+        @content
+      }  
+}
+
+@mixin for-medium{
+    @media only screen and (max-width: $medium) {
+        @content
+      }  
+}
+
+@mixin for-large{
+    @media only screen and (max-width: $large) {
+        @content
+      }  
+}
+
+
+.topFlightOffer{
+
+    .container{
+        padding: 4rem;
+        display: flex;
+        flex-direction: column;
+        gap: 5rem;
+
+        
+        .text{
+            .title{
+                 font-size: 5rem;
+            text-align: center;
+            margin: 4rem;
+            }
+
+            .desc{
+                font-size: 2rem;
+                color: #111;
+            }
+        }
+
+        .content{
+            display: flex;
+            flex-direction: column;
+            gap: 2rem;
+
+            .row1{
+                display: flex;
+                flex-wrap: wrap;
+                gap: 2rem;
+
+                @include for-small{
+                    flex-direction: column;
+                }
+                
+                .left, .right{
+                    flex: 1;
+                  
+                    .card{
+                        position: relative;
+                        height: 30rem;
+                        cursor: pointer;
+                        overflow: hidden;
+                        background-position: center;
+                        background-repeat: no-repeat;
+                        background-size: cover;
+                        border-radius: 2rem;
+
+
+                        &-container{
+                            height: 100%;
+                            transition: .2s all ease-in-out;
+
+                           
+                           
+                            &:hover{
+                                background-color: #00000060;
+                            }
+
+                            &:hover > .card-container-inner{
+                                bottom: 0;
+                            }
+
+                            &-inner{
+                                background-color: #00000060;padding: 2rem;
+                                display: flex;
+                                flex-direction: column;
+                                gap: 2rem;
+                                align-items: flex-start;
+                                position: absolute;
+                                width: 100%;
+                                bottom: -20%;
+
+                                @include for-small{
+                                    bottom: -25%;
+                                }
+                                transition: .2s all ease-in-out;
+
+                                
+                                .text{
+                                    color: white;
+                                    display: flex;
+                                    flex-direction: column;
+                                    align-items: flex-start;
+                                    justify-content: center;
+                                    
+                                    h3{
+                                        font-size: 2.5rem;
+                                    }
+                                    p{
+                                        font-size: 2rem;
+                                    }
+                                }
+
+                                button{
+                                    padding: 0.5rem 1rem;
+                                    background-color: #007afc;
+                                    border: none;
+                                    color: white;
+                                    cursor: pointer;
+                                    border-radius: 1rem;
+                                }
+                            }
+                        }
+                    }
+                }
+                .right{
+                    flex: 1;
+                    display: flex;
+                    flex-wrap: wrap;
+                    gap: 2rem;
+
+                
+
+                    .card{
+                        flex: 1;
+                        &-container{
+                            .text{
+                                p{
+                                    font-size: 2rem;
+                                    color: white;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+
+
+
+            .row2{
+                display: flex;
+                flex-wrap: wrap;
+                gap: 2rem;
+
+
+                @include for-small{
+                    flex-direction: column;
+                }
+                
+                .left, .right{
+                    flex: 1;
+                    .card{
+                        position: relative;
+                        height: 30rem;
+                        cursor: pointer;
+                        overflow: hidden;
+
+                        background-position: center;
+                        background-repeat: no-repeat;
+                        background-size: cover;
+                        border-radius: 2rem;
+
+
+
+                        &-container{
+                            height: 100%;
+                            transition: .2s all ease-in-out;
+
+                           
+                           
+                            &:hover{
+                                background-color: #00000060;
+                            }
+
+                            &:hover > .card-container-inner{
+                                bottom: 0;
+                            }
+
+                            &-inner{
+                                background-color: #00000060;padding: 2rem;
+                                display: flex;
+                                flex-direction: column;
+                                gap: 2rem;
+                                align-items: flex-start;
+                                position: absolute;
+                                width: 100%;
+                                bottom: -20%;
+
+                                @include for-small{
+                                    bottom: -25%;
+                                }
+                                transition: .2s all ease-in-out;
+
+                                
+                                .text{
+                                    color: white;
+                                    display: flex;
+                                    flex-direction: column;
+                                    align-items: flex-start;
+                                    justify-content: center;
+                                    
+                                    h3{
+                                        font-size: 2.5rem;
+                                    }
+                                    p{
+                                        font-size: 2rem;
+                                    }
+                                }
+
+                                button{
+                                    padding: 0.5rem 1rem;
+                                    background-color: #007afc;
+                                    border: none;
+                                    color: white;
+                                    cursor: pointer;
+                                    border-radius: 1rem;
+                                }
+                            }
+                        }
+                    }
+                }
+                .left{
+                    flex: 1;
+                    display: flex;
+                    gap: 2rem;
+                    .card{
+                        flex: 1;
+                        &-container{
+                            .text{
+                                p{
+                                    font-size: 2rem;
+                                    color: white;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
