@@ -158,9 +158,12 @@ const Hero = () => {
   const navigate = useNavigate();
 
   const todayDate = new Date().toISOString().split("T")[0];
+
   useEffect(() => {
     setDepartDate(todayDate);
+  }, []);
 
+  useEffect(() => {
     const interval = setInterval(() => {
       setCurrentSlide((currentSlide + 1) % images.length);
     }, 4000);
