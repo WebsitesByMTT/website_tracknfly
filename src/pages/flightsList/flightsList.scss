@@ -29,7 +29,7 @@ $large : 992px;
 
 
     @include for-small{
-        padding: 5rem 2rem;
+        padding: 5rem 1rem;
     }
 
     .container{
@@ -76,13 +76,14 @@ $large : 992px;
             }
 
             .item{
+                
                 cursor: pointer;
                 width: 100%;
                 display: flex;
                 align-items: center;
                 justify-content: center;
-                height: 10rem;
-                // padding: 2rem;
+                // height: 10rem;
+                padding: 2rem .5rem;
                 border: 1px solid rgba(128, 128, 128, 0.151);
                 transition:  .2s all ease-in-out;
 
@@ -182,10 +183,15 @@ $large : 992px;
                         color: #0c487c;
                         border-radius: 3rem;
                         font-size: 1.5rem;
+                        font-weight: bold;
 
                         &:hover{
                             background-color: #0c487c;
                             color:white
+                        }
+
+                        @include for-small(){
+                            font-size: 1rem;
                         }
 
                     }
