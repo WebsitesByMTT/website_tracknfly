@@ -12,7 +12,7 @@ const ErrorPopup = ({ setError, setPopup, error }) => {
 
   return (
     <div className="error-popup">
-      <div className="container">
+      <div className="error-container">
         <div className="inner-container">
           <div className="loader">
             <img src="/error.svg" alt="error" />

@@ -4,7 +4,7 @@ import "./popup.scss";
 const Popup = () => {
   return (
     <div className="popup">
-      <div className="container">
+      <div className="popup-container">
         <div className="inner-container">
           <div className="loader">
             <svg

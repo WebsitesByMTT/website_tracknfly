@@ -157,7 +157,10 @@ const Hero = () => {
 
   const navigate = useNavigate();
 
+  const todayDate = new Date().toISOString().split("T")[0];
   useEffect(() => {
+    setDepartDate(todayDate);
+
     const interval = setInterval(() => {
       setCurrentSlide((currentSlide + 1) % images.length);
     }, 4000);
@@ -423,37 +426,41 @@ const Hero = () => {
               </div> */}
             </div>
 
-            <div className="airport-search-depart">
-              {airportFitsDepart.length > 0 &&
-                airportFitsDepart.map((fit) => (
-                  <div
-                    key={fit.iata_code}
-                    className="airport-search__result"
-                    onClick={() => airportSelectHandlerDepartFrom(fit)}
-                  >
-                    <div className="airport__iata">{fit.iata_code}</div>
-                    <h3 className="airport__name">{fit.name}</h3>
-                    <p className="airport__city">{fit.city}, </p>
-                    <p className="airport__country">{fit.country}</p>
-                  </div>
-                ))}
-            </div>
+            {showFlyingRes === false && (
+              <div className="airport-search-depart">
+                {airportFitsDepart.length > 0 &&
+                  airportFitsDepart.map((fit) => (
+                    <div
+                      key={fit.iata_code}
+                      className="airport-search__result"
+                      onClick={() => airportSelectHandlerDepartFrom(fit)}
+                    >
+                      <div className="airport__iata">{fit.iata_code}</div>
+                      <h3 className="airport__name">{fit.name}</h3>
+                      <p className="airport__city">{fit.city}, </p>
+                      <p className="airport__country">{fit.country}</p>
+                    </div>
+                  ))}
+              </div>
+            )}
 
-            <div className="airport-search-flying">
-              {airportFitsFlying.length > 0 &&
-                airportFitsFlying.map((fit) => (
-                  <div
-                    key={fit.iata_code}
-                    className="airport-search__result"
-                    onClick={() => airportSelectHandlerFlyingTo(fit)}
-                  >
-                    <div className="airport__iata">{fit.iata_code}</div>
-                    <h3 className="airport__name">{fit.name}</h3>
-                    <p className="airport__city">{fit.city}, </p>
-                    <p className="airport__country">{fit.country}</p>
-                  </div>
-                ))}
-            </div>
+            {showDepartRes === false && (
+              <div className="airport-search-flying">
+                {airportFitsFlying.length > 0 &&
+                  airportFitsFlying.map((fit) => (
+                    <div
+                      key={fit.iata_code}
+                      className="airport-search__result"
+                      onClick={() => airportSelectHandlerFlyingTo(fit)}
+                    >
+                      <div className="airport__iata">{fit.iata_code}</div>
+                      <h3 className="airport__name">{fit.name}</h3>
+                      <p className="airport__city">{fit.city}, </p>
+                      <p className="airport__country">{fit.country}</p>
+                    </div>
+                  ))}
+              </div>
+            )}
           </div>
         </div>
       </div>

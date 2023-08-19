@@ -31,7 +31,9 @@ $large : 992px;
     transition:  background-image 1s ease-out;
     // z-index: 99;
 
-    
+    @include for-small(){
+        height: auto;
+    }
 
     .container{
         height: 100%;
@@ -46,7 +48,9 @@ $large : 992px;
 
 
 
-
+        @include for-small(){
+            padding: 5rem 0rem;
+        }
 
         .title{
             display: flex;
@@ -179,6 +183,7 @@ $large : 992px;
 
                         @include for-small(){
                             width: 100%;
+                            padding: 1rem;
                         }
 
 
@@ -203,6 +208,7 @@ $large : 992px;
 
                             @include for-small(){
                                 width: 100%;
+                                padding: 1rem;
                             }
 
                             svg{
@@ -213,12 +219,14 @@ $large : 992px;
 
                             input{
                                 border: none;
-                                font-size: 1.5rem;
+                                // font-size: 2rem;
 
                                 outline: none;
 
                                 @include for-small(){
                                    width: 100%;
+                                   background: transparent;
+                                   
                                 }
                             }
 
@@ -341,7 +349,7 @@ $large : 992px;
                 @include for-small(){
                     position: absolute;
                     width: 95%;
-                    top: 20rem;
+                    top: 23rem;
                     right: 1rem;
                     max-height: 29rem;
                     background-color: white;
