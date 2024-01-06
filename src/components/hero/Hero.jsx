@@ -464,7 +464,7 @@ const Hero = () => {
             style={{
               width: "100%",
               height: "410px",
-              maxHeight: "347px",
+              maxHeight: "410px",
               minHeight: "224px",
             }}
             scrolling="no"

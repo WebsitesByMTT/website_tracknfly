@@ -72,6 +72,10 @@ $large : 992px;
                 text-align: center;
                 flex-wrap: wrap;
 
+                @include for-small(){
+           font-size: 2.2rem;
+                }
+
                 .icon{
                     border: .4rem solid white;
                     border-radius: 50%;
@@ -86,6 +90,7 @@ $large : 992px;
                         font-size: 2.5rem;
                     }
                 }
+                
             }
 
             h2{
