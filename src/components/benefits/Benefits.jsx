@@ -3,8 +3,20 @@ import "./benefits.scss";
 
 const Benefits = () => {
   return (
+<>
+<div className="contact">
+  <img src="/contact.svg" alt="" height={"80px"}/>
+  <div><h4>
+
+  9885855555
+  </h4>
+    <p>Contact for best deals </p></div>
+  </div>
     <div className="benefits">
-      <div className="container">
+    
+      <div className="container">1
+
+
         <div className="cards">
           <div className="card">
             <div className="img">
@@ -46,6 +58,8 @@ const Benefits = () => {
         </div>
       </div>
     </div>
+
+</>
   );
 };
 

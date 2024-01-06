@@ -272,7 +272,7 @@ const Hero = () => {
             </h1>
             <h2>Search. Book. Travel. </h2>
           </div>
-          <div className="content">
+          {/* <div className="content">
             <div className="content-container">
               <div className="top">
                 <label>
@@ -419,14 +419,6 @@ const Hero = () => {
                   </button>
                 </div>
               </form>
-              {/* <div className="bottom">
-                <select value={selectedClass} onChange={handleClassChange}>
-                  <option value="economy">Economy</option>
-                  <option value="premium-economy">Premium Economy</option>
-                  <option value="business">Business</option>
-                  <option value="first">First</option>
-                </select>
-              </div> */}
             </div>
 
             {showFlyingRes === false && (
@@ -465,6 +457,20 @@ const Hero = () => {
               </div>
             )}
           </div>
+        </div> */}
+
+     <div className="hero-section">     <iframe
+            // className="w-full h-[410px] firstScreen:h-[347px] secondScreen:h-[224px] thirdScreen:h-full"
+            style={{
+              width: "100%",
+              height: "410px",
+              maxHeight: "347px",
+              minHeight: "224px",
+            }}
+            scrolling="no"
+            frameBorder="0"
+            src="//www.travelpayouts.com/widgets/22205c47ab682a18e67bf3138082cce3.html?v=2203"
+          ></iframe></div>
         </div>
       </div>
     </>
