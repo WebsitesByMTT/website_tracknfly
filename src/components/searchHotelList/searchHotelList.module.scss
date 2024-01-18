@@ -109,15 +109,18 @@ $large: 992px;
                   }
                 }
 
-                .facilities{
-                  display: flex;
-                  flex-direction: column;
-                  color: #2e70ab;
+                .facilities {
+                  display: none;
 
-                  p{
-                    font-size: 1.4rem;
+                  @include for-greater-than-smaller() {
+                    display: flex;
+                    flex-direction: column;
+                    color: #2e70ab;
                   }
 
+                  p {
+                    font-size: 1.4rem;
+                  }
                 }
               }
             }
@@ -138,28 +141,41 @@ $large: 992px;
                 .rating {
                   display: flex;
                   gap: 0.5rem;
+                  justify-content: flex-end;
 
                   .rating_title {
-                    font-size: 1.6rem;
+                    font-size: 1rem;
                     color: #2e70ab;
                     font-weight: bold;
+
+                    @include for-greater-than-smaller(){
+                      font-size: 1.6rem;
+                    }
                   }
 
                   .rating__count {
                     background: #2e70ab;
                     color: #fff;
                     font-weight: bold;
-                    font-size: 1.4rem;
+                    font-size: .8rem;
                     padding: 0rem 0.5rem;
                     display: flex;
                     align-items: center;
                     justify-content: center;
+
+                    @include for-greater-than-smaller(){
+                      font-size: 1.4rem;
+                    }
                   }
                 }
 
                 .rating_count {
                   text-align: right;
-                  font-size: 1.4rem;
+                  font-size: 1rem;
+
+                  @include for-greater-than-smaller(){
+                    font-size: 1.4rem;
+                  }
                 }
               }
 
@@ -180,19 +196,24 @@ $large: 992px;
 
                     border: 2px solid #2e70ab;
                     background: none;
-                    padding: 1rem 2rem;
                     border-radius: 3rem;
+                    padding: .5rem 1rem;
+                    
+                    @include for-greater-than-smaller(){
+                      padding: 1rem 2rem;
+
+                    }
                   }
                 }
               }
             }
           }
 
-          &-bottom{
+          &-bottom {
             padding: 1rem;
             background: #2e71ab2c;
 
-            p{
+            p {
               text-align: center;
               font-size: 1.4rem;
               color: #2e70ab;
