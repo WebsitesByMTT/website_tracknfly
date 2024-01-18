@@ -138,4 +138,9 @@ $large: 992px;
 .visible{
     height: 7rem;
     overflow: hidden;
+
+
+    @include for-greater-than-smaller(){
+        height: 55vh;
+    }
 }

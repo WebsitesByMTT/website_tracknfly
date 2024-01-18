@@ -421,7 +421,7 @@ const Hero = () => {
                   </select>
                 </div>
 
-                <div className="search">
+                <div className="search item">
                   <button>
                     <BiSearchAlt />
                     Search

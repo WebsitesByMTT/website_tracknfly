@@ -94,6 +94,10 @@ $large: 992px;
 
               h6 {
                 font-size: 1.8rem;
+
+                @include for-greater-than-smaller(){
+                  font-size: 1.8rem;
+                }
               }
               p {
                 font-size: 1.2rem;
@@ -123,6 +127,10 @@ $large: 992px;
 
               h6 {
                 font-size: 1.8rem;
+
+                @include for-greater-than-smaller(){
+                  font-size: 1.8rem;
+                }
               }
               p {
                 font-size: 1.2rem;
@@ -136,7 +144,11 @@ $large: 992px;
               flex-direction: column;
 
               h6 {
-                font-size: 1.8rem;
+                font-size: 1.5rem;
+
+                @include for-greater-than-smaller(){
+                  font-size: 1.8rem;
+                }
               }
               p {
                 font-size: 1.2rem;
