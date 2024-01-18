@@ -9,7 +9,8 @@ import Hero from "./components/hero/Hero";
 import Flights from "./pages/flights/Flights";
 import FlightsList from "./pages/flightsList/FlightsList";
 import FlightDetail from "./pages/flightDetail/FlightDetail";
-import Test from "./pages/test/Test";
+import FlightResult from "./pages/flightsResult/FlightResult";
+import HotelsResult from "./pages/hotelsResult/HotelsResult";
 
 function App() {
   return (
@@ -22,7 +23,8 @@ function App() {
         <Route path="/flights" element={<Flights />} />
         <Route path="/flight-list" element={<FlightsList />} />
         <Route path="/flight-detail" element={<FlightDetail />} />
-        <Route path="/test" element={<Test/>}/>
+        <Route path="/flights_results" element={<FlightResult/>}/>
+        <Route path="/hotels_results" element={<HotelsResult/>}/>
       </Routes>
       <Footer />
     </>

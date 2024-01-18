@@ -1,9 +1,10 @@
 import React, { useEffect, useRef } from 'react'
-import styles from './test.module.scss'
-import SearchFlightSidebar from '../../components/searchFlightSidebar.jsx/SearchFlightSidebar';
-import SearchFlightList from '../../components/searchFlightList/SearchFlightList';
+import styles from './flightResult.module.scss'
 
-const Test = () => {
+import SearchFlightList from '../../components/searchFlightList/SearchFlightList';
+import SearchFlightSidebar from '../../components/searchFlightSidebar/SearchFlightSidebar';
+
+const FlightResult = () => {
     const searchFlight = useRef(null);
 
     useEffect(() => {
@@ -34,4 +35,4 @@ const Test = () => {
   )
 }
 
-export default Test
+export default FlightResult
