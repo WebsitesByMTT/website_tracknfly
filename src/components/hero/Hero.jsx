@@ -211,20 +211,29 @@ const Hero = () => {
         }, 30000);
       });
 
-      const response = await Promise.race([
-        axios.request(options),
-        timeoutPromise,
-      ]);
+      // const response = await Promise.race([
+      //   axios.request(options),
+      //   timeoutPromise,
+      // ]);
 
-      if (response.data) {
-        setPopup(false);
-        setFlightsData(response.data.data);
+      // if (response.data) {
+      //   setPopup(false);
+      //   setFlightsData(response.data.data);
 
-        const endTime = performance.now();
-        console.log("API request took", endTime - startTime, "milliseconds");
+      //   const endTime = performance.now();
+      //   console.log("API request took", endTime - startTime, "milliseconds");
 
-        navigate("/flight-list", { state: { data: response.data.data } });
-      }
+      //   navigate("/flight-list", { state: { data: response.data.data } });
+      // }
+
+
+      setPopup(false);
+      const endTime = performance.now();
+      console.log("API request took", endTime - startTime, "milliseconds");
+      navigate("/test");
+
+
+
     } catch (error) {
       setDepartFrom("");
       setFlyingTo("");
@@ -412,7 +421,7 @@ const Hero = () => {
                   </select>
                 </div>
 
-                <div className="search">
+                <div className="search item">
                   <button>
                     <BiSearchAlt />
                     Search

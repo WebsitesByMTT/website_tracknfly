@@ -9,6 +9,7 @@ import Hero from "./components/hero/Hero";
 import Flights from "./pages/flights/Flights";
 import FlightsList from "./pages/flightsList/FlightsList";
 import FlightDetail from "./pages/flightDetail/FlightDetail";
+import Test from "./pages/test/Test";
 
 function App() {
   return (
@@ -21,6 +22,7 @@ function App() {
         <Route path="/flights" element={<Flights />} />
         <Route path="/flight-list" element={<FlightsList />} />
         <Route path="/flight-detail" element={<FlightDetail />} />
+        <Route path="/test" element={<Test/>}/>
       </Routes>
       <Footer />
     </>

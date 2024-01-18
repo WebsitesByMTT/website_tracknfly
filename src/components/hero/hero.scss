@@ -105,6 +105,7 @@ $large : 992px;
 
             width: 90%;
             padding: 1rem;
+            // border: 5px solid red;
 
             @include for-small(){
                 width: 95%;
@@ -121,6 +122,7 @@ $large : 992px;
 
               
                 .top{
+                    // border: 1px solid red;
                     display: flex;
                     gap: 2rem;
 
@@ -140,11 +142,14 @@ $large : 992px;
                 }
 
                 .middle{
+                    // display: flex;
+                    // align-items: flex-end;
+                    // // justify-content: space-between;
+                    // flex-wrap: wrap;
+                    // gap: 2rem;
+                    // border: 1px solid red;
                     display: flex;
                     align-items: flex-end;
-                    // justify-content: space-between;
-                    flex-wrap: wrap;
-                    gap: 2rem;
 
                     @include for-small(){
                         align-items: flex-start;
@@ -156,17 +161,29 @@ $large : 992px;
                             flex: 1;
                         }
                     }
+
+                    width: 100%;
+                    display: flex;
+                    flex-wrap: wrap;
+                    gap: 2rem;
+
                     
 
                     .item{
-                        display: flex;
-                        flex-direction: column;
-                        align-items: flex-start;
-                        justify-content: center;
-                        gap: .2rem;
+                      
 
                         @include for-small(){
                             width: 100%;
+                        }
+
+                        flex:1;
+                        // border: 1px solid red;
+                        display: flex;
+                        flex-direction: column;
+
+                        .input{
+                            display: flex;
+                            align-items: center;
                         }
 
                        select{
@@ -398,10 +415,7 @@ $large : 992px;
             .passenger{
                 position: relative;
                 
-                .input{
-                    
-                    border: .1rem solid red;
-                }
+                
 
                 .passenger-counter{
                     width: 100%;
