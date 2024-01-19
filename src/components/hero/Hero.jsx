@@ -230,7 +230,7 @@ const Hero = () => {
       setPopup(false);
       const endTime = performance.now();
       console.log("API request took", endTime - startTime, "milliseconds");
-      navigate("/test");
+      navigate("/flights_results");
 
 
 
