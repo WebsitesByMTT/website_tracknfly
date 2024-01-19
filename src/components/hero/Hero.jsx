@@ -10,6 +10,8 @@ import { useNavigate } from "react-router-dom";
 import Popup from "../popup/Popup";
 import ErrorPopup from "../errorPopup/ErrorPopup";
 import { RiArrowDropDownLine } from "react-icons/ri";
+import { BiSolidPlaneAlt } from "react-icons/bi";
+import { FaHotel } from "react-icons/fa";
 
 const images = ["/f-c-1.jpg", "f-c-2.jpg", "f-c-3.jpg", "f-c-4.jpg"];
 
@@ -36,6 +38,16 @@ const Hero = () => {
   const [totalPassengers, setTotalPassengers] = useState(1);
   const [showPassengerCounter, setShowPassengerCounter] = useState(false);
   const [selectedClass, setSelectedClass] = useState("ECONOMY");
+
+  const [selectedFromCity, setSelectedFromCity] = useState("");
+  const [selectedFromCountry, setSelectedFromCountry] = useState("");
+  const [selectedIATACode, setSelectedFromIATACode] = useState("");
+
+  const [selectedToCity, setSelectedToCity] = useState("");
+  const [selectedToIATACode, setSelectedToIATACode] = useState("");
+  const [selectedToCountry, setSelectedToCountry] = useState("");
+
+  const [searchFor, setSearchFor] = useState("FLIGHTS")
 
   const handleClassChange = (event) => {
     setSelectedClass(event.target.value);
@@ -88,8 +100,12 @@ const Hero = () => {
   };
 
   const airportSelectHandlerDepartFrom = (airport) => {
+    console.log("SELECTED AIRPORT : ", airport);
     setDepartFrom(airport.name);
     setFrom(airport.iata_code);
+    setSelectedFromCity(airport.city);
+    setSelectedFromIATACode(airport.iata_code);
+    setSelectedFromCountry(airport.country);
     setAirportFitsDepart([]);
   };
 
@@ -128,6 +144,9 @@ const Hero = () => {
   const airportSelectHandlerFlyingTo = (airport) => {
     setFlyingTo(airport.name);
     setTo(airport.iata_code);
+    setSelectedToIATACode(airport.iata_code);
+    setSelectedToCity(airport.city);
+    setSelectedToCountry(airport.country);
     setAirportFitsFlying([]);
   };
 
@@ -226,14 +245,10 @@ const Hero = () => {
       //   navigate("/flight-list", { state: { data: response.data.data } });
       // }
 
-
       setPopup(false);
       const endTime = performance.now();
       console.log("API request took", endTime - startTime, "milliseconds");
       navigate("/flights_results");
-
-
-
     } catch (error) {
       setDepartFrom("");
       setFlyingTo("");
@@ -281,35 +296,98 @@ const Hero = () => {
             </h1>
             <h2>Search. Book. Travel. </h2>
           </div>
+
           <div className="content">
-            <div className="content-container">
+            <div className="tabs">
+              <ul>
+                <li className={`${searchFor === "FLIGHTS" && "active"}`} onClick={()=>setSearchFor("FLIGHTS")}>
+                  <BiSolidPlaneAlt /> Flights
+                </li>
+                <li className={`${searchFor === "HOTELS" && "active"}`} onClick={()=>setSearchFor("HOTELS")}>
+                  <FaHotel />
+                  Hotels
+                </li>
+              </ul>
+            </div>
+
+            <div
+              className="content-container"
+              style={{
+                borderRadius: `${
+                  showFlyingRes || showDepartRes ? "0rem 1rem 1rem 0rem" : ""
+                }`,
+              }}
+            >
               <div className="top">
-                <label>
-                  <input
-                    type="radio"
+                <div className="trip-type">
+                  <select
                     name="trip_type"
-                    value="ONE_WAY"
-                    checked={tripType === "ONE_WAY"}
-                    onChange={() => setTripType("ONE_WAY")}
-                  />
-                  One Way
-                </label>
-                <label>
-                  <input
-                    type="radio"
-                    name="trip_type"
-                    value="ROUND_TRIP"
-                    checked={tripType === "ROUND_TRIP"}
-                    onChange={() => setTripType("ROUND_TRIP")}
-                  />
-                  Round Trip
-                </label>
+                    value={tripType}
+                    onChange={(e) => setTripType(e.target.value)}
+                  >
+                    <option value="ONE_WAY">One Way</option>
+                    <option value="ROUND_TRIP">Round Trip</option>
+                  </select>
+                </div>
+
+                <div className="trip-passengers">
+                  <button
+                    onClick={() =>
+                      setShowPassengerCounter(!showPassengerCounter)
+                    }
+                  >
+                    {totalPassengers} Passengers
+                  </button>
+
+                  {showPassengerCounter && (
+                    <div className="passenger-counter">
+                      <div className="passenger-counter-container">
+                        <div className="counter">
+                          <label>Adults</label>
+                          <div className="actions">
+                            <span onClick={handleAdultDecrement}>-</span>
+                            <p className="counter-value">{adults}</p>
+                            <span onClick={handleAdultIncrement}>+</span>
+                          </div>
+                        </div>
+                        <div className="counter">
+                          <label>Kids</label>
+                          <div className="actions">
+                            <span onClick={handleKidsDecrement}>-</span>
+                            <p className="counter-value">{kids}</p>
+                            <span onClick={handleKidsIncrement}>+</span>
+                          </div>
+                        </div>
+                        <div className="counter">
+                          <label>Infant</label>
+                          <div className="actions">
+                            <span onClick={handleInfantDecrement}>-</span>
+                            <p className="counter-value">{infant}</p>
+                            <span onClick={handleInfantIncrement}>+</span>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  )}
+                </div>
+
+                <div className="trip-class">
+                  <select value={selectedClass} onChange={handleClassChange}>
+                    {["Economy", "Premium Economy", "Business", "First"].map(
+                      (option) => (
+                        <option key={option} value={option.toUpperCase()}>
+                          {option}
+                        </option>
+                      )
+                    )}
+                  </select>
+                </div>
               </div>
               <form className="middle" onSubmit={submitFormHandler}>
                 <div className="item depart-from">
-                  <label htmlFor="">Depart from</label>
+                  <label htmlFor="">from</label>
                   <div className="input">
-                    <MdOutlineLocationOn />
+                    {/* <MdOutlineLocationOn /> */}
                     <input
                       required
                       type="text"
@@ -320,11 +398,33 @@ const Hero = () => {
                       onBlur={() => setShowDepartRes(false)}
                     />
                   </div>
+
+                  {selectedIATACode && departFrom && (
+                    <label className="airport-detail">{`${selectedIATACode}, ${selectedFromCity}, ${selectedFromCountry}`}</label>
+                  )}
+                </div>
+                <div className="swap">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="24"
+                    height="24"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    class="lucide lucide-arrow-right-left"
+                  >
+                    <path d="m16 3 4 4-4 4" />
+                    <path d="M20 7H4" />
+                    <path d="m8 21-4-4 4-4" />
+                    <path d="M4 17h16" />
+                  </svg>
                 </div>
                 <div className="item flying-to">
-                  <label htmlFor="">Flying to</label>
+                  <label htmlFor="">to</label>
                   <div className="input">
-                    <MdOutlineLocationOn />
                     <input
                       required
                       type="text"
@@ -335,7 +435,11 @@ const Hero = () => {
                       onBlur={() => setShowFlyingRes(false)}
                     />
                   </div>
+                  {selectedToIATACode && flyingTo && (
+                    <label className="airport-detail">{`${selectedToIATACode}, ${selectedToCity}, ${selectedToCountry}`}</label>
+                  )}
                 </div>
+
                 <div className="item">
                   <label htmlFor="">Departure date</label>
                   <div className="input">
@@ -348,95 +452,46 @@ const Hero = () => {
                     />
                   </div>
                 </div>
-                {tripType === "ROUND_TRIP" && (
-                  <div className="item">
-                    <label htmlFor="">Return date</label>
-                    <div className="input">
-                      <input
-                        required
-                        type="date"
-                        value={returnDate}
-                        onChange={(date) => setReturnDate(date.target.value)}
-                        min={calculateMinReturnDate(departDate)} // Custom minimum date calculation
-                        disabled={departDate === ""} // Disable if departure date is not selected yet
-                      />
-                    </div>
-                  </div>
-                )}
-
-                <div className="item passenger">
-                  <label htmlFor="" className="form-label">
-                    Passengers
-                  </label>
-                  <div className="input" onClick={handleDropdownClick}>
+                <div className={`item ${tripType === "ONE_WAY" && "disabled"}`}>
+                  <label htmlFor="">Return date</label>
+                  <div className="input">
                     <input
-                      type="text"
-                      placeholder="Total Passengers"
-                      value={`${totalPassengers} ${
-                        totalPassengers === 1 ? "Passenger" : "Passengers"
-                      }`}
-                      readOnly
+                      required
+                      type="date"
+                      value={returnDate}
+                      onChange={(date) => setReturnDate(date.target.value)}
+                      min={calculateMinReturnDate(departDate)} // Custom minimum date calculation
+                      disabled={departDate === "" || tripType === "ONE_WAY"}
+                      style={{
+                        cursor: tripType === "ONE_WAY" ? "not-allowed" : "auto",
+                      }}
                     />
-                    <RiArrowDropDownLine />
                   </div>
-                  {showPassengerCounter && (
-                    <div className="passenger-counter">
-                      <div className="counter">
-                        <label>Adults</label>
-                        <div className="actions">
-                          <span onClick={handleAdultDecrement}>-</span>
-                          <p className="counter-value">{adults}</p>
-                          <span onClick={handleAdultIncrement}>+</span>
-                        </div>
-                      </div>
-                      <div className="counter">
-                        <label>Kids</label>
-                        <div className="actions">
-                          <span onClick={handleKidsDecrement}>-</span>
-                          <p className="counter-value">{kids}</p>
-                          <span onClick={handleKidsIncrement}>+</span>
-                        </div>
-                      </div>
-                      <div className="counter">
-                        <label>Infant</label>
-                        <div className="actions">
-                          <span onClick={handleInfantDecrement}>-</span>
-                          <p className="counter-value">{infant}</p>
-                          <span onClick={handleInfantIncrement}>+</span>
-                        </div>
-                      </div>
-                    </div>
-                  )}
+                  <label htmlFor=""></label>
                 </div>
 
-                <div className="item">
-                  <label htmlFor="" className="form-label">
-                    Class
-                  </label>
-                  <select value={selectedClass} onChange={handleClassChange}>
-                    <option value="ECONOMY">Economy</option>
-                    <option value="PREMIUM_ECONOMY">Premium Economy</option>
-                    <option value="BUSINESS">Business</option>
-                    <option value="FIRST">First</option>
-                  </select>
-                </div>
-
-                <div className="search item">
+                <div className="submit">
                   <button>
-                    <BiSearchAlt />
-                    Search
+                    {" "}
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-width="2"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      class="lucide lucide-plane"
+                    >
+                      <path d="M17.8 19.2 16 11l3.5-3.5C21 6 21.5 4 21 3c-1-.5-3 0-4.5 1.5L13 8 4.8 6.2c-.5-.1-.9.1-1.1.5l-.3.5c-.2.5-.1 1 .3 1.3L9 12l-2 3H4l-1 1 3 2 2 3 1-1v-3l3-2 3.5 5.3c.3.4.8.5 1.3.3l.5-.2c.4-.3.6-.7.5-1.2z" />
+                    </svg>{" "}
+                    Search Flights
                   </button>
                 </div>
               </form>
-              {/* <div className="bottom">
-                <select value={selectedClass} onChange={handleClassChange}>
-                  <option value="economy">Economy</option>
-                  <option value="premium-economy">Premium Economy</option>
-                  <option value="business">Business</option>
-                  <option value="first">First</option>
-                </select>
-              </div> */}
             </div>
+
+
 
             {showFlyingRes === false && (
               <div className="airport-search-depart">
