@@ -21,19 +21,19 @@ const Header = () => {
               </Link>
             </li>
             <li>
-              <div className="mail">
+              {/* <div className="mail">
                 <FiMail />
                 <span>admin@flynfare.com</span>
-              </div>
+              </div> */}
             </li>
           </ul>
-          <div className="right">
+          {/* <div className="right">
             <FiPhoneCall className="icon" />
             <div className="text">
               <span>Call Us Today!</span>
               <span>1-888-831-1814</span>
             </div>
-          </div>
+          </div> */}
           <div
             className={`mobile-menu-btn ${open && "opened"}`}
             onClick={() => setOpen(!open)}
@@ -56,6 +56,12 @@ const Header = () => {
             <li>
               <Link to="/contact-us">Contact us</Link>
             </li>
+
+            <li>Car Booking</li>
+            <li>Hotel Booking</li>
+            <li>Flight Booking</li>
+            <li>About Us</li>
+
           </ul>
         </div>
 
@@ -74,6 +80,11 @@ const Header = () => {
                 <li>
                   <Link to="/contact-us">Contact us</Link>
                 </li>
+                <li>Car Booking</li>
+                <li>Hotel Booking</li>
+                <li>Flight Booking</li>
+                <li>About Us</li>
+
               </ul>
             </div>
           </div>

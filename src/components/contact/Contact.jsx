@@ -10,7 +10,6 @@ import {
   AiFillTwitterCircle,
   AiFillLinkedin,
 } from "react-icons/ai";
-import Newsletter from "../newsletter/Newsletter";
 
 const Contact = () => {
   return (
@@ -18,15 +17,15 @@ const Contact = () => {
       <div className="contact">
         <div className="container">
           <div className="item">
-            <div className="img">
+            {/* <div className="img">
               <img src="/email.png" alt="email" loading="lazy" />
-            </div>
-            <div className="text">
+            </div> */}
+            {/* <div className="text">
               <h3 className="title">For Email us</h3>
               <p className="subtitle">admin@flynfare.com</p>
-            </div>
+            </div> */}
           </div>
-          <div className="item">
+          {/* <div className="item">
             <div className="img">
               <img src="/call-f.png" alt="call" loading="lazy" />
             </div>
@@ -37,10 +36,9 @@ const Contact = () => {
                 calls may be recorded for training and quality purposes
               </p>
             </div>
-          </div>
+          </div> */}
         </div>
       </div>
-      <Newsletter />
       <div className="misc">
         <div className="container">
           <div className="item">

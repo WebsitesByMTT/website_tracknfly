@@ -1,13 +1,11 @@
 import React from "react";
 import "./footer.scss";
-import Contact from "../contact/Contact";
 import { Link } from "react-router-dom";
 
 
 const Footer = () => {
   return (
     <>
-      <Contact />
       <div className="footer">
         <div className="container">
           <div className="item">
@@ -15,8 +13,8 @@ const Footer = () => {
               <li>Cookie Policy</li>
               <li>Cancellatiion and Refund Policy</li>
               <Link to={`/privacy-policy`}>
-              
-              <li>Privacy Policy</li>
+
+                <li>Privacy Policy</li>
               </Link>
               <li>Terms & Service</li>
               <li>FAQ</li>
