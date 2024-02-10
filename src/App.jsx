@@ -12,6 +12,8 @@ import FlightDetail from "./pages/flightDetail/FlightDetail";
 import FlightResult from "./pages/flightsResult/FlightResult";
 import HotelsResult from "./pages/hotelsResult/HotelsResult";
 import PrivacyPolicy from "./pages/privacyPolicy/PrivacyPolicy";
+import ProductOffering from "./components/productOffering/ProductOffering";
+import WhyTracknFly from "./components/whyTracknFly/WhyTracknFly";
 
 function App() {
   const location = useLocation();
@@ -30,6 +32,8 @@ function App() {
         <Route path="/hotels_results" element={<HotelsResult />} />
         <Route path="/privacy-policy" element={<PrivacyPolicy />} />
       </Routes>
+      <WhyTracknFly />
+      <ProductOffering />
       <Footer />
     </>
   );
