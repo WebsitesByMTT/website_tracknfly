@@ -1,8 +1,12 @@
-import React from "react";
+import React, { lazy } from "react";
 import "./flight.scss";
 import { GoLocation } from "react-icons/go";
 import WhyToChooseUs from "../../components/why-choose-us/WhyToChooseUs";
 import MostPopularFlightDest from "../../components/mostPopularFlightDest/MostPopularFlightDest";
+import FC1IMG from "/f-c-1.jpg"
+import FC2IMG from "/f-c-2.jpg" 
+import FC3IMG from "/f-c-3.jpg" 
+import FC4IMG from "/f-c-4.jpg" 
 
 const Flights = () => {
   return (
@@ -20,7 +24,7 @@ const Flights = () => {
                       <GoLocation />
                       <span>Tanzania</span>
                     </div>
-                    <img src="/f-c-1.jpg" alt="" />
+                    <img src={FC1IMG} alt="" loading="lazy"/>
                   </div>
                 </div>
               </div>
@@ -31,7 +35,7 @@ const Flights = () => {
                       <GoLocation />
                       <span>Colombia</span>
                     </div>
-                    <img src="/f-c-2.jpg" alt="" />
+                    <img src={FC2IMG} alt="" loading="lazy" />
                   </div>
                 </div>
               </div>
@@ -42,7 +46,7 @@ const Flights = () => {
                       <GoLocation />
                       <span>Bahrain</span>
                     </div>
-                    <img src="/f-c-3.jpg" alt="" />
+                    <img src={FC3IMG} alt="" loading="lazy"/>
                   </div>
                 </div>
               </div>
@@ -53,7 +57,7 @@ const Flights = () => {
                       <GoLocation />
                       <span>Mauritius</span>
                     </div>
-                    <img src="/f-c-4.jpg" alt="" />
+                    <img src={FC4IMG} alt="" loading="lazy" />
                   </div>
                 </div>
               </div>
