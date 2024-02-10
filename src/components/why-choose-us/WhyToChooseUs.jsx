@@ -1,5 +1,8 @@
 import React from "react";
 import "./whyToChooseUs.scss";
+import Rating1IMG from "/rating1.jpg";
+import  WtcuPrimaryIMG  from "/wtcu-primary.jpg"
+import WtcuSecondaryIMG from "/wtcu-secondary.jpg"
 
 const WhyToChooseUs = () => {
   return (
@@ -47,7 +50,7 @@ const WhyToChooseUs = () => {
               <div className="rating">
                 <div className="profile">
                   <img
-                    src="https://randomuser.me/api/portraits/men/32.jpg"
+                    src={Rating1IMG}
                     alt="user-rating"
                     loading="lazy"
                   />
@@ -62,7 +65,7 @@ const WhyToChooseUs = () => {
               <div className="primary-img">
                 <div className="primary-img-container">
                   <img
-                    src="/wtcu-primary.jpg"
+                    src={WtcuPrimaryIMG}
                     alt="wtcu-primary"
                     loading="lazy"
                   />
@@ -70,7 +73,7 @@ const WhyToChooseUs = () => {
               </div>
               <div className="secondary-img">
                 <img
-                  src="/wtcu-secondary.jpg"
+                  src={WtcuSecondaryIMG}
                   alt="wtcu-secondary"
                   loading="lazy"
                 />

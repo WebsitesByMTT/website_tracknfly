@@ -26,7 +26,7 @@ const TopFlightOffer = () => {
                 className="card"
                 style={{
                   backgroundImage:
-                    "url(https://images.pexels.com/photos/2662116/pexels-photo-2662116.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1)",
+                    "url(/top-flight-card-1.jpeg)",
                 }}
               >
                 <div className="card-container">
@@ -45,7 +45,7 @@ const TopFlightOffer = () => {
                 className="card"
                 style={{
                   backgroundImage:
-                    "url(https://images.pexels.com/photos/7054237/pexels-photo-7054237.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1)",
+                    "url(/top-flight-card-2.jpeg)",
                 }}
               >
                 <div className="card-container">
@@ -62,7 +62,7 @@ const TopFlightOffer = () => {
                 className="card"
                 style={{
                   backgroundImage:
-                    "url(https://images.pexels.com/photos/9796785/pexels-photo-9796785.jpeg?auto=compress&cs=tinysrgb&w=600&lazy=load)",
+                    "url(/top-flight-card-3.jpeg)",
                 }}
               >
                 <div className="card-container">
@@ -83,7 +83,7 @@ const TopFlightOffer = () => {
                 className="card"
                 style={{
                   backgroundImage:
-                    "url(https://images.pexels.com/photos/6485389/pexels-photo-6485389.jpeg?auto=compress&cs=tinysrgb&w=600&lazy=load)",
+                    "url(/top-flight-card-4.jpeg)",
                 }}
               >
                 <div className="card-container">
@@ -100,7 +100,7 @@ const TopFlightOffer = () => {
                 className="card"
                 style={{
                   backgroundImage:
-                    "url(https://images.pexels.com/photos/1121176/pexels-photo-1121176.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1)",
+                    "url(/top-flight-card-5.jpeg)",
                 }}
               >
                 <div className="card-container">
@@ -119,9 +119,9 @@ const TopFlightOffer = () => {
                 className="card"
                 style={{
                   backgroundImage:
-                    "url(https://images.pexels.com/photos/3601425/pexels-photo-3601425.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1)",
+                    "url(/top-flight-card-6.jpeg)",      
                 }}
-              >
+              >0...............
                 <div className="card-container">
                   <div className="card-container-inner">
                     <div className="text">
