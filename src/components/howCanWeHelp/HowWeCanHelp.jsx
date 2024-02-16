@@ -1,7 +1,7 @@
 import React from "react";
 import "./howWeCanHelp.scss";
 import { RiEarthLine } from "react-icons/ri";
-import { BsCoin, BsTicketPerforated } from "react-icons/bs";
+import { BsCoin, BsTicketPerforated, BsXSquare } from "react-icons/bs";
 
 const HowWeCanHelp = () => {
   return (
@@ -42,6 +42,14 @@ const HowWeCanHelp = () => {
             <p>
               After you pay you can immediately enjoy the trip to destination
             </p>
+          </div>
+
+          <div className="card">
+            <div className="icon">
+              <BsXSquare />
+            </div>
+            <h3>Cancel Booking</h3>
+            <p>If your plans change, you can cancel your booking with ease.</p>
           </div>
         </div>
       </div>
