@@ -59,6 +59,14 @@ $large : 992px;
             display: flex;
             flex-wrap: wrap;
 
+            @include for-small{
+                display: block;
+            } 
+
+            @include for-medium(){
+                display: block;
+            } 
+
             .card{
                 flex: 1;
                 padding: 4rem;

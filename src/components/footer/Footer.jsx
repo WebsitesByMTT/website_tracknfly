@@ -31,7 +31,7 @@ const Footer = () => {
           <div className="item">
             <ul>
               <li>
-                Copyright © 2023 FLYNFARE LLC.
+                Copyright © 2024 FLYNFARE LLC.
                 <br /> All rights reserved Please note that all HTML mark up
                 codes, Images and logos contained on this website, is owned by
                 flynfare.com, its affiliates, and/or their suppliers, and is

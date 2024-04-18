@@ -9,11 +9,8 @@ const WhyToChooseUs = () => {
     <div className="whyToChooseUs">
       <div className="container">
         <div className="titles">
-          <h2>Why You Should Choose Us</h2>
-          <p>
-            You Should Choose us because we provide the best accomodation and we
-            have sorted all the flights here based on their rating
-          </p>
+          <h2>Why choose us</h2>
+          <p>Trackn Fly is one of the best travel website where you will find exclusive offers on cheap airline tickets. If you are struggling to find last-minute hotels and flights, then worry not because there are numerous affordable hotels and flights. We also offer cheap cars on rent. So, without any hurry create your own memory with us.</p>
         </div>
 
         <div className="content">
@@ -21,26 +18,23 @@ const WhyToChooseUs = () => {
             <ul className="list">
               <li>
                 <span className="series">1</span>
-                <h3>We Provide the best choice for you</h3>
+                <h3>We provide the most comfortable choice for you</h3>
                 <p>
-                  We always prioriize customer comfort and satisfaction. That's
-                  why we onlu accept the best flight
+                For us, customer satisfaction is the top most priority.
                 </p>
               </li>
               <li>
                 <span className="series">2</span>
-                <h3>Low Price with best quality</h3>
+                <h3>Cheap price but the best services</h3>
                 <p>
-                  although the price tends to be cheaper but it will not affect
-                  the quality of service, so don't worry
+                We provide cheap plane tickets and hotel bookings to our clients. But that does not mean that they are of bad quality or worse services. So, without any doubt book your last-minute flights and save your money.
                 </p>
               </li>
               <li>
                 <span className="series">3</span>
-                <h3>Can refund up to 100%</h3>
+                <h3>Hassle-free refunds</h3>
                 <p>
-                  Don't worry if suddenly you have a problem and want to do a
-                  refund, you can get a full refund.
+                Wondering about the refunds? Then don’t worry because we understand you. You need to cancel your flight tickets before 24 hours and you will be entitled to a refund. It will be credited to your account between 7 to 12 days.
                 </p>
               </li>
             </ul>
