@@ -31,6 +31,7 @@ body {
   }
 }
 
+
 /* Font size for screens that are 480px wide or less */
 @media screen and (max-width: 480px) {
   html {
