@@ -121,7 +121,8 @@ const flights = [
     airline: {
       name: "SpiceJet",
       logoUrl:
-      "https://logos-world.net/wp-content/uploads/2023/01/SpiceJet-Logo.png",    },
+        "https://logos-world.net/wp-content/uploads/2023/01/SpiceJet-Logo.png",
+    },
     flightDetails: {
       flightNumber: "SG 542",
       departureTime: "14:00",
@@ -139,7 +140,8 @@ const flights = [
     airline: {
       name: "AirAsia",
       logoUrl:
-      "https://images.squarespace-cdn.com/content/v1/5a5dbe4632601eb31977f947/1629703651716-J8RVOTD1XO3SDINHP2RG/unnamed+%281%29.png",    },
+        "https://images.squarespace-cdn.com/content/v1/5a5dbe4632601eb31977f947/1629703651716-J8RVOTD1XO3SDINHP2RG/unnamed+%281%29.png",
+    },
     flightDetails: {
       flightNumber: "AK 101",
       departureTime: "09:30",
@@ -157,7 +159,8 @@ const flights = [
     airline: {
       name: "IndiGo",
       logoUrl:
-      "https://upload.wikimedia.org/wikipedia/commons/thumb/6/69/IndiGo_Airlines_logo.svg/2560px-IndiGo_Airlines_logo.svg.png",    },
+        "https://upload.wikimedia.org/wikipedia/commons/thumb/6/69/IndiGo_Airlines_logo.svg/2560px-IndiGo_Airlines_logo.svg.png",
+    },
     flightDetails: {
       flightNumber: "6E 401",
       departureTime: "13:15",
@@ -175,7 +178,8 @@ const flights = [
     airline: {
       name: "GoAir",
       logoUrl:
-      "https://upload.wikimedia.org/wikipedia/commons/8/86/GoAir_Logo.png?20131227121333",    },
+        "https://upload.wikimedia.org/wikipedia/commons/8/86/GoAir_Logo.png?20131227121333",
+    },
     flightDetails: {
       flightNumber: "G8 602",
       departureTime: "17:45",
@@ -193,7 +197,8 @@ const flights = [
   {
     airline: {
       name: "Air India Express",
-      logoUrl: "https://upload.wikimedia.org/wikipedia/commons/thumb/8/8d/Air_India_Express_Logo.svg/2560px-Air_India_Express_Logo.svg.png",    },
+      logoUrl: "https://upload.wikimedia.org/wikipedia/commons/thumb/8/8d/Air_India_Express_Logo.svg/2560px-Air_India_Express_Logo.svg.png",
+    },
     flightDetails: {
       flightNumber: "IX 422",
       departureTime: "11:30",

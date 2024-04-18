@@ -4,7 +4,7 @@ import "./topFlightOffer.scss";
 const TopFlightOffer = () => {
   return (
     <div className="topFlightOffer">
-      <div className="container">
+      <div className="Container">
         <div className="text">
           <h2 className="title">
             Book Top Flight with Flexibility

@@ -31,7 +31,7 @@ $large : 992px;
         padding: 5rem 2rem;
 
     }
-    .container{
+    .Container{
         height: 100%;
         width: 100%;
 
@@ -44,16 +44,12 @@ $large : 992px;
         .cards{
            display: grid;
            grid-template-columns: repeat(3, 1fr);
-
            @include for-small(){
             grid-template-columns: repeat(1, 1fr);
            }
 
             .card{
-                padding: 2rem;
-                display: flex;
-
-                
+                display: flex;                
                 flex-direction: column;
                 gap: 1.5rem;
                 transition: .2s all ease-in-out;

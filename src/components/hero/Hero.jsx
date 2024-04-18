@@ -17,23 +17,42 @@ const Hero = () => {
     return () => clearInterval(interval);
   }, [currentSlide]);
 
+  //OnScroll Scale Logic is here
+  const [scrollPercentage, setScrollPercentage] = useState(100);
+  const handleScroll = () => {
+    const windowHeight = window.innerHeight;
+    const scrollHeight = document.documentElement.scrollHeight;
+    const scrollTop =
+      window.scrollY || window.pageYOffset || document.body.scrollTop + (document.documentElement && document.documentElement.scrollTop || 0);
+    // Calculate the scroll percentage in reverse
+    const scrolled = 100 - scrollTop / (scrollHeight - windowHeight) * 200;
+    setScrollPercentage(scrolled);
+  };
+
+  useEffect(() => {
+    window.addEventListener('scroll', handleScroll);
+    return () => {
+      window.removeEventListener('scroll', handleScroll);
+    };
+  }, []);
+
   return (
-    <>                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                              
+    <>
       <div
         className="hero"
-        style={{ backgroundImage: `url(${images[currentSlide]})` }}
+        style={{ backgroundImage: `url(${images[currentSlide]})`, transform: `scale(${scrollPercentage / 100})` }}
       >
         {popup && <Popup />}
         {error && (
           <ErrorPopup error={error} setError={setError} setPopup={setPopup} />
         )}
-        <div className="container">
+        <div className="Container">
           <div className="title">
             <h1>
               <div className="icon">
                 <FaPlane />
               </div>
-               Search, Compare Flights & Save
+              Search, Compare Flights & Save
             </h1>
             <h2>Search. Book. Travel.</h2>
           </div>

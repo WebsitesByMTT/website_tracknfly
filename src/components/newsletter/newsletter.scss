@@ -3,35 +3,35 @@ $medium : 768px;
 $large : 992px;
 
 
-@mixin for-small{
+@mixin for-small {
     @media only screen and (max-width: $small) {
         @content
-      }  
+    }
 }
 
-@mixin for-medium{
+@mixin for-medium {
     @media only screen and (max-width: $medium) {
         @content
-      }  
+    }
 }
 
-@mixin for-large{
+@mixin for-large {
     @media only screen and (max-width: $large) {
         @content
-      }  
+    }
 }
 
 
 
-.newsletter{
+.newsletter {
     overflow: hidden;
     padding: 10rem 4rem;
 
-    @include for-small{
+    @include for-small {
         padding: 5rem 2rem;
     }
 
-    .container{
+    .container {
         height: 100%;
         width: 100%;
 
@@ -41,24 +41,25 @@ $large : 992px;
         justify-content: center;
         gap: 5rem;
 
-        .titles{
+        .titles {
             display: flex;
             flex-direction: column;
             align-items: center;
-            h2{
+
+            h2 {
                 font-size: 5rem;
                 text-align: center;
             }
-    
-            p{
+
+            p {
                 font-size: 2rem;
                 text-align: center;
 
-    
+
             }
         }
 
-        .email{
+        .email {
 
             background-color: whitesmoke;
             border-radius: 3rem;
@@ -67,15 +68,15 @@ $large : 992px;
             flex-direction: row;
             border: .01rem solid gray;
 
-            @include for-small{
-             flex-direction: column;  
-             border: none;
-             background-color: transparent; 
-             gap: 2rem;    
+            @include for-small {
+                flex-direction: column;
+                border: none;
+                background-color: transparent;
+                gap: 2rem;
             }
 
 
-            input{
+            input {
                 padding: 1rem 2em;
                 background-color: transparent;
                 border: none;
@@ -83,15 +84,15 @@ $large : 992px;
                 outline: none;
                 font-size: 1.5rem;
 
-                @include for-small{
+                @include for-small {
                     background-color: whitesmoke;
                     border: .01rem solid gray;
                 }
 
-              
+
             }
 
-            button{
+            button {
                 padding: 1rem 2em;
                 border: none;
                 background-color: #2e70ab;
@@ -102,7 +103,7 @@ $large : 992px;
                 font-size: 1.5rem;
 
 
-                &:hover{
+                &:hover {
                     background-color: #0c487c;
 
                 }

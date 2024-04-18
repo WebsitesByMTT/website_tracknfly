@@ -6,7 +6,7 @@ import { BsCoin, BsTicketPerforated } from "react-icons/bs";
 const HowWeCanHelp = () => {
   return (
     <div className="howWeCanHelp">
-      <div className="container">
+      <div className="Container">
         <div className="titles">
           <h2>Make your journey memorable with us</h2>
           <p>We provide pocket-friendly services that make your journey more enjoyable</p>
@@ -18,7 +18,7 @@ const HowWeCanHelp = () => {
             </div>
             <h3>Delve yourself into your favorite place</h3>
             <p>
-               At Trackn Fly, you can search for your most awaited travel destination. With us, travel the whole world in your budget.
+              At Trackn Fly, you can search for your most awaited travel destination. With us, travel the whole world in your budget.
             </p>
           </div>
           <div className="card">

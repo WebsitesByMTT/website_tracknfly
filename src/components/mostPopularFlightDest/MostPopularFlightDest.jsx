@@ -4,7 +4,7 @@ import "./mostPopularFlightDest.scss";
 const MostPopularFlightDest = () => {
   return (
     <div className="explore">
-      <div className="container">
+      <div className="Container">
         <div className="titles">
           <h2>MOST POPULAR FLIGHT DESTINATIONS </h2>
           <p>

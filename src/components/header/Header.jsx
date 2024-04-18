@@ -7,7 +7,7 @@ const Header = () => {
   const [open, setOpen] = useState(false);
   return (
     <div className="header">
-      <div className="container">
+      <div className="Container">
         <nav className="top">
           <ul className="left">
             <li>

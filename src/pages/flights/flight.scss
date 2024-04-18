@@ -3,86 +3,90 @@ $medium : 768px;
 $large : 992px;
 
 
-@mixin for-small{
+@mixin for-small {
     @media only screen and (max-width: $small) {
         @content
-      }  
+    }
 }
 
-@mixin for-medium{
+@mixin for-medium {
     @media only screen and (max-width: $medium) {
         @content
-      }  
+    }
 }
 
-@mixin for-large{
+@mixin for-large {
     @media only screen and (max-width: $large) {
         @content
-      }  
+    }
 }
 
 
-.flights{
+.flights {
     overflow: hidden;
 
     padding: 10rem 4rem;
 
-    @include for-small{
+    @include for-small {
         padding: 5rem 2rem;
 
     }
 
-    .container{
+    .Container {
         height: 100%;
         width: 100%;
 
-        h2{
+        h2 {
             font-size: 5rem;
             padding: 4rem;
             text-align: center;
+
+            @include for-small() {
+                font-size: 3rem;
+            }
         }
 
-        .content{
+        .content {
 
-            .cards{
+            .cards {
                 display: flex;
                 flex-direction: row;
                 flex-wrap: wrap;
                 gap: 4rem;
 
-                @include for-medium{
+                @include for-medium {
                     flex-direction: column;
                 }
 
-                .card{
+                .card {
                     // flex: 1;
                     // width: 22.4%;
                     flex: 1;
                     height: 50rem;
                     display: flex;
 
-                    @include for-large{
+                    @include for-large {
                         width: 100%;
                         overflow: hidden;
                     }
 
-                 
 
 
 
-                    .card-container{
+
+                    .card-container {
                         height: 100%;
                         display: flex;
                         width: 100%;
                         overflow: hidden;
 
-                        &:hover img{
+                        &:hover img {
                             transform: scale(1.1);
                             transition: all 0.3s ease-in-out;
                             filter: brightness(50%);
                         }
 
-                        .card-content{
+                        .card-content {
                             height: 90%;
                             width: 100%;
                             border-radius: 1rem;
@@ -90,12 +94,12 @@ $large : 992px;
                             position: relative;
                             overflow: hidden;
 
-                            @include for-medium{
+                            @include for-medium {
                                 height: 100%;
                             }
 
 
-                            .card-title{
+                            .card-title {
                                 position: absolute;
                                 z-index: 999;
                                 padding: .5rem 1rem;
@@ -110,7 +114,8 @@ $large : 992px;
                                 justify-content: center;
                                 gap: .2rem;
                             }
-                            img{
+
+                            img {
                                 border-radius: 2rem;
 
                                 z-index: 9;
@@ -120,23 +125,23 @@ $large : 992px;
                             }
                         }
                     }
-                    
+
                 }
 
 
-                &>:nth-child(odd){
-                        .card-container{
-                            align-items: flex-start;
-    
+                &>:nth-child(odd) {
+                    .card-container {
+                        align-items: flex-start;
+
                     }
                 }
 
-                &>:nth-child(even){
-                    .card-container{
+                &>:nth-child(even) {
+                    .card-container {
                         align-items: flex-end;
                     }
                 }
-                
+
             }
         }
     }

@@ -22,8 +22,8 @@ const data = [
 const WhyTracknFly = () => {
   return (
     <div className="whyTracknFly">
-      <div className="container">
-        <div className="cards">
+      <div className="Container ">
+        <div className="cards space-x-[5%]">
           {data.map((item) => (
             <div className="card">
               <h3>{item.title}</h3>

@@ -7,7 +7,7 @@ import WtcuSecondaryIMG from "/wtcu-secondary.jpg"
 const WhyToChooseUs = () => {
   return (
     <div className="whyToChooseUs">
-      <div className="container">
+      <div className="Container">
         <div className="titles">
           <h2>Why choose us</h2>
           <p>Trackn Fly is one of the best travel website where you will find exclusive offers on cheap airline tickets. If you are struggling to find last-minute hotels and flights, then worry not because there are numerous affordable hotels and flights. We also offer cheap cars on rent. So, without any hurry create your own memory with us.</p>

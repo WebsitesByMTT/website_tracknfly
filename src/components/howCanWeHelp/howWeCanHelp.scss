@@ -3,35 +3,35 @@ $medium : 768px;
 $large : 992px;
 
 
-@mixin for-small{
+@mixin for-small {
     @media only screen and (max-width: $small) {
         @content
-      }  
+    }
 }
 
-@mixin for-medium{
+@mixin for-medium {
     @media only screen and (max-width: $medium) {
         @content
-      }  
+    }
 }
 
-@mixin for-large{
+@mixin for-large {
     @media only screen and (max-width: $large) {
         @content
-      }  
+    }
 }
 
 
-.howWeCanHelp{
+.howWeCanHelp {
     overflow: hidden;
     padding: 10rem 4rem;
 
-    @include for-small{
-        padding: 5rem 2rem;
+    @include for-small {
+        padding: 3rem 2rem;
 
     }
 
-    .container{
+    .Container {
         height: 100%;
         width: 100%;
 
@@ -41,33 +41,42 @@ $large : 992px;
         justify-content: center;
         gap: 4rem;
 
-        .titles{
+        .titles {
 
-            h2{
+            h2 {
                 font-size: 5rem;
                 text-align: center;
+                padding-bottom: 2rem;
+
+                @include for-small() {
+                    font-size: 3rem;
+                }
+
+                @include for-medium() {
+                    font-size: 3rem;
+                }
             }
-            
-            p{
+
+            p {
                 font-size: 2rem;
                 color: #222;
                 text-align: center;
             }
         }
 
-        .cards{
+        .cards {
             display: flex;
             flex-wrap: wrap;
 
-            @include for-small{
+            @include for-small {
                 display: block;
-            } 
+            }
 
-            @include for-medium(){
+            @include for-medium() {
                 display: block;
-            } 
+            }
 
-            .card{
+            .card {
                 flex: 1;
                 padding: 4rem;
                 display: flex;
@@ -78,13 +87,13 @@ $large : 992px;
                 transition: .2s all ease-in-out;
 
                 &:hover {
-                    .icon{
+                    .icon {
                         background-color: #00794c;
 
                     }
                 }
 
-                .icon{
+                .icon {
                     transition: .2s all ease-in-out;
                     background-color: #0eb77a;
                     width: 5rem;
@@ -95,18 +104,19 @@ $large : 992px;
                     align-items: center;
                     justify-content: center;
 
-                    svg{
+                    svg {
                         font-size: 3rem;
                     }
 
                 }
 
-                h3{
+                h3 {
                     font-size: 2rem;
                     font-weight: 500;
                     text-align: center;
                 }
-                p{
+
+                p {
                     font-size: 1.5rem;
                     color: #222;
                     text-align: center;
