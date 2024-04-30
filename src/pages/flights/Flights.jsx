@@ -10,9 +10,10 @@ import FC4IMG from "/f-c-4.jpg"
 
 const Flights = () => {
   return (
+    
     <>
       <div className="flights">
-        <div className="container">
+        <div className="Container">
           <h2>Discover the touch of Nature</h2>
 
           <div className="content">

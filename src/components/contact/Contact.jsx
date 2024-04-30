@@ -3,7 +3,6 @@ import "./contact.scss";
 import { AiOutlineMail } from "react-icons/ai";
 import { FiPhoneCall } from "react-icons/fi";
 import { ImLocation } from "react-icons/im";
-import { CiFacebook } from "react-icons/ci";
 import { IoLogoFacebook } from "react-icons/io";
 import {
   AiFillInstagram,
@@ -15,32 +14,13 @@ const Contact = () => {
   return (
     <>
       <div className="contact">
-        <div className="container">
+        <div className="Container">
           <div className="item">
-            {/* <div className="img">
-              <img src="/email.png" alt="email" loading="lazy" />
-            </div> */}
-            {/* <div className="text">
-              <h3 className="title">For Email us</h3>
-              <p className="subtitle">admin@flynfare.com</p>
-            </div> */}
           </div>
-          {/* <div className="item">
-            <div className="img">
-              <img src="/call-f.png" alt="call" loading="lazy" />
-            </div>
-            <div className="text">
-              <h3 className="title">For reservation and booking </h3>
-              <p className="subtitle">1-888-831-1814 </p>
-              <p className="desc">
-                calls may be recorded for training and quality purposes
-              </p>
-            </div>
-          </div> */}
         </div>
       </div>
       <div className="misc">
-        <div className="container">
+        <div className="Container">
           <div className="item">
             <h3>Location</h3>
 

@@ -6,41 +6,37 @@ import { BsCoin, BsTicketPerforated } from "react-icons/bs";
 const HowWeCanHelp = () => {
   return (
     <div className="howWeCanHelp">
-      <div className="container">
+      <div className="Container">
         <div className="titles">
-          <h2>How we can help you journey</h2>
-          <p>Our service are very comfortable and can make you happy</p>
+          <h2>Make your journey memorable with us</h2>
+          <p>We provide pocket-friendly services that make your journey more enjoyable</p>
         </div>
         <div className="cards">
           <div className="card">
             <div className="icon">
               <RiEarthLine />
             </div>
-            <h3>Find your destination</h3>
+            <h3>Delve yourself into your favorite place</h3>
             <p>
-              Find your travel destination, we have covered all regions in the
-              world
+              At Trackn Fly, you can search for your most awaited travel destination. With us, travel the whole world in your budget.
             </p>
           </div>
-
           <div className="card">
             <div className="icon">
               <BsTicketPerforated />
             </div>
-            <h3>Book a ticket</h3>
+            <h3>Flight and hotel booking</h3>
             <p>
-              After finding the trip you want to go to, you can immediately
-              order the ticket.
+              Once you selected your destination, now you can find the cheapest hotel and flight tickets.
             </p>
           </div>
-
           <div className="card">
             <div className="icon">
               <BsCoin />
             </div>
-            <h3>Pay and explore destination</h3>
+            <h3>Pay and explore</h3>
             <p>
-              After you pay you can immediately enjoy the trip to destination
+              After booking a hotel and flight, explore more holiday packages. Enjoy your trip ahead.
             </p>
           </div>
         </div>

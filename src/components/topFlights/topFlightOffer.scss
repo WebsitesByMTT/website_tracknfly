@@ -24,18 +24,34 @@ $large : 992px;
 
 .topFlightOffer{
 
-    .container{
+    .Container{
         padding: 4rem;
         display: flex;
         flex-direction: column;
         gap: 5rem;
 
+        @include for-small(){
+            padding: 2rem;
+        }
+
+        @include for-medium(){
+            padding: 2rem;
+        }
+
         
         .text{
             .title{
-                 font-size: 5rem;
+            font-size: 5rem;
             text-align: center;
             margin: 4rem;
+
+            @include for-small(){
+              font-size: 3rem;
+            }
+            @include for-medium(){
+                font-size: 3rem;
+            }
+
             }
 
             .desc{

@@ -28,7 +28,7 @@ $large: 992px;
   transition: all .2s ease-in-out;
 
 
- 
+
 
   .container {
     height: 100%;
@@ -36,14 +36,16 @@ $large: 992px;
     flex-direction: column;
     gap: 2rem;
     overflow-y: scroll;
-  
-  
-    -ms-overflow-style: none;  /* IE and Edge */
-    scrollbar-width: none;  /* Firefox */
-  
+
+
+    -ms-overflow-style: none;
+    /* IE and Edge */
+    scrollbar-width: none;
+    /* Firefox */
+
     &::-webkit-scrollbar {
-        display: none;
-      }
+      display: none;
+    }
 
     .item {
       h4 {
@@ -54,24 +56,24 @@ $large: 992px;
         font-weight: 500;
         margin-bottom: 1rem;
 
-        button{
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            background: none;
-            border: none;
-            cursor: pointer;
+        button {
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          background: none;
+          border: none;
+          cursor: pointer;
+          transition: all .2s ease-in-out;
+
+
+          // @include for-greater-than-smaller(){
+          //     display: none;
+          // }
+
+          svg {
             transition: all .2s ease-in-out;
 
-
-            // @include for-greater-than-smaller(){
-            //     display: none;
-            // }
-
-            svg{
-                transition: all .2s ease-in-out;
-
-            }
+          }
         }
       }
 
@@ -111,11 +113,12 @@ $large: 992px;
           transition: all .2s ease-in-out;
           cursor: pointer;
 
-         &:hover{
+          &:hover {
             background: whitesmoke;
-         }
+          }
 
           padding: 0.7rem;
+
           input {
             display: none;
           }
@@ -135,12 +138,12 @@ $large: 992px;
 }
 
 
-.visible{
-    height: 7rem;
-    overflow: hidden;
+.visible {
+  height: 7rem;
+  overflow: hidden;
 
 
-    @include for-greater-than-smaller(){
-        height: 55vh;
-    }
+  @include for-greater-than-smaller() {
+    height: 55vh;
+  }
 }

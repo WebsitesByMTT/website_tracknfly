@@ -4,19 +4,13 @@ import "./topFlightOffer.scss";
 const TopFlightOffer = () => {
   return (
     <div className="topFlightOffer">
-      <div className="container">
+      <div className="Container">
         <div className="text">
           <h2 className="title">
-            Top <span> Flight Offers</span>
+            Book Top Flight with Flexibility
           </h2>
           <p className="desc">
-            If you’re planning your next adventure, we’ve got the best cheap
-            flight deals ready to whisk you away to your favourite locations.
-            Whether it’s a fast-paced city escape in bustling New York, exotic
-            weather in the Philippines or a far-flung trip to Sydney you’re
-            seeking, we’ve got a variety of cheap flights available from United
-            States to other major airports. We have close partnerships with over
-            150 airlines
+            Are you looking for your next trip? then check out the top airline ticket deals. If you want to discover the vibrant city of New York or explore the beauty of Sydney there is everything for everyone. Here you can book and compare the cheapest airline and flight tickets. With our exclusive packages, find the perfect holiday packages and make unforgettable memories.
           </p>
         </div>
         <div className="content">
@@ -119,7 +113,7 @@ const TopFlightOffer = () => {
                 className="card"
                 style={{
                   backgroundImage:
-                    "url(/top-flight-card-6.jpeg)",      
+                    "url(/top-flight-card-6.jpeg)",
                 }}
               >0...............
                 <div className="card-container">

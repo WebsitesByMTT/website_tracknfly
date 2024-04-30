@@ -5,7 +5,7 @@ const data = [
   {
     id: 1,
     title: "Why Trackn Fly?",
-    desc: "Trackn Fly is one of the most renowned leading company around the world. We offer great deals on airline, flight tickets, and hotel booking with exclusive discounts. There you can also hire a car on rental at a cheap price. By using our website, you will have the most seamless online booking experience without any hassle.  ",
+    desc: "Trackn Fly is one of the most renowned leading company around the world. We offer great deals on airline, flight tickets, and hotel booking with exclusive discounts. There you can also hire a car on rental at a cheap price. By using our website, you will have the most seamless online booking experience without any hassle.",
   },
   {
     id: 2,
@@ -22,8 +22,8 @@ const data = [
 const WhyTracknFly = () => {
   return (
     <div className="whyTracknFly">
-      <div className="container">
-        <div className="cards">
+      <div className="Container ">
+        <div className="cards space-x-[5%]">
           {data.map((item) => (
             <div className="card">
               <h3>{item.title}</h3>
