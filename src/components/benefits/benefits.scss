@@ -1,167 +1,160 @@
-$small : 600px;
-$medium : 768px;
-$large : 992px;
+$small: 600px;
+$medium: 768px;
+$large: 992px;
 
-
-@mixin for-small{
-    @media only screen and (max-width: $small) {
-        @content
-      }  
+@mixin for-small {
+  @media only screen and (max-width: $small) {
+    @content;
+  }
 }
 
-@mixin for-medium{
-    @media only screen and (max-width: $medium) {
-        @content
-      }  
+@mixin for-medium {
+  @media only screen and (max-width: $medium) {
+    @content;
+  }
 }
 
-@mixin for-large{
-    @media only screen and (max-width: $large) {
-        @content
-      }  
+@mixin for-large {
+  @media only screen and (max-width: $large) {
+    @content;
+  }
 }
 
+.benefits {
+  background-color: #ececec;
+  padding-bottom: 5rem;
 
-.benefits{
-    background-color: #ececec;
-    padding-bottom: 5rem;
+  @include for-small {
+    padding: 0 4px;
+  }
 
-    @include for-small{
-        padding: 0 4px;
+  .benefits_title {
+    text-align: center;
+    font-size: 5rem;
+    font-weight: 700;
+    color: black;
+    padding-top: 7rem;
+
+    @include for-small {
+      font-size: 3rem;
+      padding-top: 4rem;
     }
 
-    .benefits_title{
-        text-align:center;
-        font-size: 5rem;
-        font-weight: 700;
-        color: black;
-        padding-top: 7rem;
-
-        @include for-small{
-            font-size: 3rem;
-            padding-top: 4rem;
-        }
-
-        @include for-medium{
-            font-size: 3rem;
-            padding-top: 4rem;
-        }
-
-        .break_text{
-            @include for-small{
-                display: none;
-            }
-            
-            @include for-medium{
-                display: none;
-            }
-        }
+    @include for-medium {
+      font-size: 3rem;
+      padding-top: 4rem;
     }
 
-    .container{
-        width: 40%;
+    .break_text {
+      @include for-small {
+        display: none;
+      }
+
+      @include for-medium {
+        display: none;
+      }
+    }
+  }
+
+  .container {
+    width: 40%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 4rem 0rem;
+    margin-left: auto;
+    margin-right: auto;
+
+    @include for-small {
+      width: 95%;
+    }
+
+    @include for-medium {
+      width: 80%;
+    }
+
+    .cards {
+      display: flex;
+      width: 100%;
+      flex-wrap: wrap;
+
+      @include for-small {
+        flex-direction: column;
+        align-items: center;
+      }
+
+      .card:hover {
+        transform: scale(0.98);
+        transition: 0.2s ease;
+        opacity: 0.8;
+      }
+
+      .card {
+        flex: 1;
         display: flex;
+        flex-direction: column;
         align-items: center;
         justify-content: center;
-        padding: 4rem 0rem;
-        margin-left: auto;
-        margin-right: auto;
+        gap: 1rem;
+        padding: 3rem;
+        margin-right: 3rem;
+        background-color: #d9d9d9;
+        border-radius: 1.3rem;
+        cursor: pointer;
 
-      @include for-small{
-        width: 95%;
-      }
-
-      @include for-medium{
-        width: 80%;
-      }
-
-        .cards{
-            display: flex;
-            width: 100%;
-            flex-wrap: wrap;
-
-            @include for-small{
-                flex-direction: column;
-                align-items: center;
-            }
-
-        
-
-            .card:hover{
-                transform: scale(.98);
-                transition: .2s ease;
-                opacity: .8;
-            }
-
-            .card{
-                flex: 1;
-                display: flex;
-                flex-direction: column;
-                align-items: center;
-                justify-content: center;
-                gap: 1rem;
-                padding: 3rem;
-                margin-right: 3rem;
-                background-color: #D9D9D9;
-                border-radius: 1.3rem;
-                cursor: pointer;
-
-                @include for-small{
-                    flex-direction: column;
-                    align-items: center;
-                    margin-right: 0;
-                    margin-bottom: 2rem;
-                }
-
-
-             
-                .img{
-                    img{
-                        width: 6rem;
-                        height: 6.4rem;
-                        object-fit: contain;
-                    } 
-                    background-color:#BEBEBE;
-                    padding-top: .3rem;
-                    padding-bottom: .3rem;
-                    border-radius: 1.5rem;
-                    padding-left: .6rem;
-                    padding-right: .6rem;
-                }
-
-                .easy-steps{
-                    padding: 1rem;
-                }
-
-                .text{
-
-                    .title{
-                        font-size: 1.8rem;
-                        font-weight: 500;
-                        text-align: center;
-                        padding: .5rem 0;
-
-                        @include for-small{
-                           text-align: center;
-                        }
-                    }
-
-                    .subtitle{
-                        font-size: 1.2rem;
-                        font-weight: 400;
-                        color: gray;
-                        text-align: center;
-
-                        .read_more{
-                          color: #00BB00;
-                        }
-
-                        @include for-small{
-                            text-align: center;
-                         }
-                    }
-                }
-            }
+        @include for-small {
+          flex-direction: column;
+          align-items: center;
+          margin-right: 0;
+          margin-bottom: 2rem;
         }
+
+        .img {
+          img {
+            width: 6rem;
+            height: 6.4rem;
+            object-fit: contain;
+          }
+          background-color: #bebebe;
+          padding-top: 0.3rem;
+          padding-bottom: 0.3rem;
+          border-radius: 1.5rem;
+          padding-left: 0.6rem;
+          padding-right: 0.6rem;
+        }
+
+        .easy-steps {
+          padding: 1rem;
+        }
+
+        .text {
+          .title {
+            font-size: 1.8rem;
+            font-weight: 500;
+            text-align: center;
+            padding: 0.5rem 0;
+
+            @include for-small {
+              text-align: center;
+            }
+          }
+
+          .subtitle {
+            font-size: 1.2rem;
+            font-weight: 400;
+            color: gray;
+            text-align: center;
+
+            .read_more {
+              color: #00bb00;
+            }
+
+            @include for-small {
+              text-align: center;
+            }
+          }
+        }
+      }
     }
+  }
 }

@@ -20,20 +20,8 @@ const Header = () => {
                 />
               </Link>
             </li>
-            <li>
-              {/* <div className="mail">
-                <FiMail />
-                <span>admin@flynfare.com</span>
-              </div> */}
-            </li>
           </ul>
-          {/* <div className="right">
-            <FiPhoneCall className="icon" />
-            <div className="text">
-              <span>Call Us Today!</span>
-              <span>1-888-831-1814</span>
-            </div>
-          </div> */}
+
           <div
             className={`mobile-menu-btn ${open && "opened"}`}
             onClick={() => setOpen(!open)}
@@ -46,27 +34,31 @@ const Header = () => {
         <div className="bottom">
           <ul>
             <li>
-              <Link to="/">Home</Link>
-            </li>
-            <li>
               <Link to="/flights">Flights</Link>
             </li>
-            <li>Business Class</li>
-            <li>Airline deals</li>
             <li>
-              <Link to="/contact-us">Contact us</Link>
+              <Link to="/hotels">Hotels</Link>
             </li>
-
-            <li>Car Booking</li>
-            <li>Hotel Booking</li>
-            <li>Flight Booking</li>
-            <li>About Us</li>
-
+            <li>
+              <Link to="/car-on-rent">Car on rent</Link>
+            </li>
+            <li>
+              <Link to="/best-deals">Best Deals</Link>
+            </li>
+            <li>
+              <Link to="/contact-us">Contact Us</Link>
+            </li>
+            <li>
+              <Link to="/about-us">About Us</Link>
+            </li>
+            <li>
+              <Link to="/sign-in">Sign in</Link>
+            </li>
           </ul>
         </div>
 
         {open && (
-          <div onClick={()=>setOpen(false)} className="mobile-menu">
+          <div onClick={() => setOpen(false)} className="mobile-menu">
             <div className="mobile-menu-container">
               <ul>
                 <li>
@@ -84,7 +76,6 @@ const Header = () => {
                 <li>Hotel Booking</li>
                 <li>Flight Booking</li>
                 <li>About Us</li>
-
               </ul>
             </div>
           </div>
