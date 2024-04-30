@@ -2,6 +2,7 @@ import React, { Suspense } from "react";
 import "./App.css";
 import { Route, Routes, useLocation } from "react-router-dom";
 import PreLoader from "./utils/PreLoader";
+import AboutTrackenFly from "./components/aboutTrackenFly/AboutTrackenFly";
 //Using React Lazy
 const Home = React.lazy(() => import("./pages/Home"))
 const Header = React.lazy(() => import("./components/header/Header"))
@@ -23,7 +24,7 @@ function App() {
   const isPrivacyPolicyPage = location.pathname === "/privacy-policy";
   return (
     <>
-      <Suspense fallback={ <PreLoader />}>
+     <Suspense fallback={<PreLoader />}>
         <Header />
         {!isPrivacyPolicyPage && <Hero />}
         <Routes>
@@ -37,6 +38,7 @@ function App() {
           <Route path="/privacy-policy" element={<PrivacyPolicy />} />
         </Routes>
         <WhyTracknFly />
+        <AboutTrackenFly />
         <ProductOffering />
         <Footer />
       </Suspense>

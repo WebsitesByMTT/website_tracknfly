@@ -1,7 +1,6 @@
 import React, { useState } from "react";
 import "./header.scss";
-import { FiMail, FiPhoneCall } from "react-icons/fi";
-import { Link } from "react-router-dom";
+import { Link, NavLink } from "react-router-dom";
 
 const Header = () => {
   const [open, setOpen] = useState(false);
@@ -20,20 +19,7 @@ const Header = () => {
                 />
               </Link>
             </li>
-            <li>
-              {/* <div className="mail">
-                <FiMail />
-                <span>admin@flynfare.com</span>
-              </div> */}
-            </li>
           </ul>
-          {/* <div className="right">
-            <FiPhoneCall className="icon" />
-            <div className="text">
-              <span>Call Us Today!</span>
-              <span>1-888-831-1814</span>
-            </div>
-          </div> */}
           <div
             className={`mobile-menu-btn ${open && "opened"}`}
             onClick={() => setOpen(!open)}
@@ -46,45 +32,54 @@ const Header = () => {
         <div className="bottom">
           <ul>
             <li>
-              <Link to="/">Home</Link>
+              <NavLink  to="/flights">FLIGHTS</NavLink>
             </li>
             <li>
-              <Link to="/flights">Flights</Link>
+              <NavLink to="/hotels">HOTELS</NavLink>
             </li>
-            <li>Business Class</li>
-            <li>Airline deals</li>
             <li>
-              <Link to="/contact-us">Contact us</Link>
+              <NavLink to="/carsonrent">CAR ON RENT</NavLink>
             </li>
-
-            <li>Car Booking</li>
-            <li>Hotel Booking</li>
-            <li>Flight Booking</li>
-            <li>About Us</li>
-
+            <li>
+              <NavLink to="/bestdeals">BEST DEALS</NavLink>
+            </li>
+            <li>
+              <NavLink to="/contact">CONTACT US</NavLink>
+            </li>
+            <li>
+              <NavLink to="/about-us">ABOUT US</NavLink>
+            </li>
+            <li>
+              <NavLink to="/signin">SIGN IN</NavLink>
+            </li>
           </ul>
         </div>
 
         {open && (
-          <div onClick={()=>setOpen(false)} className="mobile-menu">
+          <div onClick={() => setOpen(false)} className="mobile-menu">
             <div className="mobile-menu-container">
               <ul>
                 <li>
-                  <Link to="/">Home</Link>
+                  <Link to="/flights">FLIGHTS</Link>
                 </li>
                 <li>
-                  <Link to="/flights">Flights</Link>
+                  <Link to="#">HOTELS</Link>
                 </li>
-                <li>Business Class</li>
-                <li>Airline deals</li>
                 <li>
-                  <Link to="/contact-us">Contact us</Link>
+                  <Link to="#">CAR ON RENT</Link>
                 </li>
-                <li>Car Booking</li>
-                <li>Hotel Booking</li>
-                <li>Flight Booking</li>
-                <li>About Us</li>
-
+                <li>
+                  <Link to="#">BEST DEALS</Link>
+                </li>
+                <li>
+                  <Link to="#">CONTACT US</Link>
+                </li>
+                <li>
+                  <Link to="#">ABOUT US</Link>
+                </li>
+                <li>
+                  <Link to="#">SIGN IN</Link>
+                </li>
               </ul>
             </div>
           </div>
