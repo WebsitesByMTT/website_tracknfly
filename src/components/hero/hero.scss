@@ -27,16 +27,14 @@ $large: 992px;
   background-repeat: no-repeat;
   background-size: cover;
   transition: background-image 1s ease-out;
-  // z-index: 99;
 
   @include for-small() {
     height: auto;
   }
 
-  .container {
+  .Container {
     height: 100%;
     background-color: #0000003f;
-
     display: flex;
     align-items: center;
     justify-content: center;
@@ -59,7 +57,6 @@ $large: 992px;
         font-weight: 700;
         font-size: 3.2rem;
         margin-bottom: 1rem;
-
         display: flex;
         flex-direction: row;
         align-items: center;
@@ -73,7 +70,6 @@ $large: 992px;
           border-radius: 50%;
           height: 5rem;
           width: 5rem;
-
           display: flex;
           align-items: center;
           justify-content: center;
@@ -100,30 +96,29 @@ $large: 992px;
       color: red;
       transition: all 0.2s ease-in-out;
     }
+
     .depart-from {
       position: relative;
     }
 
     .airport-search-depart,
     .airport-search-flying {
-      -ms-overflow-style: none; /* IE and Edge */
-      scrollbar-width: none; /* Firefox */
+      -ms-overflow-style: none;
+      /* IE and Edge */
+      scrollbar-width: none;
+      /* Firefox */
     }
 
-    
     .content {
       width: 90%;
-      // background-color: white;
-      // padding: 2rem;
-      // border-radius: 1rem;
       display: flex;
       flex-direction: column;
-      // border: 1px solid red;
       position: relative;
 
       .tabs {
         ul {
           display: flex;
+
           li {
             list-style: none;
             padding: 1rem 2rem;
@@ -138,10 +133,9 @@ $large: 992px;
             transition: all .2s ease-in-out;
           }
 
-          .active{
+          .active {
             background: white;
             color: #2e70ab;
-
           }
         }
       }
@@ -149,15 +143,9 @@ $large: 992px;
       &-container {
         display: flex;
         flex-direction: column;
-        // gap: 2rem;
-        // border: 1px dashed #111;
-        // padding: 2rem;
         border-radius: 0rem 1rem 1rem 1rem;
         background-color: white;
         position: relative;
-
-
-     
 
         .top {
           display: flex;
@@ -166,7 +154,7 @@ $large: 992px;
           padding: 2rem;
           flex-wrap: wrap;
 
-          @include for-small(){
+          @include for-small() {
             padding: 1rem;
           }
 
@@ -185,6 +173,7 @@ $large: 992px;
 
           .trip-passengers {
             position: relative;
+
             button {
               border: 1px solid rgba(128, 128, 128, 0.336);
               background: none;
@@ -193,7 +182,6 @@ $large: 992px;
               border: none;
               cursor: pointer;
               font-size: 1.4rem;
-
             }
 
             .passenger-counter {
@@ -201,8 +189,6 @@ $large: 992px;
               position: absolute;
               z-index: 9999;
               transition: all 0.2s ease-in-out;
-
-              // box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
 
               .passenger-counter-container {
                 display: flex;
@@ -219,7 +205,7 @@ $large: 992px;
                 align-items: center;
                 justify-content: space-between;
 
-                & > * {
+                &>* {
                   flex: 1;
                 }
 
@@ -232,13 +218,13 @@ $large: 992px;
                   align-items: center;
                   justify-content: space-between;
 
-                  & > :not(:nth-child(2)) {
+                  &> :not(:nth-child(2)) {
                     background-color: #2e70ab;
                     color: white;
                     cursor: pointer;
                   }
 
-                  & > * {
+                  &>* {
                     flex: 1;
                     display: flex;
                     align-items: center;
@@ -260,11 +246,9 @@ $large: 992px;
           gap: 2rem;
           padding: 2rem;
 
-          @include for-small(){
+          @include for-small() {
             flex-direction: column;
           }
-
-
 
           .item {
             border: 1px solid rgba(128, 128, 128, 0.336);
@@ -272,7 +256,7 @@ $large: 992px;
             padding: 1rem;
             height: 9rem;
 
-            @include for-small(){
+            @include for-small() {
               width: 100%;
             }
 
@@ -299,10 +283,6 @@ $large: 992px;
             }
           }
 
-          .disabled {
-            // opacity: .8;
-          }
-
           .swap {
             display: flex;
             align-items: center;
@@ -312,7 +292,7 @@ $large: 992px;
             height: 5rem;
             border-radius: 50%;
 
-            @include for-small(){
+            @include for-small() {
               display: none;
             }
           }
@@ -324,7 +304,7 @@ $large: 992px;
             z-index: 999;
             overflow: hidden;
 
-            @include for-small(){
+            @include for-small() {
               bottom: 0;
             }
 
@@ -369,20 +349,10 @@ $large: 992px;
         top: 100%;
         left: 0;
         background: white;
-        // border: 1px solid red;
         padding: 0rem 4rem;
         border-radius: 0rem 0rem 2rem 2rem;
 
-        // @include for-small() {
-        //   position: absolute;
-        //   width: 95%;
-        //   top: 13rem;
-        //   right: 1rem;
-        //   max-height: 30rem;
-        //   background-color: white;
-        // }
-
-        @include for-small(){
+        @include for-small() {
           top: 45%;
         }
 
@@ -400,7 +370,7 @@ $large: 992px;
             background-color: whitesmoke;
           }
 
-          & > * {
+          &>* {
             flex: 1;
             font-size: 1.5rem;
             padding: 1rem;
@@ -424,13 +394,12 @@ $large: 992px;
         top: 100%;
         left: 0;
         background: white;
-        // border: 1px solid red;
         padding: 0rem 4rem;
         border-radius: 0rem 0rem 2rem 2rem;
 
-       @include for-small(){
-        top: 65%;
-       }
+        @include for-small() {
+          top: 65%;
+        }
 
         &::-webkit-scrollbar {
           display: none;
@@ -446,7 +415,7 @@ $large: 992px;
             background-color: whitesmoke;
           }
 
-          & > * {
+          &>* {
             flex: 1;
             font-size: 1.5rem;
             padding: 1rem;

@@ -23,7 +23,7 @@ const data = [
 const ProductOffering = () => {
     return (
         <div className='productOffering'>
-            <div className="container">
+            <div className="Container">
                 <div className="cards">
                     {data.map((item, index) => (
                         <div className="card" key={index}>

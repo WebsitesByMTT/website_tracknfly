@@ -105,16 +105,16 @@ const SearchHotelList = () => {
                       )}
 
                       <div className={styles.facilities}>
-                          {hotel.facilities.bookWithZeroPayment && (
-                            <p>✓ Book with ₹0 Payment</p>
-                          )}
-                          {hotel.facilities.freeCancellationTillCheckIn && (
-                            <p>✓ Free Cancellation till check-in</p>
-                          )}
+                        {hotel.facilities.bookWithZeroPayment && (
+                          <p>✓ Book with ₹0 Payment</p>
+                        )}
+                        {hotel.facilities.freeCancellationTillCheckIn && (
+                          <p>✓ Free Cancellation till check-in</p>
+                        )}
 
-                          {hotel.facilities.breakfastIncluded && (
-                            <p>✓ Breakfast Included</p>
-                          )}
+                        {hotel.facilities.breakfastIncluded && (
+                          <p>✓ Breakfast Included</p>
+                        )}
                       </div>
                     </div>
                   </div>

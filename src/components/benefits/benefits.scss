@@ -24,13 +24,56 @@ $large : 992px;
 
 .benefits{
     background-color: #ececec;
+    padding-bottom: 5rem;
+
+    @include for-small{
+        padding: 0 4px;
+    }
+
+    .benefits_title{
+        text-align:center;
+        font-size: 5rem;
+        font-weight: 700;
+        color: black;
+        padding-top: 7rem;
+
+        @include for-small{
+            font-size: 3rem;
+            padding-top: 4rem;
+        }
+
+        @include for-medium{
+            font-size: 3rem;
+            padding-top: 4rem;
+        }
+
+        .break_text{
+            @include for-small{
+                display: none;
+            }
+            
+            @include for-medium{
+                display: none;
+            }
+        }
+    }
 
     .container{
-        width: 100%;
+        width: 40%;
         display: flex;
         align-items: center;
         justify-content: center;
         padding: 4rem 0rem;
+        margin-left: auto;
+        margin-right: auto;
+
+      @include for-small{
+        width: 95%;
+      }
+
+      @include for-medium{
+        width: 80%;
+      }
 
         .cards{
             display: flex;
@@ -42,30 +85,52 @@ $large : 992px;
                 align-items: center;
             }
 
+        
+
+            .card:hover{
+                transform: scale(.98);
+                transition: .2s ease;
+                opacity: .8;
+            }
 
             .card{
                 flex: 1;
-
                 display: flex;
-                flex-direction: row;
-                align-items: flex-start;
+                flex-direction: column;
+                align-items: center;
                 justify-content: center;
                 gap: 1rem;
-                padding: 4rem;
+                padding: 3rem;
+                margin-right: 3rem;
+                background-color: #D9D9D9;
+                border-radius: 1.3rem;
+                cursor: pointer;
 
                 @include for-small{
                     flex-direction: column;
                     align-items: center;
+                    margin-right: 0;
+                    margin-bottom: 2rem;
                 }
 
 
              
                 .img{
                     img{
-                        width: 6.6rem;
-                        height: 7rem;
+                        width: 6rem;
+                        height: 6.4rem;
                         object-fit: contain;
-                    }
+                    } 
+                    background-color:#BEBEBE;
+                    padding-top: .3rem;
+                    padding-bottom: .3rem;
+                    border-radius: 1.5rem;
+                    padding-left: .6rem;
+                    padding-right: .6rem;
+                }
+
+                .easy-steps{
+                    padding: 1rem;
                 }
 
                 .text{
@@ -73,7 +138,8 @@ $large : 992px;
                     .title{
                         font-size: 1.8rem;
                         font-weight: 500;
-                        text-align: left;
+                        text-align: center;
+                        padding: .5rem 0;
 
                         @include for-small{
                            text-align: center;
@@ -84,6 +150,11 @@ $large : 992px;
                         font-size: 1.2rem;
                         font-weight: 400;
                         color: gray;
+                        text-align: center;
+
+                        .read_more{
+                          color: #00BB00;
+                        }
 
                         @include for-small{
                             text-align: center;

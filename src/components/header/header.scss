@@ -22,13 +22,15 @@ $large : 992px;
 }
 
 .header {
-    // height: 10.9rem;
+    height: 10.9rem;
     display: flex;
     align-items: center;
     justify-content: center;
-    position: relative;
-
-    .container {
+    position: sticky;
+    top: 0;
+    z-index: 9999;
+    background-color: #fff;
+    .Container {
         width: 100%;
 
         .top {
@@ -164,7 +166,6 @@ $large : 992px;
             padding: 0px 7rem;
             background-color: #345c87;
             background-color: whitesmoke;
-            border-bottom: 1px solid #f9c541;
 
             ul {
                 display: flex;

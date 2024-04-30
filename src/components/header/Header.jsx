@@ -7,7 +7,7 @@ const Header = () => {
   const [open, setOpen] = useState(false);
   return (
     <div className="header">
-      <div className="container">
+      <div className="Container">
         <nav className="top">
           <ul className="left">
             <li>
@@ -66,7 +66,7 @@ const Header = () => {
         </div>
 
         {open && (
-          <div className="mobile-menu">
+          <div onClick={()=>setOpen(false)} className="mobile-menu">
             <div className="mobile-menu-container">
               <ul>
                 <li>

@@ -13,19 +13,17 @@ import {
 const Contact = () => {
   return (
     <div className="contact-us">
-      <div className="container">
+      <div className="Container">
         <h2>
-          Get <span>In Touch With Us</span>
+          We are here to help
         </h2>
         <div className="content">
           <div className="left">
             <div className="titles">
               <h3>Contact Informaion</h3>
+              <p className="enjoyable">Get in touch with us and make your trip more enjoyable</p>
               <p>
-                At FLYNFARE LLC we're constantly satisfied to get with both new
-                and existing customers, So in the event that you have a question
-                or require any information, Please feel free to reach on below
-                contact details.
+                Are you struggling to find flights or hotels? or do you need another help regarding the website? we have our most experienced staff who will provide you with guidance at any time. You can ask anything at any time with our expert team via phone and email. They will ensure you have a smooth experience because your satisfaction is the top most priority.
               </p>
             </div>
             <ul className="details">

@@ -112,15 +112,15 @@ const SearchFlightSidebar = () => {
   const handleAirlineChange = (airline) => {
     const updatedAirlines = selectedAirlines.includes(airline)
       ? selectedAirlines.filter(
-          (selectedAirline) => selectedAirline !== airline
-        )
+        (selectedAirline) => selectedAirline !== airline
+      )
       : [...selectedAirlines, airline];
 
     setSelectedAirlines(updatedAirlines);
   };
 
   return (
-    <aside className={`${styles[`search-flight-sidebar`]} ${showFilters ? styles.visible: styles.hidden}`}>
+    <aside className={`${styles[`search-flight-sidebar`]} ${showFilters ? styles.visible : styles.hidden}`}>
       <div className={styles.container}>
         <div className={styles.item}>
           <h4>
