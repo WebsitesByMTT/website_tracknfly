@@ -2,6 +2,7 @@ import React, { Suspense } from "react";
 import "./App.css";
 import { Route, Routes, useLocation } from "react-router-dom";
 import PreLoader from "./utils/PreLoader";
+import AboutTrackenFly from "./components/aboutTrackenFly/AboutTrackenFly";
 import FrquentlyAskedQuestions from "./components/faqs/FrquentlyAskedQuestions";
 import Hotel from "./pages/hotels/Hotel";
 import Cars from "./pages/cars/Cars";
@@ -38,7 +39,7 @@ function App() {
 
   return (
     <>
-      <Suspense fallback={<PreLoader />}>
+     <Suspense fallback={<PreLoader />}>
         <Header />
         {!isPrivacyPolicyPage && <Hero />}
         <Routes>
@@ -53,6 +54,7 @@ function App() {
           <Route path="/hotels_results" element={<HotelsResult />} />
           <Route path="/privacy-policy" element={<PrivacyPolicy />} />
         </Routes>
+        <AboutTrackenFly />
         <Footer />
       </Suspense>
     </>

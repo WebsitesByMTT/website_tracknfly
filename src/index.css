@@ -50,3 +50,26 @@ body {
     font-size: 40%;
   }
 }
+
+/* PreLoader Animation */
+
+.animate{
+  animation: dingding 3s  infinite;
+}
+
+@keyframes dingding {
+  0%{
+    transform: scale(1);
+    transition: 1s;
+  }
+
+  50%{
+    transform: scale(.3);
+    transition: 1s;
+  }
+
+  100%{
+    transform: scale(1);
+    transition: 1s;
+  }
+}

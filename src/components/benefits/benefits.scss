@@ -56,14 +56,14 @@ $large: 992px;
     }
   }
 
-  .container {
-    width: 40%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    padding: 4rem 0rem;
-    margin-left: auto;
-    margin-right: auto;
+    .container{
+        width: 60%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 4rem 0rem;
+        margin-left: auto;
+        margin-right: auto;
 
     @include for-small {
       width: 95%;

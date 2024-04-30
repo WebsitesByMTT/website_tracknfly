@@ -1,7 +1,6 @@
 import React, { useState } from "react";
 import "./header.scss";
-import { FiMail, FiPhoneCall } from "react-icons/fi";
-import { Link } from "react-router-dom";
+import { Link, NavLink } from "react-router-dom";
 
 const Header = () => {
   const [open, setOpen] = useState(false);
@@ -21,7 +20,6 @@ const Header = () => {
               </Link>
             </li>
           </ul>
-
           <div
             className={`mobile-menu-btn ${open && "opened"}`}
             onClick={() => setOpen(!open)}
@@ -34,25 +32,25 @@ const Header = () => {
         <div className="bottom">
           <ul>
             <li>
-              <Link to="/flights">Flights</Link>
+              <NavLink  to="/flights">FLIGHTS</NavLink>
             </li>
             <li>
-              <Link to="/hotels">Hotels</Link>
+              <NavLink to="/hotels">HOTELS</NavLink>
             </li>
             <li>
-              <Link to="/car-on-rent">Car on rent</Link>
+              <NavLink to="/carsonrent">CAR ON RENT</NavLink>
             </li>
             <li>
-              <Link to="/best-deals">Best Deals</Link>
+              <NavLink to="/bestdeals">BEST DEALS</NavLink>
             </li>
             <li>
-              <Link to="/contact-us">Contact Us</Link>
+              <NavLink to="/contact">CONTACT US</NavLink>
             </li>
             <li>
-              <Link to="/about-us">About Us</Link>
+              <NavLink to="/about-us">ABOUT US</NavLink>
             </li>
             <li>
-              <Link to="/sign-in">Sign in</Link>
+              <NavLink to="/signin">SIGN IN</NavLink>
             </li>
           </ul>
         </div>
@@ -62,20 +60,26 @@ const Header = () => {
             <div className="mobile-menu-container">
               <ul>
                 <li>
-                  <Link to="/">Home</Link>
+                  <Link to="/flights">FLIGHTS</Link>
                 </li>
                 <li>
-                  <Link to="/flights">Flights</Link>
+                  <Link to="#">HOTELS</Link>
                 </li>
-                <li>Business Class</li>
-                <li>Airline deals</li>
                 <li>
-                  <Link to="/contact-us">Contact us</Link>
+                  <Link to="#">CAR ON RENT</Link>
                 </li>
-                <li>Car Booking</li>
-                <li>Hotel Booking</li>
-                <li>Flight Booking</li>
-                <li>About Us</li>
+                <li>
+                  <Link to="#">BEST DEALS</Link>
+                </li>
+                <li>
+                  <Link to="#">CONTACT US</Link>
+                </li>
+                <li>
+                  <Link to="#">ABOUT US</Link>
+                </li>
+                <li>
+                  <Link to="#">SIGN IN</Link>
+                </li>
               </ul>
             </div>
           </div>
