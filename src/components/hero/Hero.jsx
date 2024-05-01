@@ -8,6 +8,7 @@ const images = ["/f-c-1.jpg", "f-c-2.jpg", "f-c-3.jpg", "f-c-4.jpg"];
 const Hero = () => {
 
   const [currentSlide, setCurrentSlide] = useState(0);
+  const [active, setActive] = useState('flight')
   const [error, setError] = useState("");
   const [popup, setPopup] = useState(false);
   useEffect(() => {
@@ -58,14 +59,26 @@ const Hero = () => {
           </div>
 
           <div className="content">
-            {/* Flight Iframe */}
+            <div className="flex text-[1.8rem] space-x-2 items-center">
+              <div onClick={() => setActive('flight')} className={`bg-white ${active==="flight"?'bg-orange-500 text-white':''} py-2 px-6 rounded-tl-md rounded-tr-md cursor-pointer`}>Flights</div>
+              <div onClick={() => setActive('hotel')} className={`bg-white ${active==="hotel"?'bg-orange-500 text-white':''} py-2 px-6 rounded-tl-md rounded-tr-md cursor-pointer`}>Hotels</div>
+            </div>
             <iframe
               src="//www.travelpayouts.com/widgets/22205c47ab682a18e67bf3138082cce3.html?v=2203"
               allowFullScreen={true}
-              title="Flights"
-              className="flights_hero"
+              className={active !== "flight" ? 'hidden' : 'h-[70rem] md:h-[20rem] lg:h-[15rem]'}
+              title="Car"
             ></iframe>
-            {/* Flight Iframe */}
+            <iframe
+              src="//www.travelpayouts.com/widgets/c2fcc9c9f099c9a7e5502aa4dea71d3d.html?v=2267"
+              className={active === "flight" ? 'hidden' : 'h-[70rem] md:h-[20rem] lg:h-[15rem]'}
+              title="Hotels"
+            ></iframe>
+            {/* <iframe
+              src="/kiwi-form"
+              title="Cars"
+              className="w-full h-[30rem] overflow-hidden border-none transition-all"
+            /> */}
           </div>
         </div>
       </div>
