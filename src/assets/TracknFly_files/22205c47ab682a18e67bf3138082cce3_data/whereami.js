@@ -1,0 +1,1 @@
+mewtwoForms.geoIPSetter.lang_en({"iata":"DEL","name":"Delhi","country_name":"India","coordinates":"77.10079:28.556555"})
