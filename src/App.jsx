@@ -4,12 +4,16 @@ import { Route, Routes, useLocation } from "react-router-dom";
 import PreLoader from "./utils/PreLoader";
 import AboutTrackenFly from "./components/aboutTrackenFly/AboutTrackenFly";
 import FrquentlyAskedQuestions from "./components/faqs/FrquentlyAskedQuestions";
-import Hotel from "./pages/hotels/Hotel";
 import Cars from "./pages/cars/Cars";
 import RefundPolicy from "./pages/refundPolicy/RefundPolicy";
 import TermsAndServices from "./pages/termsAndServices/TermsAndServices";
 import FAQS from "./pages/faq/FAQS";
+import KiwiForm from "./pages/kiwiform/KiwiForm";
+
 //Using React Lazy
+const Hotel=React.lazy(()=>import("./pages/hotels/Hotel"))
+const AboutUs=React.lazy(()=>import("./pages/aboutus/AboutUs"))
+const BestDeals = React.lazy(()=>import("./pages/bestdeals/BestDeals"))
 const Home = React.lazy(() => import("./pages/Home"));
 const Header = React.lazy(() => import("./components/header/Header"));
 const Contact = React.lazy(() => import("./pages/contact/Contact"));
@@ -89,6 +93,7 @@ function App() {
     "/cancellation-and-refund-policy",
     "/terms-and-services",
     "/frequently-asked-questions",
+    "/best-deals"
   ];
   const shouldRenderHero = !excludePathsForHero.includes(location.pathname);
 
@@ -117,6 +122,10 @@ function App() {
           />
           <Route path="/terms-and-services" element={<TermsAndServices />} />
           <Route path="/frequently-asked-questions" element={<FAQS />} />
+          <Route path="/best-deals" element={<BestDeals />} />
+          <Route path="/about-us" element={<AboutUs />} />
+          {/* <Route path="/kiwi-form" element={<KiwiForm />}/> */}
+
         </Routes>
 
         {shouldRenderProductOffering && (
