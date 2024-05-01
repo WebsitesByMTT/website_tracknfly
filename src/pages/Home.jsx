@@ -9,6 +9,8 @@ import FrquentlyAskedQuestions from "../components/faqs/FrquentlyAskedQuestions"
 import ProductOffering from "../components/productOffering/ProductOffering";
 import WhyTracknFly from "../components/whyTracknFly/WhyTracknFly";
 import AboutTrackenFly from "../components/aboutTrackenFly/AboutTrackenFly";
+import Blogs from "../components/blogs/Blogs";
+
 
 const data = {
   frquentlyAskedQuestions: [
@@ -58,6 +60,7 @@ const Home = () => {
       <PopularBeach />
       <TopFlightOffer />
       <HowWeCanHelp />
+      <Blogs />
       <WhyToChooseUs />
       <WhyTracknFly />
       <AboutTrackenFly />

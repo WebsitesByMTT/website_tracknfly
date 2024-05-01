@@ -46,9 +46,10 @@ $large : 992px;
             align-items: center;
             justify-content: center;
             h2{
-                font-size: 5rem;
+                font-size: 4rem;
                 padding-bottom: 2rem;
                 text-align: center;
+                font-weight: 580;
 
                 @include for-small(){
                     font-size: 3rem;

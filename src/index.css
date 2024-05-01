@@ -73,3 +73,7 @@ body {
     transition: 1s;
   }
 }
+ 
+.carousel .control-dots .dot{
+  background-color: red !important;
+}
