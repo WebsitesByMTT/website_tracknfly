@@ -29,9 +29,10 @@ $large : 992px;
 
     @include for-small{
         padding: 5rem 2rem;
+        margin-bottom: 4rem;
     }
 
-    .container{
+    .Container{
         height: 100%;
         width: 100%;
         display: flex;
@@ -45,8 +46,18 @@ $large : 992px;
             align-items: center;
             justify-content: center;
             h2{
-                font-size: 5rem;
+                font-size: 4rem;
+                padding-bottom: 2rem;
                 text-align: center;
+                font-weight: 580;
+
+                @include for-small(){
+                    font-size: 3rem;
+                }
+
+                @include for-medium(){
+                    font-size: 3rem;
+                }
             }
 
             p{
@@ -77,7 +88,6 @@ $large : 992px;
                     display: flex;
                     flex-direction: column;
                     gap: 4rem;
-                    padding-left: 2rem;
 
                    li{
                   
