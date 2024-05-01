@@ -1,79 +1,115 @@
-$small : 600px;
-$medium : 768px;
-$large : 992px;
+$small: 600px;
+$medium: 768px;
+$large: 992px;
 
-
-@mixin for-small{
-    @media only screen and (max-width: $small) {
-        @content
-      }  
+@mixin for-small {
+  @media only screen and (max-width: $small) {
+    @content;
+  }
 }
 
-@mixin for-medium{
-    @media only screen and (max-width: $medium) {
-        @content
-      }  
+@mixin for-medium {
+  @media only screen and (max-width: $medium) {
+    @content;
+  }
 }
 
-@mixin for-large{
-    @media only screen and (max-width: $large) {
-        @content
-      }  
+@mixin for-large {
+  @media only screen and (max-width: $large) {
+    @content;
+  }
 }
 
+.topFlightOffer {
+  .Container {
+    padding: 4rem;
+    display: flex;
+    flex-direction: column;
+    gap: 5rem;
 
-.topFlightOffer{
+    @include for-small() {
+      padding: 2rem;
+    }
 
-    .Container{
-        padding: 4rem;
+    @include for-medium() {
+      padding: 2rem;
+    }
+
+    .text {
+      .title {
+        font-size: 5rem;
+        text-align: center;
+        margin: 4rem;
+
+        @include for-small() {
+          font-size: 3rem;
+        }
+        @include for-medium() {
+          font-size: 3rem;
+        }
+      }
+
+      .desc {
+        font-size: 2rem;
+        color: #111;
+        // border: 1px solid red;
+      }
+    }
+
+    .content {
+      display: flex;
+      flex-direction: column;
+      gap: 2rem;
+
+      .row1 {
         display: flex;
-        flex-direction: column;
-        gap: 5rem;
+        flex-wrap: wrap;
+        gap: 2rem;
 
-        @include for-small(){
-            padding: 2rem;
+        @include for-small {
+          flex-direction: column;
         }
 
-        @include for-medium(){
-            padding: 2rem;
-        }
+        .left,
+        .right {
+          flex: 1;
 
-        
-        .text{
-            .title{
-            font-size: 5rem;
-            text-align: center;
-            margin: 4rem;
+          .card {
+            position: relative;
+            height: 30rem;
+            cursor: pointer;
+            overflow: hidden;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+            border-radius: 2rem;
 
-            @include for-small(){
-              font-size: 3rem;
-            }
-            @include for-medium(){
-                font-size: 3rem;
-            }
+            &-container {
+              height: 100%;
+              transition: 0.2s all ease-in-out;
 
-            }
+              &:hover {
+                background-color: #00000060;
+              }
 
-            .desc{
-                font-size: 2rem;
-                color: #111;
-            }
-        }
+              &:hover > .card-container-inner {
+                bottom: 0;
+              }
 
-        .content{
-            display: flex;
-            flex-direction: column;
-            gap: 2rem;
-
-            .row1{
+              &-inner {
+                background-color: #00000060;
+                padding: 2rem;
                 display: flex;
-                flex-wrap: wrap;
+                flex-direction: column;
                 gap: 2rem;
+                align-items: flex-start;
+                position: absolute;
+                width: 100%;
+                bottom: -20%;
 
-                @include for-small{
-                    flex-direction: column;
+                @include for-small {
+                  bottom: -25%;
                 }
-                
                 .left, .right{
                     flex: 1;
                   
@@ -145,41 +181,120 @@ $large : 992px;
                             }
                         }
                     }
-                }
-                .right{
-                    flex: 1;
-                    display: flex;
-                    flex-wrap: wrap;
-                    gap: 2rem;
+                transition: 0.2s all ease-in-out;
 
-                
+                .text {
+                  color: white;
+                  display: flex;
+                  flex-direction: column;
+                  align-items: flex-start;
+                  justify-content: center;
 
-                    .card{
-                        flex: 1;
-                        &-container{
-                            .text{
-                                p{
-                                    font-size: 2rem;
-                                    color: white;
-                                }
-                            }
-                        }
-                    }
+                  h3 {
+                    font-size: 2.5rem;
+                  }
+                  p {
+                    font-size: 2rem;
+                  }
                 }
+
+                button {
+                  padding: 0.5rem 1rem;
+                  background-color: #007afc;
+                  border: none;
+                  color: white;
+                  cursor: pointer;
+                  border-radius: 1rem;
+                }
+              }
             }
+          }
+        }
+        .right {
+          flex: 1;
+          display: flex;
+          flex-wrap: wrap;
+          gap: 2rem;
 
-
-
-            .row2{
-                display: flex;
-                flex-wrap: wrap;
-                gap: 2rem;
-
-
-                @include for-small{
-                    flex-direction: column;
+          .card {
+            flex: 1;
+            &-container {
+              .text {
+                p {
+                  font-size: 2rem;
+                  color: white;
                 }
-                
+              }
+            }
+          }
+        }
+      }
+
+      .row2 {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 2rem;
+
+        @include for-small {
+          flex-direction: column;
+        }
+
+        .left,
+        .right {
+          flex: 1;
+          .card {
+            position: relative;
+            height: 30rem;
+            cursor: pointer;
+            overflow: hidden;
+
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+            border-radius: 2rem;
+
+            &-container {
+              height: 100%;
+              transition: 0.2s all ease-in-out;
+
+              &:hover {
+                background-color: #00000060;
+              }
+
+              &:hover > .card-container-inner {
+                bottom: 0;
+              }
+
+              &-inner {
+                background-color: #00000060;
+                padding: 2rem;
+                display: flex;
+                flex-direction: column;
+                gap: 2rem;
+                align-items: flex-start;
+                position: absolute;
+                width: 100%;
+                bottom: -20%;
+
+                @include for-small {
+                  bottom: -25%;
+                }
+                transition: 0.2s all ease-in-out;
+
+                .text {
+                  color: white;
+                  display: flex;
+                  flex-direction: column;
+                  align-items: flex-start;
+                  justify-content: center;
+
+                  h3 {
+                    font-size: 2.5rem;
+                  }
+                  p {
+                    font-size: 2rem;
+                  }
+                }
                 .left, .right{
                     flex: 1;
                     .card{
@@ -252,24 +367,35 @@ $large : 992px;
                             }
                         }
                     }
+                button {
+                  padding: 0.5rem 1rem;
+                  background-color: #007afc;
+                  border: none;
+                  color: white;
+                  cursor: pointer;
+                  border-radius: 1rem;
                 }
-                .left{
-                    flex: 1;
-                    display: flex;
-                    gap: 2rem;
-                    .card{
-                        flex: 1;
-                        &-container{
-                            .text{
-                                p{
-                                    font-size: 2rem;
-                                    color: white;
-                                }
-                            }
-                        }
-                    }
-                }
+              }
             }
+          }
         }
+        .left {
+          flex: 1;
+          display: flex;
+          gap: 2rem;
+          .card {
+            flex: 1;
+            &-container {
+              .text {
+                p {
+                  font-size: 2rem;
+                  color: white;
+                }
+              }
+            }
+          }
+        }
+      }
     }
+  }
 }
