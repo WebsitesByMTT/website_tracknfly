@@ -93,6 +93,7 @@ function App() {
     "/cancellation-and-refund-policy",
     "/terms-and-services",
     "/frequently-asked-questions",
+    "/best-deals"
   ];
   const shouldRenderHero = !excludePathsForHero.includes(location.pathname);
 
