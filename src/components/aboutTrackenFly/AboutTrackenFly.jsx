@@ -3,7 +3,7 @@ import aboutTracknfly from '/aboutTrackenfly.png'
 
 const AboutTrackenFly = () => {
     return (
-        <div className='bg-[#F5F5F5]'>
+        <div className=''>
             <div className='w-[95%] py-5 md:py-24 mx-auto'>
                 <div className='relative overflow-hidden rounded-[2rem]'>
                     <img src={aboutTracknfly} alt="img" className='rounded-[2rem] w-full hover:scale-125 transition-all'/>

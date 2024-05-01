@@ -6,25 +6,25 @@ import {
   AccordionTrigger,
 } from "../ui/accordion";
 
-const FrquentlyAskedQuestions = ({ data, sidebar = true }) => {
+const FrquentlyAskedQuestions = ({ title = "FAQs", data, sidebar = true }) => {
   return (
-    <div className=" p-[4rem] flex justify-between gap-24 flex-col lg:flex-row">
+    <div className=" py-[7rem] px-[4rem] flex justify-between gap-24 flex-col lg:flex-row ">
       <div className="left  flex-1">
         <h2
           className={`${
             sidebar
-              ? " text-center md:text-right  text-[2.5rem] "
-              : "text-center text-[3rem] md:text-[5rem]"
-          }  font-semibold mb-[5rem] mr-[5rem]`}
+              ? " text-center md:text-right text-[3rem] md:text-[4rem] "
+              : "text-center text-[3rem] md:text-[4rem]"
+          }  mb-[5rem] mr-[5rem] ${title == "FAQs" && "font-semibold"}`}
         >
-          FAQs
+          {title}
         </h2>
         <Accordion type="single" collapsible>
           {data.map((item, index) => (
             <AccordionItem value={`item-${index}`}>
               <AccordionTrigger>
                 <h6 className=" flex gap-4 text-left">
-                  <span className=" rounded-[50%] w-[2.5rem] h-[2.5rem] flex items-center justify-center bg-[#0EB77A] text-white">
+                  <span className=" rounded-[50%] min-w-[2.5rem] h-[2.5rem] flex items-center justify-center bg-[#0EB77A] text-white">
                     {index + 1}
                   </span>
                   {item.question}

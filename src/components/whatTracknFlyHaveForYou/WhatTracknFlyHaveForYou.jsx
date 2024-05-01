@@ -31,7 +31,7 @@ const data = [
 
 export const WhatTracknFlyHaveForYou = () => {
   return (
-    <div className="whatTracknFlyHaveForYou flex flex-col gap-[5rem] py-[7rem]">
+    <div className="whatTracknFlyHaveForYou flex flex-col gap-[7rem] py-[7rem] px-[2rem]">
       <div className="whatTracknFlyHaveForYou_title text-[3rem] md:text-[5rem]">
         What does Trackn Fly have for you?
       </div>
