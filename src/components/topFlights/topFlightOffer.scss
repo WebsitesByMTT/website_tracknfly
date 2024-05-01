@@ -110,6 +110,77 @@ $large: 992px;
                 @include for-small {
                   bottom: -25%;
                 }
+                .left, .right{
+                    flex: 1;
+                  
+                    .card{
+                        position: relative;
+                        height: 30rem;
+                        cursor: pointer;
+                        overflow: hidden;
+                        background-position: center;
+                        background-repeat: no-repeat;
+                        background-size: cover;
+                        border-radius: 2rem;
+
+
+                        &-container{
+                            height: 100%;
+                            transition: .2s all ease-in-out;
+
+                           
+                           
+                            &:hover{
+                                background-color: #00000060;
+                            }
+
+                            &:hover > .card-container-inner{
+                                bottom: 0;
+                            }
+
+                            &-inner{
+                                background-color: #00000060;padding: 2rem;
+                                display: flex;
+                                flex-direction: column;
+                                gap: 2rem;
+                                align-items: flex-start;
+                                position: absolute;
+                                width: 100%;
+                                bottom: -20%;
+
+                                @include for-small{
+                                    bottom: -25%;
+                                }
+                                transition: .2s all ease-in-out;
+
+                                
+                                .text{
+                                    color: white;
+                                    display: flex;
+                                    flex-direction: column;
+                                    align-items: flex-start;
+                                    justify-content: center;
+                                    
+                                    h3{
+                                        font-size: 2.5rem;
+                                        padding-bottom: 1rem;
+                                    }
+                                    p{
+                                        font-size: 2rem;
+                                    }
+                                }
+
+                                button{
+                                    padding: 0.5rem 1rem;
+                                    background-color: #007afc;
+                                    border: none;
+                                    color: white;
+                                    cursor: pointer;
+                                    border-radius: 1rem;
+                                }
+                            }
+                        }
+                    }
                 transition: 0.2s all ease-in-out;
 
                 .text {
@@ -224,7 +295,78 @@ $large: 992px;
                     font-size: 2rem;
                   }
                 }
+                .left, .right{
+                    flex: 1;
+                    .card{
+                        position: relative;
+                        height: 30rem;
+                        cursor: pointer;
+                        overflow: hidden;
 
+                        background-position: center;
+                        background-repeat: no-repeat;
+                        background-size: cover;
+                        border-radius: 2rem;
+
+
+
+                        &-container{
+                            height: 100%;
+                            transition: .2s all ease-in-out;
+
+                           
+                           
+                            &:hover{
+                                background-color: #00000060;
+                            }
+
+                            &:hover > .card-container-inner{
+                                bottom: 0;
+                            }
+
+                            &-inner{
+                                background-color: #00000060;padding: 2rem;
+                                display: flex;
+                                flex-direction: column;
+                                gap: 2rem;
+                                align-items: flex-start;
+                                position: absolute;
+                                width: 100%;
+                                bottom: -20%;
+
+                                @include for-small{
+                                    bottom: -25%;
+                                }
+                                transition: .2s all ease-in-out;
+
+                                
+                                .text{
+                                    color: white;
+                                    display: flex;
+                                    flex-direction: column;
+                                    align-items: flex-start;
+                                    justify-content: center;
+                                    
+                                    h3{
+                                        font-size: 2.5rem;
+                                        padding-bottom: 1rem;
+                                    }
+                                    p{
+                                        font-size: 2rem;
+                                    }
+                                }
+
+                                button{
+                                    padding: 0.5rem 1rem;
+                                    background-color: #007afc;
+                                    border: none;
+                                    color: white;
+                                    cursor: pointer;
+                                    border-radius: 1rem;
+                                }
+                            }
+                        }
+                    }
                 button {
                   padding: 0.5rem 1rem;
                   background-color: #007afc;

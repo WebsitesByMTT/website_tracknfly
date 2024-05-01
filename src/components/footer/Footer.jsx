@@ -109,13 +109,13 @@ const Footer = () => {
             <div className="text-white text-[1.1rem] pt-5 text-center">Copyright &copy; 2024 TRACKNFLY.COM</div>
           </div>
           <div className="md:flex items-center text-center md:text-start space-y-3 md:space-y-0 md:space-x-3 justify-center text-white text-opacity-70 text-[1.1rem] pt-5">
-             <div className="cursor-pointer hover:opacity-70 uppercase border-r-2 pr-4 border-gray-400">privacy policy</div>
-             <div className="cursor-pointer hover:opacity-70 uppercase border-r-2 pr-4 border-gray-400">CANCELLATION AND REFUND POLICY</div>
-             <div className="cursor-pointer hover:opacity-70 uppercase border-r-2 pr-4 border-gray-400">TERMS AND SERVICES</div>
-             <div className="cursor-pointer hover:opacity-70 uppercase border-r-2 pr-4 border-gray-400">Faqs</div>
-             <div className="cursor-pointer hover:opacity-70 uppercase border-r-2 pr-4 border-gray-400">refer & earn</div>
-             <div className="cursor-pointer hover:opacity-70 uppercase border-r-2 pr-4 border-gray-400">rewards</div>
-             <div className="cursor-pointer hover:opacity-70 uppercase border-r-2 pr-4 border-gray-400">Support</div>
+             <div className="cursor-pointer hover:opacity-70 uppercase md:border-r-2 pr-4 border-gray-400">privacy policy</div>
+             <div className="cursor-pointer hover:opacity-70 uppercase md:border-r-2 pr-4 border-gray-400">CANCELLATION AND REFUND POLICY</div>
+             <div className="cursor-pointer hover:opacity-70 uppercase md:border-r-2 pr-4 border-gray-400">TERMS AND SERVICES</div>
+             <div className="cursor-pointer hover:opacity-70 uppercase md:border-r-2 pr-4 border-gray-400">Faqs</div>
+             <div className="cursor-pointer hover:opacity-70 uppercase md:border-r-2 pr-4 border-gray-400">refer & earn</div>
+             <div className="cursor-pointer hover:opacity-70 uppercase md:border-r-2 pr-4 border-gray-400">rewards</div>
+             <div className="cursor-pointer hover:opacity-70 uppercase md:border-r-2 pr-4 border-gray-400">Support</div>
              <div className="cursor-pointer hover:opacity-70 uppercase">manage trip</div>
           </div>
         </div>
