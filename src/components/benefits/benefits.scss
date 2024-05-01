@@ -110,11 +110,12 @@ $large : 992px;
                     flex-direction: column;
                     align-items: center;
                     margin-right: 0;
-                    margin-bottom: 2rem;
                 }
 
+                @include for-large{
+                    margin-top: 2rem;
+                }
 
-             
                 .img{
                     img{
                         width: 6rem;
