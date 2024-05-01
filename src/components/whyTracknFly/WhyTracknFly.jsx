@@ -1,5 +1,4 @@
 import React from "react";
-import "./whyTracknFly.scss";
 
 const data = [
   {
@@ -21,13 +20,15 @@ const data = [
 
 const WhyTracknFly = () => {
   return (
-    <div className="whyTracknFly">
-      <div className="Container ">
-        <div className="cards space-x-[5%]">
+    <div className=" overflow-hidden py-[5rem] px-[2rem] md:py-[10rem] md:px-[4rem]">
+      <div className=" ">
+        <div className=" grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-[4rem]">
           {data.map((item) => (
-            <div className="card">
-              <h3>{item.title}</h3>
-              <p>{item.desc}</p>
+            <div className=" flex flex-col gap-[1.6rem]">
+              <h3 className=" text-[2rem] font-[500] text-left">
+                {item.title}
+              </h3>
+              <p className=" text-[1.6rem] text-justify">{item.desc}</p>
             </div>
           ))}
         </div>

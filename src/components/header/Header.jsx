@@ -32,19 +32,19 @@ const Header = () => {
         <div className="bottom">
           <ul>
             <li>
-              <NavLink  to="/flights">FLIGHTS</NavLink>
+              <NavLink to="/flights">FLIGHTS</NavLink>
             </li>
             <li>
               <NavLink to="/hotels">HOTELS</NavLink>
             </li>
             <li>
-              <NavLink to="/carsonrent">CAR ON RENT</NavLink>
+              <NavLink to="/car-on-rent">CAR ON RENT</NavLink>
             </li>
             <li>
-              <NavLink to="/bestdeals">BEST DEALS</NavLink>
+              <NavLink to="/best-deals">BEST DEALS</NavLink>
             </li>
             <li>
-              <NavLink to="/contact">CONTACT US</NavLink>
+              <NavLink to="/contact-us">CONTACT US</NavLink>
             </li>
             <li>
               <NavLink to="/about-us">ABOUT US</NavLink>
