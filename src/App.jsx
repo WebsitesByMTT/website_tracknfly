@@ -9,6 +9,7 @@ import RefundPolicy from "./pages/refundPolicy/RefundPolicy";
 import TermsAndServices from "./pages/termsAndServices/TermsAndServices";
 import FAQS from "./pages/faq/FAQS";
 import KiwiForm from "./pages/kiwiform/KiwiForm";
+
 //Using React Lazy
 const Hotel=React.lazy(()=>import("./pages/hotels/Hotel"))
 const AboutUs=React.lazy(()=>import("./pages/aboutus/AboutUs"))
@@ -123,6 +124,7 @@ function App() {
           <Route path="/best-deals" element={<BestDeals />} />
           <Route path="/about-us" element={<AboutUs />} />
           {/* <Route path="/kiwi-form" element={<KiwiForm />}/> */}
+
         </Routes>
 
         {shouldRenderProductOffering && (
