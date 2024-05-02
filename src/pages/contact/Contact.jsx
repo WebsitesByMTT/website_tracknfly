@@ -3,16 +3,10 @@ import "./contact.scss";
 import { FiMapPin } from "react-icons/fi";
 import { IoIosCall } from "react-icons/io";
 import { AiOutlineMail } from "react-icons/ai";
-import { IoLogoFacebook } from "react-icons/io";
-import {
-  AiFillInstagram,
-  AiFillTwitterCircle,
-  AiFillLinkedin,
-} from "react-icons/ai";
 import AboutTrackenFly from "../../components/aboutTrackenFly/AboutTrackenFly";
 import { Link } from "react-router-dom";
 import WhyTracknFly from "../../components/whyTracknFly/WhyTracknFly";
-import ProductOffering from "../../components/productOffering/ProductOffering";
+import Hero from "../../components/hero/Hero";
 
 const social = [
   {
@@ -42,13 +36,16 @@ const social = [
 ];
 const Contact = () => {
   return (
+    <>
+       <Hero text={'Explore Flights - Hotels Online & Cars on Rent'}/>
+  
     <div className="contact-us">
-      <div className="Container py-[7rem] flex flex-col gap-[7rem]">
-        <div className="px-[2rem] md:px-[4rem] flex items-center justify-center flex-col gap-[1rem] ">
-          <h2 className="text-black text-center tracking-wide font-semibold  text-[4rem]">
+      <div className="Container px-[2rem] flex flex-col pb-[7rem] md:gap-[7rem]">
+        <div className="  md:px-[4rem] flex md:items-center justify-center flex-col gap-[1rem] ">
+          <h2 className="text-black pt-10  md:text-center tracking-wide font-semibold  text-[4rem]">
             We are here to help
           </h2>
-          <p className=" text-[2rem] w-full md:w-[80%] text-center">
+          <p className=" text-[2rem] w-full md:w-[80%] md:text-center">
             Are you struggling to find flights or hotels? or do you need another
             help regarding the website? we have our most experienced staff who
             will provide you with guidance at any time. You can ask anything at
@@ -58,7 +55,7 @@ const Contact = () => {
           </p>
         </div>
         <div className="content flex flex-col lg:flex-row">
-          <div className="left  py-[4rem] px-[2rem] md:px-[7rem]">
+          <div className="left  py-[4rem]  md:px-[7rem]">
             <div className="flex flex-col gap-[1rem]">
               <h3 className=" text-[3rem] font-semibold  tracking-wide ">
                 Get in touch with us and make your trip more enjoyable
@@ -131,6 +128,7 @@ const Contact = () => {
       <WhyTracknFly />
       <AboutTrackenFly />
     </div>
+    </>
   );
 };
 

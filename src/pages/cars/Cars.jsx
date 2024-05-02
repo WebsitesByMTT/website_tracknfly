@@ -3,6 +3,7 @@ import FrquentlyAskedQuestions from "../../components/faqs/FrquentlyAskedQuestio
 import Benefits from "../../components/benefits/Benefits";
 import AboutTrackenFly from "../../components/aboutTrackenFly/AboutTrackenFly";
 import ProductOffering from "../../components/productOffering/ProductOffering";
+import Hero from "../../components/hero/Hero";
 
 const data = {
   frquentlyAskedQuestions: [
@@ -99,6 +100,7 @@ const data = {
 const Cars = () => {
   return (
     <>
+      <Hero text={'Find Hundreds Of Cars on Rent At Your Destination'}/>
       <Benefits />
       <FrquentlyAskedQuestions
         data={data.frquentlyAskedQuestions}

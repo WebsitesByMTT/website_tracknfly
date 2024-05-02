@@ -33,7 +33,7 @@ const PrivacyPolicy = () => {
     window.scrollTo(0, 0);
   }, []);
   return (
-    <div className={" p-[4rem]"}>
+    <div className={" px-[2rem] py-[3rem] md:p-[4rem]"}>
       <div className={" flex flex-col gap-[4rem]"}>
         <div className={""}>
           <h1 className="text-black text-left tracking-wide font-semibold  text-[4rem]">

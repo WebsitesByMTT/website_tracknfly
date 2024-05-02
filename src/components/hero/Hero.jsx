@@ -5,8 +5,9 @@ import Popup from "../popup/Popup";
 import ErrorPopup from "../errorPopup/ErrorPopup";
 const images = ["/f-c-1.jpg", "f-c-2.jpg", "f-c-3.jpg", "f-c-4.jpg"];
 
-const Hero = () => {
+const Hero = ({text}) => {
 
+  const [iframeLoaded, setIframeLoaded] = useState(false);
   const [currentSlide, setCurrentSlide] = useState(0);
   const [active, setActive] = useState('flight')
   const [error, setError] = useState("");
@@ -17,31 +18,11 @@ const Hero = () => {
     }, 4000);
     return () => clearInterval(interval);
   }, [currentSlide]);
-
-  //OnScroll Scale Logic is here
-  const [scrollPercentage, setScrollPercentage] = useState(100);
-  const handleScroll = () => {
-    const windowHeight = window.innerHeight;
-    const scrollHeight = document.documentElement.scrollHeight;
-    const scrollTop =
-      window.scrollY || window.pageYOffset || document.body.scrollTop + (document.documentElement && document.documentElement.scrollTop || 0);
-    // Calculate the scroll percentage in reverse
-    const scrolled = 100 - scrollTop / (scrollHeight - windowHeight) * 200;
-    setScrollPercentage(scrolled);
-  };
-
-  useEffect(() => {
-    window.addEventListener('scroll', handleScroll);
-    return () => {
-      window.removeEventListener('scroll', handleScroll);
-    };
-  }, []);
-
   return (
     <>
       <div
         className="hero"
-        style={{ backgroundImage: `url(${images[currentSlide]})`, transform: `scale(${scrollPercentage / 100})` }}
+        style={{ backgroundImage: `url(${images[currentSlide]})` }}
       >
         {popup && <Popup />}
         {error && (
@@ -53,32 +34,39 @@ const Hero = () => {
               <div className="icon">
                 <FaPlane />
               </div>
-              Search, Compare Flights & Save
+              {text}
             </h1>
             <h2>Search. Book. Travel.</h2>
           </div>
 
           <div className="content">
             <div className="flex text-[1.8rem] space-x-2 items-center">
-              <div onClick={() => setActive('flight')} className={`bg-white ${active==="flight"?'bg-orange-500 text-white':''} py-2 px-6 rounded-tl-md rounded-tr-md cursor-pointer`}>Flights</div>
-              <div onClick={() => setActive('hotel')} className={`bg-white ${active==="hotel"?'bg-orange-500 text-white':''} py-2 px-6 rounded-tl-md rounded-tr-md cursor-pointer`}>Hotels</div>
+              <div onClick={() => setActive('flight')} className={` ${active === "flight" ? 'bg-[#F99C00] text-white' : 'bg-white'} py-2 px-6 rounded-tl-md rounded-tr-md cursor-pointer`}>Flights</div>
+              <div onClick={() => setActive('hotel')} className={` ${active === "hotel" ? 'bg-[#F99C00] text-white' : 'bg-white'} py-2 px-6 rounded-tl-md rounded-tr-md cursor-pointer`}>Hotels</div>
             </div>
+            {!iframeLoaded && <div className="relative">
+              <div className="absolute top-0 left-0 h-full w-full bg-opacity-40 animate-pulse bg-white animate-shine"></div>
+              <div className="flex items-center justify-center h-[42rem] md:h-[9.3rem]  rounded-lg shadow-md">
+
+              </div>
+            </div>}
             <iframe
-              src="//www.travelpayouts.com/widgets/22205c47ab682a18e67bf3138082cce3.html?v=2203"
+              scrolling="no"
+              frameBorder="0"
+              src={"//www.travelpayouts.com/widgets/22205c47ab682a18e67bf3138082cce3.html?v=2203"}
               allowFullScreen={true}
-              className={active !== "flight" ? 'hidden' : 'h-[70rem] md:h-[20rem] lg:h-[15rem]'}
+              onLoad={() => setIframeLoaded(true)}
+              className={(active !== "flight" || !iframeLoaded) ? 'hidden' : 'h-[70rem] md:h-[20rem] lg:h-[15rem]'}
               title="Car"
             ></iframe>
             <iframe
+              scrolling="no"
+              frameBorder="0"
+              onLoad={() => setIframeLoaded(true)}
               src="//www.travelpayouts.com/widgets/c2fcc9c9f099c9a7e5502aa4dea71d3d.html?v=2267"
-              className={active === "flight" ? 'hidden' : 'h-[70rem] md:h-[20rem] lg:h-[15rem]'}
+              className={(active === "flight" || !iframeLoaded) ? 'hidden' : 'h-[70rem] md:h-[20rem] lg:h-[15rem]'}
               title="Hotels"
             ></iframe>
-            {/* <iframe
-              src="/kiwi-form"
-              title="Cars"
-              className="w-full h-[30rem] overflow-hidden border-none transition-all"
-            /> */}
           </div>
         </div>
       </div>

@@ -6,6 +6,7 @@ import FrquentlyAskedQuestions from "../../components/faqs/FrquentlyAskedQuestio
 import Benefits from "../../components/benefits/Benefits";
 import AboutTrackenFly from "../../components/aboutTrackenFly/AboutTrackenFly";
 import ProductOffering from "../../components/productOffering/ProductOffering";
+import Hero from "../../components/hero/Hero";
 
 const data = {
   frquentlyAskedQuestions: [
@@ -108,6 +109,7 @@ const data = {
 const Flights = () => {
   return (
     <>
+      <Hero text={'Search Domestic and International Flight Online'}/>
       <Benefits />
       <WhatTracknFlyHaveForYou />
       <FrquentlyAskedQuestions
