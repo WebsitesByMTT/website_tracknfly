@@ -6,6 +6,7 @@ import FrquentlyAskedQuestions from "../../components/faqs/FrquentlyAskedQuestio
 import Benefits from "../../components/benefits/Benefits";
 import AboutTrackenFly from "../../components/aboutTrackenFly/AboutTrackenFly";
 import ProductOffering from "../../components/productOffering/ProductOffering";
+import { Helmet } from "react-helmet";
 import Hero from "../../components/hero/Hero";
 
 const data = {
@@ -109,6 +110,34 @@ const data = {
 const Flights = () => {
   return (
     <>
+      <Helmet>
+        <title>
+          Trackn Fly gives the best deals on cheap air-flight tickets.
+        </title>
+        <meta
+          name="description"
+          content="By visiting Trackn Fly, you will have the best deals on cheap air and book flight tickets on our flights page. Now you don't need to cancel your travel plans."
+        />
+        <meta property="og:url" content="https://www.tracknfly.com/flights" />
+        <meta property="og:type" content="website" />
+        <meta
+          property="og:title"
+          content="Trackn Fly gives the best deals on cheap air-flight tickets."
+        />
+        <meta property="og:site_name" content="FLIGHTS" />
+        <meta
+          property="og:description"
+          content="By visiting Trackn Fly, you will have the best deals on cheap air and book flight tickets on our flights page. Now you don't need to cancel your travel plans."
+        />
+        <meta
+          property="og:image"
+          content="https://i.im.ge/2024/04/30/ZPv6SY.Final-logo.jpeg"
+        />
+        <meta
+          name="Keywords"
+          content="flights booking, flights online Booking, flight tickets, best deals, travel plans, Travel Ideas, cheap air, air-flight tickets, International Flight Online, Domestic flights Booking, Trackn Fly, Fly with Trackn Fly, united airlines, expedia flights, airline tickets, plane tickets, google flights"
+        />
+      </Helmet>
       <Hero text={'Search Domestic and International Flight Online'}/>
       <Benefits />
       <WhatTracknFlyHaveForYou />

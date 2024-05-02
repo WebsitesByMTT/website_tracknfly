@@ -4,6 +4,7 @@ import Benefits from "../../components/benefits/Benefits";
 import ProductOffering from "../../components/productOffering/ProductOffering";
 import FrquentlyAskedQuestions from "../../components/faqs/FrquentlyAskedQuestions";
 import AboutTrackenFly from "../../components/aboutTrackenFly/AboutTrackenFly";
+import { Helmet } from "react-helmet";
 import Hero from "../../components/hero/Hero";
 
 const data = {
@@ -107,7 +108,33 @@ const data = {
 const Hotel = () => {
   return (
     <>
-      <Hero text={'Our Best Hotels to Book Online'}/>
+      <Helmet>
+        <title>Book Hotel rooms online and have the best deal on it.</title>
+        <meta
+          name="description"
+          content="At Trackn Fly book hotel rooms online and have the best deal on it. You can save more money with its coupons. Visit the hotels page for more information"
+        />
+        <meta property="og:url" content="https://www.tracknfly.com/Hotels" />
+        <meta property="og:type" content="website" />
+        <meta
+          property="og:title"
+          content="Book Hotel rooms online and have the best deal on it."
+        />
+        <meta property="og:site_name" content="Hotels" />
+        <meta
+          property="og:description"
+          content="At Trackn Fly book hotel rooms online and have the best deal on it. You can save more money with its coupons. Visit the hotels page for more information."
+        />
+        <meta
+          property="og:image"
+          content="https://i.im.ge/2024/04/30/ZPv6SY.Final-logo.jpeg"
+        />
+        <meta
+          name="Keywords"
+          content="Hotels Booking, Hotel online book, expedia hotels, Hotel Booking with Trackn fly, cheap hotels near me, cheap hotels, nyc hotels, hotels tonight, hotel booking sites, best hotel booking site, book hotel"
+        />
+      </Helmet>
+      <Hero text={"Our Best Hotels to Book Online"} activeTab="hotel" />
       <Benefits />
       <FrquentlyAskedQuestions
         data={data.frquentlyAskedQuestions}

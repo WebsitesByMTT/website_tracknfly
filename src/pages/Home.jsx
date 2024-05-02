@@ -10,7 +10,6 @@ import AboutTrackenFly from "../components/aboutTrackenFly/AboutTrackenFly";
 import Blogs from "../components/blogs/Blogs";
 import Hero from "../components/hero/Hero";
 
-
 const data = {
   frquentlyAskedQuestions: [
     {
