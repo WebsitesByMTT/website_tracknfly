@@ -117,4 +117,5 @@ const BestDeals = () => {
   );
 };
 
+
 export default BestDeals;

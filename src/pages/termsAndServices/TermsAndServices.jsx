@@ -30,13 +30,13 @@ const TermsAndServices = () => {
           content="https://i.im.ge/2024/04/30/ZPv6SY.Final-logo.jpeg"
         />
       </Helmet>
-      <div className={" p-[4rem] scroll-smooth"}>
-        <div className={" flex flex-col gap-[4rem]"}>
-          <div className={""}>
-            <h1 className="text-black text-left tracking-wide font-semibold  text-[4rem] capitalize">
-              Here are our terms and conditions{" "}
-            </h1>
-          </div>
+    <div className={"px-[2rem] py-[3rem] md:p-[4rem] scroll-smooth"}>
+      <div className={" flex flex-col gap-[4rem]"}>
+        <div className={""}>
+          <h1 className="text-black text-left tracking-wide font-semibold  text-[4rem] capitalize">
+            Here are our terms and conditions{" "}
+          </h1>
+        </div>
 
           <div className={` flex flex-col gap-[1rem]`}>
             <p className=" text-[1.6rem]">

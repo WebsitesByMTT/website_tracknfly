@@ -57,14 +57,14 @@ const PrivacyPolicy = () => {
           content="https://i.im.ge/2024/04/30/ZPv6SY.Final-logo.jpeg"
         />
       </Helmet>
-      <div className={" p-[4rem]"}>
-        <div className={" flex flex-col gap-[4rem]"}>
-          <div className={""}>
-            <h1 className="text-black text-left tracking-wide font-semibold  text-[4rem]">
-              Privacy Policy
-            </h1>
-          </div>
 
+    <div className={" px-[2rem] py-[3rem] md:p-[4rem]"}>
+      <div className={" flex flex-col gap-[4rem]"}>
+        <div className={""}>
+          <h1 className="text-black text-left tracking-wide font-semibold  text-[4rem]">
+            Privacy Policy
+          </h1>
+        </div>
           {data.map((item, index) => (
             <div className={` flex flex-col gap-[1rem]`} key={index}>
               <h2 className=" text-[2.6rem]">{item.title}</h2>

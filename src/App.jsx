@@ -16,7 +16,6 @@ const Home = React.lazy(() => import("./pages/Home"));
 const Header = React.lazy(() => import("./components/header/Header"));
 const Contact = React.lazy(() => import("./pages/contact/Contact"));
 const Footer = React.lazy(() => import("./components/footer/Footer"));
-const Hero = React.lazy(() => import("./components/hero/Hero"));
 const Flights = React.lazy(() => import("./pages/flights/Flights"));
 const PrivacyPolicy = React.lazy(() =>
   import("./pages/privacyPolicy/PrivacyPolicy")
@@ -73,27 +72,18 @@ const data = {
 
 function App() {
   const location = useLocation();
-  const excludePathsForHero = [
-    "/privacy-policy",
-    "/cancellation-&-refund-policy",
-    "/terms-&services",
-    "/frequently-asked-questions",
-    "/best-deals",
-  ];
-  const shouldRenderHero = !excludePathsForHero.includes(location.pathname);
-
   const excludePaths = ["/flights", "/hotels", "/car-on-rent", "best-deals"];
   const shouldRenderProductOffering = !excludePaths.includes(location.pathname);
-
+  window.scrollTo({top: 0,behavior: 'smooth'})
   return (
     <>
       <Suspense fallback={<PreLoader />}>
         <Header />
-        {shouldRenderHero && <Hero />}
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/flights" element={<Flights />} />
           <Route path="/hotels" element={<Hotel />} />
+
           <Route path="/cars-on-rent" element={<Cars />} />
           <Route path="/best-deals" element={<BestDeals />} />
           <Route path="/contact-us" element={<Contact />} />
@@ -110,6 +100,7 @@ function App() {
         {shouldRenderProductOffering && (
           <ProductOffering data={data.productOffering} />
         )}
+
         <Footer />
       </Suspense>
     </>

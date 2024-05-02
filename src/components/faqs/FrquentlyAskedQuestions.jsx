@@ -8,14 +8,14 @@ import {
 
 const FrquentlyAskedQuestions = ({ title = "FAQs", data, sidebar = true }) => {
   return (
-    <div className=" py-[7rem] px-[4rem] flex justify-between gap-24 flex-col lg:flex-row ">
+    <div className="py-[4rem] md:py-[7rem] px-[2rem] md:px-[4rem] flex justify-between gap-24 flex-col lg:flex-row ">
       <div className="left  flex-1">
         <h2
           className={`${
             sidebar
               ? " text-center md:text-right text-[3rem] md:text-[4rem] "
               : "text-center text-[3rem] md:text-[4rem]"
-          }  mb-[5rem] mr-[5rem] ${title == "FAQs" && "font-semibold"}`}
+          } mb-[1rem]  md:mb-[5rem] mr-[5rem] ${title == "FAQs" && "font-semibold"}`}
         >
           {title}
         </h2>

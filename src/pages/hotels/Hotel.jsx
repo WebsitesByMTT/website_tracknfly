@@ -5,6 +5,7 @@ import ProductOffering from "../../components/productOffering/ProductOffering";
 import FrquentlyAskedQuestions from "../../components/faqs/FrquentlyAskedQuestions";
 import AboutTrackenFly from "../../components/aboutTrackenFly/AboutTrackenFly";
 import { Helmet } from "react-helmet";
+import Hero from "../../components/hero/Hero";
 
 const data = {
   frquentlyAskedQuestions: [
@@ -133,6 +134,7 @@ const Hotel = () => {
           content="Hotels Booking, Hotel online book, expedia hotels, Hotel Booking with Trackn fly, cheap hotels near me, cheap hotels, nyc hotels, hotels tonight, hotel booking sites, best hotel booking site, book hotel"
         />
       </Helmet>
+      <Hero text={'Our Best Hotels to Book Online'}/>
       <Benefits />
       <FrquentlyAskedQuestions
         data={data.frquentlyAskedQuestions}
