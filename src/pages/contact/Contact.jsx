@@ -1,12 +1,8 @@
 import React from "react";
 import "./contact.scss";
-import { FiMapPin } from "react-icons/fi";
-import { IoIosCall } from "react-icons/io";
-import { AiOutlineMail } from "react-icons/ai";
 import AboutTrackenFly from "../../components/aboutTrackenFly/AboutTrackenFly";
 import { Link } from "react-router-dom";
 import WhyTracknFly from "../../components/whyTracknFly/WhyTracknFly";
-import ProductOffering from "../../components/productOffering/ProductOffering";
 import { Helmet } from "react-helmet";
 import Hero from "../../components/hero/Hero";
 
@@ -94,15 +90,54 @@ const Contact = () => {
               </div>
               <ul className=" flex flex-col gap-[2rem]">
                 <li className=" text-[2rem] flex items-center gap-[1rem]">
-                  <FiMapPin className="icon" />
+                  <svg
+                    width="20"
+                    height="20"
+                    viewBox="0 0 20 20"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      fill-rule="evenodd"
+                      clip-rule="evenodd"
+                      d="M5.04953 4.04999C6.36235 2.73717 8.14292 1.99963 9.99953 1.99963C11.8561 1.99963 13.6367 2.73717 14.9495 4.04999C16.2623 5.36281 16.9999 7.14338 16.9999 8.99999C16.9999 10.8566 16.2623 12.6372 14.9495 13.95L9.99953 18.9L5.04953 13.95C4.39944 13.3 3.88376 12.5283 3.53193 11.6789C3.18011 10.8296 2.99902 9.9193 2.99902 8.99999C2.99902 8.08068 3.18011 7.17037 3.53193 6.32104C3.88376 5.47172 4.39944 4.70001 5.04953 4.04999ZM9.99953 11C10.53 11 11.0387 10.7893 11.4137 10.4142C11.7888 10.0391 11.9995 9.53042 11.9995 8.99999C11.9995 8.46956 11.7888 7.96085 11.4137 7.58578C11.0387 7.2107 10.53 6.99999 9.99953 6.99999C9.4691 6.99999 8.96039 7.2107 8.58532 7.58578C8.21024 7.96085 7.99953 8.46956 7.99953 8.99999C7.99953 9.53042 8.21024 10.0391 8.58532 10.4142C8.96039 10.7893 9.4691 11 9.99953 11Z"
+                      fill="#18181B"
+                    />
+                  </svg>
                   <span>Address: </span> Irving, TX 75038, USA.
                 </li>
                 <li className=" text-[2rem] flex items-center gap-[1rem]">
-                  <IoIosCall />
+                  <svg
+                    width="16"
+                    height="16"
+                    viewBox="0 0 16 16"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M0 1C0 0.734784 0.105357 0.48043 0.292893 0.292893C0.48043 0.105357 0.734784 0 1 0H3.153C3.38971 0.000108969 3.6187 0.0841807 3.79924 0.23726C3.97979 0.390339 4.10018 0.602499 4.139 0.836L4.879 5.271C4.91436 5.48222 4.88097 5.69921 4.78376 5.89003C4.68655 6.08085 4.53065 6.23543 4.339 6.331L2.791 7.104C3.34611 8.47965 4.17283 9.72928 5.22178 10.7782C6.27072 11.8272 7.52035 12.6539 8.896 13.209L9.67 11.661C9.76552 11.4695 9.91994 11.3138 10.1106 11.2166C10.3012 11.1194 10.5179 11.0859 10.729 11.121L15.164 11.861C15.3975 11.8998 15.6097 12.0202 15.7627 12.2008C15.9158 12.3813 15.9999 12.6103 16 12.847V15C16 15.2652 15.8946 15.5196 15.7071 15.7071C15.5196 15.8946 15.2652 16 15 16H13C5.82 16 0 10.18 0 3V1Z"
+                      fill="#18181B"
+                    />
+                  </svg>
                   <span>Phone : </span> 1-888-831-1814
                 </li>
                 <li className=" text-[2rem] flex items-center gap-[1rem]">
-                  <AiOutlineMail />
+                  <svg
+                    width="20"
+                    height="20"
+                    viewBox="0 0 20 20"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M2.00293 5.884L9.99993 9.882L17.9969 5.884C17.9673 5.37444 17.744 4.89549 17.3728 4.54523C17.0015 4.19497 16.5103 3.99991 15.9999 4H3.99993C3.48951 3.99991 2.99838 4.19497 2.62711 4.54523C2.25584 4.89549 2.03253 5.37444 2.00293 5.884Z"
+                      fill="#18181B"
+                    />
+                    <path
+                      d="M18 8.11804L10 12.118L2 8.11804V14C2 14.5305 2.21071 15.0392 2.58579 15.4143C2.96086 15.7893 3.46957 16 4 16H16C16.5304 16 17.0391 15.7893 17.4142 15.4143C17.7893 15.0392 18 14.5305 18 14V8.11804Z"
+                      fill="#18181B"
+                    />
+                  </svg>
                   <span>E-mail : </span> admin@flynfare.com
                 </li>
               </ul>
