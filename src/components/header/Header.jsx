@@ -63,22 +63,22 @@ const Header = () => {
                   <Link to="/flights">FLIGHTS</Link>
                 </li>
                 <li>
-                  <Link to="#">HOTELS</Link>
+                  <Link to="/hotels">HOTELS</Link>
                 </li>
                 <li>
-                  <Link to="#">CAR ON RENT</Link>
+                  <Link to="/car-on-rent">CAR ON RENT</Link>
                 </li>
                 <li>
-                  <Link to="#">BEST DEALS</Link>
+                  <Link to="/best-deals">BEST DEALS</Link>
                 </li>
                 <li>
-                  <Link to="#">CONTACT US</Link>
+                  <Link to="/contact-us">CONTACT US</Link>
                 </li>
                 <li>
-                  <Link to="#">ABOUT US</Link>
+                  <Link to="/about-us">ABOUT US</Link>
                 </li>
                 <li>
-                  <Link to="#">SIGN IN</Link>
+                  <Link to="/signin">SIGN IN</Link>
                 </li>
               </ul>
             </div>

@@ -186,7 +186,7 @@ const FAQS = () => {
     window.scrollTo(0, 0);
   }, []);
   return (
-    <div className={" py-[7rem] px-[4rem]"}>
+    <div className={" py-[4rem] md:py-[7rem] px-[2rem] md:px-[4rem]"}>
       <div className={" flex flex-col gap-[4rem]"}>
         <div className={""}>
           <h1 className="text-black text-center tracking-wide font-semibold  text-[4rem]">

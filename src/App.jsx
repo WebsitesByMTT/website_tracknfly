@@ -2,14 +2,10 @@ import React, { Suspense } from "react";
 import "./App.css";
 import { Route, Routes, useLocation } from "react-router-dom";
 import PreLoader from "./utils/PreLoader";
-import AboutTrackenFly from "./components/aboutTrackenFly/AboutTrackenFly";
-import FrquentlyAskedQuestions from "./components/faqs/FrquentlyAskedQuestions";
 import Cars from "./pages/cars/Cars";
 import RefundPolicy from "./pages/refundPolicy/RefundPolicy";
 import TermsAndServices from "./pages/termsAndServices/TermsAndServices";
 import FAQS from "./pages/faq/FAQS";
-import KiwiForm from "./pages/kiwiform/KiwiForm";
-
 //Using React Lazy
 const Hotel=React.lazy(()=>import("./pages/hotels/Hotel"))
 const AboutUs=React.lazy(()=>import("./pages/aboutus/AboutUs"))
@@ -18,28 +14,13 @@ const Home = React.lazy(() => import("./pages/Home"));
 const Header = React.lazy(() => import("./components/header/Header"));
 const Contact = React.lazy(() => import("./pages/contact/Contact"));
 const Footer = React.lazy(() => import("./components/footer/Footer"));
-const Hero = React.lazy(() => import("./components/hero/Hero"));
 const Flights = React.lazy(() => import("./pages/flights/Flights"));
-const FlightsList = React.lazy(() => import("./pages/flightsList/FlightsList"));
-const FlightDetail = React.lazy(() =>
-  import("./pages/flightDetail/FlightDetail")
-);
-const FlightResult = React.lazy(() =>
-  import("./pages/flightsResult/FlightResult")
-);
-const HotelsResult = React.lazy(() =>
-  import("./pages/hotelsResult/HotelsResult")
-);
 const PrivacyPolicy = React.lazy(() =>
   import("./pages/privacyPolicy/PrivacyPolicy")
 );
 const ProductOffering = React.lazy(() =>
   import("./components/productOffering/ProductOffering")
-);
-const WhyTracknFly = React.lazy(() =>
-  import("./components/whyTracknFly/WhyTracknFly")
-);
-
+)
 const data = {
   productOffering: [
     {
@@ -88,49 +69,26 @@ const data = {
 
 function App() {
   const location = useLocation();
-  const excludePathsForHero = [
-    "/privacy-policy",
-    "/cancellation-and-refund-policy",
-    "/terms-and-services",
-    "/frequently-asked-questions",
-    "/best-deals"
-  ];
-  const shouldRenderHero = !excludePathsForHero.includes(location.pathname);
-
   const excludePaths = ["/flights", "/hotels", "/car-on-rent", "best-deals"];
   const shouldRenderProductOffering = !excludePaths.includes(location.pathname);
-
+  window.scrollTo({top: 0,behavior: 'smooth'})
   return (
     <>
       <Suspense fallback={<PreLoader />}>
         <Header />
-        {shouldRenderHero && <Hero />}
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/contact-us" element={<Contact />} />
           <Route path="/flights" element={<Flights />} />
           <Route path="/hotels" element={<Hotel />} />
           <Route path="/car-on-rent" element={<Cars />} />
-          <Route path="/flight-list" element={<FlightsList />} />
-          <Route path="/flight-detail" element={<FlightDetail />} />
-          <Route path="/flights_results" element={<FlightResult />} />
-          <Route path="/hotels_results" element={<HotelsResult />} />
           <Route path="/privacy-policy" element={<PrivacyPolicy />} />
-          <Route
-            path="/cancellation-and-refund-policy"
-            element={<RefundPolicy />}
-          />
+          <Route path="/cancellation-and-refund-policy" element={<RefundPolicy />}/>
           <Route path="/terms-and-services" element={<TermsAndServices />} />
           <Route path="/frequently-asked-questions" element={<FAQS />} />
           <Route path="/best-deals" element={<BestDeals />} />
           <Route path="/about-us" element={<AboutUs />} />
-          {/* <Route path="/kiwi-form" element={<KiwiForm />}/> */}
-
-        </Routes>
-
-        {shouldRenderProductOffering && (
-          <ProductOffering data={data.productOffering} />
-        )}
+        </Routes>{shouldRenderProductOffering && (<ProductOffering data={data.productOffering} />)}
         <Footer />
       </Suspense>
     </>

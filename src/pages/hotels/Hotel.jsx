@@ -4,6 +4,7 @@ import Benefits from "../../components/benefits/Benefits";
 import ProductOffering from "../../components/productOffering/ProductOffering";
 import FrquentlyAskedQuestions from "../../components/faqs/FrquentlyAskedQuestions";
 import AboutTrackenFly from "../../components/aboutTrackenFly/AboutTrackenFly";
+import Hero from "../../components/hero/Hero";
 
 const data = {
   frquentlyAskedQuestions: [
@@ -106,6 +107,7 @@ const data = {
 const Hotel = () => {
   return (
     <>
+      <Hero text={'Our Best Hotels to Book Online'}/>
       <Benefits />
       <FrquentlyAskedQuestions
         data={data.frquentlyAskedQuestions}
