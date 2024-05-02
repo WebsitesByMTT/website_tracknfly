@@ -134,7 +134,7 @@ const Hotel = () => {
           content="Hotels Booking, Hotel online book, expedia hotels, Hotel Booking with Trackn fly, cheap hotels near me, cheap hotels, nyc hotels, hotels tonight, hotel booking sites, best hotel booking site, book hotel"
         />
       </Helmet>
-      <Hero text={'Our Best Hotels to Book Online'}/>
+      <Hero text={"Our Best Hotels to Book Online"} activeTab="hotel" />
       <Benefits />
       <FrquentlyAskedQuestions
         data={data.frquentlyAskedQuestions}
