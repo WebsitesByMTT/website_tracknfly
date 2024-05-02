@@ -20,7 +20,7 @@ const data = [
 
 const WhyTracknFly = () => {
   return (
-    <div className=" overflow-hidden py-[5rem] px-[2rem] md:py-[10rem] md:px-[4rem]">
+    <div className=" overflow-hidden py-[3rem] px-[2rem] md:py-[10rem] md:px-[4rem]">
       <div className=" ">
         <div className=" grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-[4rem]">
           {data.map((item) => (

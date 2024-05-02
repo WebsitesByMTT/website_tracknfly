@@ -3,6 +3,8 @@ import FrquentlyAskedQuestions from "../../components/faqs/FrquentlyAskedQuestio
 import Benefits from "../../components/benefits/Benefits";
 import AboutTrackenFly from "../../components/aboutTrackenFly/AboutTrackenFly";
 import ProductOffering from "../../components/productOffering/ProductOffering";
+import { Helmet } from "react-helmet";
+import Hero from "../../components/hero/Hero";
 
 const data = {
   frquentlyAskedQuestions: [
@@ -99,6 +101,41 @@ const data = {
 const Cars = () => {
   return (
     <>
+      <Helmet>
+        <title>Trackn Fly has the best deals on cars on rent.</title>
+        <meta
+          name="description"
+          content=" Book affordable cars with Trackn fly. It has the best deals on cars on rent. If you have any doubt, then do visit our car on rent page."
+        />
+        <meta
+          property="og:url"
+          content="https://www.tracknfly.com/cars-on-rent"
+        />
+        <meta property="og:type" content="website" />
+        <meta
+          property="og:title"
+          content="Trackn Fly has the best deals on cars on rent."
+        />
+        <meta property="og:site_name" content="cars on rent" />
+        <meta
+          property="og:description"
+          content="Book affordable cars with Trackn fly. It has the best deals on cars on rent. If you have any doubt, then do visit our car on rent page."
+        />
+        <meta
+          property="og:image"
+          content="https://i.im.ge/2024/04/30/ZPv6SY.Final-logo.jpeg"
+        />
+        <meta
+          name="Keywords"
+          content="cars on rent, rental cars, how much to rent a car, car rental san diego, google rental cars, rent a car with Tracknfly, rental agencies, last minute car rentals, cheap rental car delivered to you, airport rent a car, cheap automobile rentals, available car"
+        />
+      </Helmet>
+
+      <Hero
+        text={"Find Hundreds Of Cars on Rent At Your Destination"}
+        activeTab="car"
+      />
+
       <Benefits />
       <FrquentlyAskedQuestions
         data={data.frquentlyAskedQuestions}
