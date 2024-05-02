@@ -3,6 +3,7 @@ import bestdealsbg from "/bestdeals.png";
 import { Carousel } from "react-responsive-carousel";
 import "react-responsive-carousel/lib/styles/carousel.min.css";
 import { Helmet } from "react-helmet";
+import AboutTrackenFly from "../../components/aboutTrackenFly/AboutTrackenFly";
 
 const BestDeals = () => {
   const data = [
@@ -80,7 +81,7 @@ const BestDeals = () => {
               className="md:pb-[20%] pb-[5%] lg:pb-[16%]"
               infiniteLoop
               autoPlay
-              centerSlidePercentage={80}
+              centerSlidePercentage={84}
               centerMode
               showThumbs={false}
               showArrows={false}
@@ -113,9 +114,9 @@ const BestDeals = () => {
           </div>
         </div>
       </div>
+      <AboutTrackenFly />
     </>
   );
 };
-
 
 export default BestDeals;

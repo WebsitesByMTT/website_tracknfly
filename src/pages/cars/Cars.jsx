@@ -101,7 +101,6 @@ const data = {
 const Cars = () => {
   return (
     <>
-
       <Helmet>
         <title>Trackn Fly has the best deals on cars on rent.</title>
         <meta
@@ -132,7 +131,10 @@ const Cars = () => {
         />
       </Helmet>
 
-      <Hero text={'Find Hundreds Of Cars on Rent At Your Destination'}/>
+      <Hero
+        text={"Find Hundreds Of Cars on Rent At Your Destination"}
+        activeTab="car"
+      />
 
       <Benefits />
       <FrquentlyAskedQuestions
