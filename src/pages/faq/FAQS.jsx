@@ -1,3 +1,4 @@
+import { Helmet } from "react-helmet";
 import FrquentlyAskedQuestions from "../../components/faqs/FrquentlyAskedQuestions";
 import React, { useEffect } from "react";
 
@@ -186,6 +187,29 @@ const FAQS = () => {
     window.scrollTo(0, 0);
   }, []);
   return (
+    <>
+      <Helmet>
+        <title>FAQ - Book cheap hotels, flights | cars on rental</title>
+        <meta
+          name="description"
+          content=" Trackn Fly - If you have any questions then do visit its FAQ page. It is the best travel agency that has cheap hotels, flights, and cars on rentals."
+        />
+        <meta
+          property="og:url"
+          content="https://www.tracknfly.com/frequently-asked-questions"
+        />
+        <meta property="og:type" content="website" />
+        <meta property="og:title" content=" TERMS & SERVICES - Trackn Fly" />
+        <meta property="og:site_name" content="TERMS & SERVICES" />
+        <meta
+          property="og:description"
+          content="Trackn Fly - Before booking cheap hotels, flights, and cars on rentals, you must agree with its terms and conditions. It is the best travel agency."
+        />
+        <meta
+          property="og:image"
+          content="https://i.im.ge/2024/04/30/ZPv6SY.Final-logo.jpeg"
+        />
+      </Helmet>
     <div className={" py-[4rem] md:py-[7rem] px-[2rem] md:px-[4rem]"}>
       <div className={" flex flex-col gap-[4rem]"}>
         <div className={""}>
@@ -203,7 +227,7 @@ const FAQS = () => {
           ))}
         </div>
       </div>
-    </div>
+    </>
   );
 };
 
