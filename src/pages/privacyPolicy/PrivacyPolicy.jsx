@@ -1,4 +1,5 @@
 import React, { useEffect } from "react";
+import { Helmet } from "react-helmet";
 
 const data = [
   {
@@ -33,22 +34,46 @@ const PrivacyPolicy = () => {
     window.scrollTo(0, 0);
   }, []);
   return (
-    <div className={" p-[4rem]"}>
-      <div className={" flex flex-col gap-[4rem]"}>
-        <div className={""}>
-          <h1 className="text-black text-left tracking-wide font-semibold  text-[4rem]">
-            Privacy Policy
-          </h1>
-        </div>
-
-        {data.map((item, index) => (
-          <div className={` flex flex-col gap-[1rem]`} key={index}>
-            <h2 className=" text-[2.6rem]">{item.title}</h2>
-            <p className=" text-[1.6rem]">{item.desc}</p>
+    <>
+      <Helmet>
+        <title>Privacy Policy - Trackn Fly</title>
+        <meta
+          name="description"
+          content="Trackn Fly - A travel agency that has huge discounts on cheap hotels, flights and coats on rentals. For more information visit its privacy policy."
+        />
+        <meta
+          property="og:url"
+          content="https://www.tracknfly.com/privacy-policy"
+        />
+        <meta property="og:type" content="website" />
+        <meta property="og:title" content="Privacy Policy - Trackn Fly" />
+        <meta property="og:site_name" content="Privacy Policy" />
+        <meta
+          property="og:description"
+          content="Trackn Fly - A travel agency that has huge discounts on cheap hotels, flights and coats on rentals. For more information visit its privacy policy."
+        />
+        <meta
+          property="og:image"
+          content="https://i.im.ge/2024/04/30/ZPv6SY.Final-logo.jpeg"
+        />
+      </Helmet>
+      <div className={" p-[4rem]"}>
+        <div className={" flex flex-col gap-[4rem]"}>
+          <div className={""}>
+            <h1 className="text-black text-left tracking-wide font-semibold  text-[4rem]">
+              Privacy Policy
+            </h1>
           </div>
-        ))}
+
+          {data.map((item, index) => (
+            <div className={` flex flex-col gap-[1rem]`} key={index}>
+              <h2 className=" text-[2.6rem]">{item.title}</h2>
+              <p className=" text-[1.6rem]">{item.desc}</p>
+            </div>
+          ))}
+        </div>
       </div>
-    </div>
+    </>
   );
 };
 

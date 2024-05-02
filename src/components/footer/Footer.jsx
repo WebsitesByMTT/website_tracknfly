@@ -35,7 +35,7 @@ const data = [
       },
       {
         name: "Terms & conditions",
-        url: "/terms-and-services",
+        url: "/terms-&services",
       },
       {
         name: "privacy",
@@ -320,12 +320,12 @@ const Footer = () => {
               <Link to={"/privacy-policy"}> privacy policy</Link>
             </li>
             <li className="cursor-pointer hover:opacity-70 uppercase border-r-2 pr-4 border-gray-400">
-              <Link to={"/cancellation-and-refund-policy"}>
+              <Link to={"/cancellation-&-refund-policy"}>
                 CANCELLATION AND REFUND POLICY
               </Link>
             </li>
             <li className="cursor-pointer hover:opacity-70 uppercase border-r-2 pr-4 border-gray-400">
-              <Link to={"/terms-and-services"}>TERMS AND SERVICES</Link>
+              <Link to={"/terms-&services"}>TERMS AND SERVICES</Link>
             </li>
             <li className="cursor-pointer hover:opacity-70 uppercase border-r-2 pr-4 border-gray-400">
               <Link to={"/frequently-asked-questions"}>FAQS</Link>
@@ -340,7 +340,7 @@ const Footer = () => {
               <Link to={"/rewards"}>rewards</Link>
             </li>
             <li className="cursor-pointer hover:opacity-70 uppercase border-r-2 pr-4 border-gray-400">
-              <Link to={"/support"}>support</Link>
+              <Link to={"/contact-us"}>support</Link>
             </li>
             <li className="cursor-pointer hover:opacity-70 uppercase">
               <Link to={"/manage-trip"}>manage trip</Link>

@@ -11,7 +11,6 @@ import WhyTracknFly from "../components/whyTracknFly/WhyTracknFly";
 import AboutTrackenFly from "../components/aboutTrackenFly/AboutTrackenFly";
 import Blogs from "../components/blogs/Blogs";
 
-
 const data = {
   frquentlyAskedQuestions: [
     {
