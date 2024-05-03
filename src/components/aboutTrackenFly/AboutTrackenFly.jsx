@@ -11,8 +11,8 @@ const AboutTrackenFly = () => {
             className={`text-white p-12 rounded-2xl md:p-20 bg-cover bg-center`}
             style={{ backgroundImage: `url(${aboutTracknfly})` }}
           >
-            <div className="font-bold text-[4rem]">About Trackn Fly</div>
-            <div className="text-[2rem] font-normal tracking-wide leading-relaxed">
+            <h5 className="font-bold text-[3rem]">About Trackn Fly</h5>
+            <p className="text-[1.6rem] font-normal tracking-wide leading-relaxed">
               Today, we have been solving billions of queries across the world
               and helping large numbers of travelers{" "}
               <br className="lg:block hidden" />
@@ -24,7 +24,7 @@ const AboutTrackenFly = () => {
               <Link to={"/about-us"} className="text-red-500 cursor-pointer">
                 Know more.
               </Link>
-            </div>
+            </p>
           </div>
         </div>
       </div>

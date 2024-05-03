@@ -59,7 +59,7 @@ const BestDeals = () => {
         />
       </Helmet>
       <div
-        className="h-auto p-20 md:px-20 md:py-40 bg-cover bg-center"
+        className="h-auto py-20  md:px-20 md:py-40 bg-cover bg-center"
         style={{ backgroundImage: `url(${bestdealsbg})` }}
       >
         <div className="grid grid-cols-12 gap-y-10 md:gap-y-0 md:items-center">
