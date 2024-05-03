@@ -54,7 +54,7 @@ const data = {
 const Home = () => {
   return (
     <>
-      <Hero text={'Explore Flights - Hotels Online & Cars on Rent'}/>
+      <Hero text={"Explore Flights - Hotels Online & Cars on Rent"} />
       <Benefits />
       <PopularBeach />
       <TopFlightOffer />

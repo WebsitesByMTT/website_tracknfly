@@ -1,6 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import weaccept from "/cards.png";
+import weaccept from "../../assets/images/cards.png";
 
 const data = [
   {

@@ -1,27 +1,28 @@
 import React from "react";
-import bestdealsbg from "/bestdeals.png";
+import bestdealsbg from "../../assets/images/bestdeals.png";
 import { Carousel } from "react-responsive-carousel";
 import "react-responsive-carousel/lib/styles/carousel.min.css";
 import { Helmet } from "react-helmet";
 import AboutTrackenFly from "../../components/aboutTrackenFly/AboutTrackenFly";
+import BeastDealsCrausal1 from "../../assets/images/BeastDealsCrausal1.png";
 
 const BestDeals = () => {
   const data = [
     {
       id: 1,
-      image: "BeastDealsCrausal1.png",
+      image: BeastDealsCrausal1,
       title: "Innsbruck get 20% off on pre booking",
       para: "Now book flight and get a free meal & save BIG bucks on our journey.",
     },
     {
       id: 2,
-      image: "BeastDealsCrausal1.png",
+      image: BeastDealsCrausal1,
       title: "Innsbruck get 20% off on pre booking",
       para: "Now book flight and get a free meal & save BIG bucks on our journey.",
     },
     {
       id: 3,
-      image: "BeastDealsCrausal1.png",
+      image: BeastDealsCrausal1,
       title: "Innsbruck get 20% off on pre booking",
       para: "Now book flight and get a free meal & save BIG bucks on our journey.",
     },

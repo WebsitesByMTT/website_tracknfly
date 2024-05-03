@@ -1,33 +1,35 @@
-import React from 'react'
+import React from "react";
+import blogs1 from "../../assets/images/blogs1.png";
+import blogs2 from "../../assets/images/blogs2.png";
+import blogs3 from "../../assets/images/blogs3.png";
 
 const Blogs = () => {
-
-    const data = [
-        {
-            id: 1,
-            image: '/blogs1.png',
-            title: 'Sydeny’s 10 most fashionable 5 star hotels',
-            para: 'Browse the fastest growing tourism sector in the heart of Australia tourism capital ....'
-        },
-        {
-            id: 2,
-            image: '/blogs2.png',
-            title: 'Top cities for Vegan Travellers',
-            para: 'Top sites where you do not have to worry about being a vegan. Our tourist guide is here...'
-        },
-        {
-            id: 3,
-            image: '/blogs3.png',
-            title: 'World’s top destinations during and post covid timeline',
-            para: 'Pandemic is still intact and will be here for a longer time. Here’s where your next destination...'
-        },
-        {
-            id: 4,
-            image: '/blogs1.png',
-            title: 'Sydeny’s 10 most fashionable 5 star hotels',
-            para: 'Browse the fastest growing tourism sector in the heart of Australia tourism capital ....'
-        }
-    ]
+  const data = [
+    {
+      id: 1,
+      image: blogs1,
+      title: "Sydeny’s 10 most fashionable 5 star hotels",
+      para: "Browse the fastest growing tourism sector in the heart of Australia tourism capital ....",
+    },
+    {
+      id: 2,
+      image: blogs2,
+      title: "Top cities for Vegan Travellers",
+      para: "Top sites where you do not have to worry about being a vegan. Our tourist guide is here...",
+    },
+    {
+      id: 3,
+      image: blogs3,
+      title: "World’s top destinations during and post covid timeline",
+      para: "Pandemic is still intact and will be here for a longer time. Here’s where your next destination...",
+    },
+    {
+      id: 4,
+      image: blogs1,
+      title: "Sydeny’s 10 most fashionable 5 star hotels",
+      para: "Browse the fastest growing tourism sector in the heart of Australia tourism capital ....",
+    },
+  ];
 
     return (
         <div className='bg-white py-8'>
@@ -49,8 +51,11 @@ const Blogs = () => {
                     }
                 </div>
             </div>
+          ))}
         </div>
-    )
-}
+      </div>
+    </div>
+  );
+};
 
-export default Blogs
+export default Blogs;

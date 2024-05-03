@@ -5,6 +5,7 @@ import {
   AccordionItem,
   AccordionTrigger,
 } from "../ui/accordion";
+import faqImg from "../../assets/images/faq.png"
 
 const FrquentlyAskedQuestions = ({ title = "FAQs", data, sidebar = true }) => {
   return (
@@ -39,7 +40,7 @@ const FrquentlyAskedQuestions = ({ title = "FAQs", data, sidebar = true }) => {
         <div
           className="right flex-[.5] md:h-[70vh] p-10 rounded-3xl"
           style={{
-            backgroundImage: `url('/faq.png')`,
+            backgroundImage: `url('${faqImg}')`,
             backgroundSize: "cover",
             backgroundPosition: "center",
           }}

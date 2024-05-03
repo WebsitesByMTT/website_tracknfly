@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import "./header.scss";
 import { Link, NavLink } from "react-router-dom";
+import logo from "../../assets/images/tracknfly-logo.png";
 
 const Header = () => {
   const [open, setOpen] = useState(false);
@@ -11,12 +12,7 @@ const Header = () => {
           <ul className="left">
             <li>
               <Link to="/">
-                <img
-                  src="/tracknfly-logo.png"
-                  alt="logo"
-                  className="logo"
-                  loading="lazy"
-                />
+                <img src={logo} alt="logo" className="logo" loading="lazy" />
               </Link>
             </li>
           </ul>
