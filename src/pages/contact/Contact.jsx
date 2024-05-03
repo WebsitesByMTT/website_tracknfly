@@ -5,29 +5,33 @@ import { Link } from "react-router-dom";
 import WhyTracknFly from "../../components/whyTracknFly/WhyTracknFly";
 import { Helmet } from "react-helmet";
 import Hero from "../../components/hero/Hero";
+import facebook from "../../assets/images/facebook.svg";
+import instagram from "../../assets/images/instagram.svg";
+import twitter from "../../assets/images/twitter.svg";
+import linkedin from "../../assets/images/linkedin.svg";
 
 const social = [
   {
     id: 1,
-    logo: "/facebook.svg",
+    logo: facebook,
     name: "facebook",
     url: "",
   },
   {
     id: 2,
-    logo: "/instagram.svg",
+    logo: instagram,
     name: "instagram",
     url: "",
   },
   {
     id: 3,
-    logo: "/twitter.svg",
+    logo: twitter,
     name: "twitter",
     url: "",
   },
   {
     id: 4,
-    logo: "/linkedin.svg",
+    logo: linkedin,
     name: "linkedin",
     url: "",
   },

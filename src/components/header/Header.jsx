@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import "./header.scss";
 import { Link, NavLink } from "react-router-dom";
+import logo from "../../assets/images/tracknfly-logo.png";
 
 const Header = () => {
   const [open, setOpen] = useState(false);
@@ -11,12 +12,7 @@ const Header = () => {
           <ul className="left">
             <li>
               <Link to="/">
-                <img
-                  src="/tracknfly-logo.png"
-                  alt="logo"
-                  className="logo"
-                  loading="lazy"
-                />
+                <img src={logo} alt="logo" className="logo" loading="lazy" />
               </Link>
             </li>
           </ul>
@@ -60,25 +56,25 @@ const Header = () => {
             <div className="mobile-menu-container">
               <ul>
                 <li>
-                  <Link to="/flights">FLIGHTS</Link>
+                  <Link to="/flights" className="flex items-center space-x-8"><span><img src="/flight.png" alt="error"/></span><span>FLIGHTS</span></Link>
                 </li>
                 <li>
-                  <Link to="/hotels">HOTELS</Link>
+                  <Link to="/hotels" className="flex items-center space-x-8"><span><img src="/hotel.png" alt="error"/></span><span>HOTELS</span></Link>
                 </li>
                 <li>
-                  <Link to="/cars-on-rent">CARS ON RENT</Link>
+                  <Link to="/cars-on-rent" className="flex items-center space-x-8"><span><img src="/car.png" alt="error"/></span><span>CARS ON RENT</span></Link>
                 </li>
                 <li>
-                  <Link to="/best-deals">BEST DEALS</Link>
+                  <Link to="/best-deals" className="flex items-center space-x-8"><span><img src="/deals.png" alt="error"/></span><span>BEST DEALS</span></Link>
                 </li>
                 <li>
-                  <Link to="/contact-us">CONTACT US</Link>
+                  <Link to="/contact-us" className="flex items-center space-x-8"><span><img src="/contact.png" alt="error"/></span><span>CONTACT US</span></Link>
                 </li>
                 <li>
-                  <Link to="/about-us">ABOUT US</Link>
+                  <Link to="/about-us" className="flex items-center space-x-8"><span><img src="/about.png" alt="error"/></span><span>ABOUT US</span></Link>
                 </li>
                 <li>
-                  <Link to="/signin">SIGN IN</Link>
+                  <Link to="/signin" className="flex items-center space-x-8"><span><img src="/login.png" alt="error"/></span><span>SIGN IN</span></Link>
                 </li>
               </ul>
             </div>

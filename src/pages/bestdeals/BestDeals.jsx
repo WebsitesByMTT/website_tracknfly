@@ -1,27 +1,28 @@
 import React from "react";
-import bestdealsbg from "/bestdeals.png";
+import bestdealsbg from "../../assets/images/bestdeals.png";
 import { Carousel } from "react-responsive-carousel";
 import "react-responsive-carousel/lib/styles/carousel.min.css";
 import { Helmet } from "react-helmet";
 import AboutTrackenFly from "../../components/aboutTrackenFly/AboutTrackenFly";
+import BeastDealsCrausal1 from "../../assets/images/BeastDealsCrausal1.png";
 
 const BestDeals = () => {
   const data = [
     {
       id: 1,
-      image: "BeastDealsCrausal1.png",
+      image: BeastDealsCrausal1,
       title: "Innsbruck get 20% off on pre booking",
       para: "Now book flight and get a free meal & save BIG bucks on our journey.",
     },
     {
       id: 2,
-      image: "BeastDealsCrausal1.png",
+      image: BeastDealsCrausal1,
       title: "Innsbruck get 20% off on pre booking",
       para: "Now book flight and get a free meal & save BIG bucks on our journey.",
     },
     {
       id: 3,
-      image: "BeastDealsCrausal1.png",
+      image: BeastDealsCrausal1,
       title: "Innsbruck get 20% off on pre booking",
       para: "Now book flight and get a free meal & save BIG bucks on our journey.",
     },
@@ -57,13 +58,11 @@ const BestDeals = () => {
           content="Best deals, air flight deals, cheap hotels with Trackn Fly, Cars deals, Flights Booking, cheap deals, air flights deals, explore deals, great deals, offers"
         />
       </Helmet>
-      <div className="h-auto relative">
-        <img
-          src={bestdealsbg}
-          alt="img"
-          className=" h-[70vh] md:h-[70vh] md:block  lg:h-[80vh] object-cover"
-        />
-        <div className="grid grid-cols-12 gap-y-10 md:gap-y-0 md:items-center absolute bottom-0 left-0 w-full h-auto">
+      <div
+        className="h-auto py-20  md:px-20 md:py-40 bg-cover bg-center"
+        style={{ backgroundImage: `url(${bestdealsbg})` }}
+      >
+        <div className="grid grid-cols-12 gap-y-10 md:gap-y-0 md:items-center">
           <div className="col-span-12 order-2 md:order-1 pb-10 md:pb-0 md:col-span-6 lg:col-span-8">
             <div className="pl-10 md:pl-20 lg:pl-32">
               <div className="text-white pb-12 text-[3.5rem] lg:text-[5rem] font-semibold">
@@ -78,10 +77,9 @@ const BestDeals = () => {
           </div>
           <div className="col-span-12 order-1 md:col-span-6  lg:col-span-4">
             <Carousel
-              className="md:pb-[20%] pb-[5%] lg:pb-[16%]"
               infiniteLoop
               autoPlay
-              centerSlidePercentage={84}
+              centerSlidePercentage={94}
               centerMode
               showThumbs={false}
               showArrows={false}

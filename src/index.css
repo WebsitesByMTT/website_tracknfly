@@ -51,30 +51,11 @@ body {
     font-size: 40%;
   }
 }
-
-/* PreLoader Animation */
-
-.animate{
-  animation: dingding 3s  infinite;
-}
-
-@keyframes dingding {
-  0%{
-    transform: scale(1);
-    transition: 1s;
-  }
-
-  50%{
-    transform: scale(.3);
-    transition: 1s;
-  }
-
-  100%{
-    transform: scale(1);
-    transition: 1s;
-  }
-}
  
 .carousel .control-dots .dot{
   background-color: red !important;
+}
+
+.tp_powered_by a img{
+  display: none !important;
 }

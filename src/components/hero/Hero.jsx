@@ -1,17 +1,16 @@
 import React, { useState, useEffect } from "react";
 import "./hero.scss";
-import Popup from "../popup/Popup";
-import ErrorPopup from "../errorPopup/ErrorPopup";
 import Script from "../../utils/Script";
-const images = ["/f-c-1.jpg", "f-c-2.jpg", "f-c-3.jpg", "f-c-4.jpg"];
+import bg1 from "../../assets/images/f-c-1.jpg";
+import bg2 from "../../assets/images/f-c-2.jpg";
+import bg3 from "../../assets/images/f-c-3.jpg";
+import bg4 from "../../assets/images/f-c-4.jpg";
+const images = [bg1, bg2, bg3, bg4];
 
 const Hero = ({ text, activeTab = "flight" }) => {
   const [iframeLoaded, setIframeLoaded] = useState(false);
-
   const [currentSlide, setCurrentSlide] = useState(0);
   const [active, setActive] = useState(activeTab);
-  const [error, setError] = useState("");
-  const [popup, setPopup] = useState(false);
   useEffect(() => {
     const interval = setInterval(() => {
       setCurrentSlide((currentSlide + 1) % images.length);
@@ -25,10 +24,6 @@ const Hero = ({ text, activeTab = "flight" }) => {
         className="hero"
         style={{ backgroundImage: `url(${images[currentSlide]})` }}
       >
-        {popup && <Popup />}
-        {error && (
-          <ErrorPopup error={error} setError={setError} setPopup={setPopup} />
-        )}
         <div className="Container">
           <div className="title">
             <h1>
@@ -131,7 +126,9 @@ const Hero = ({ text, activeTab = "flight" }) => {
             <div
               id="cars-rental"
               className={`${
-                active != "car" || !iframeLoaded ? "hidden" : "lg:h-[21.4rem] overflow-hidden"
+                active != "car" || !iframeLoaded
+                  ? "hidden"
+                  : "lg:h-[21.4rem] overflow-hidden"
               }`}
             >
               <Script

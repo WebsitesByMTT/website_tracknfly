@@ -1,23 +1,27 @@
 import React from "react";
-import Heart from "/heart.png";
+import Heart from "../../assets/images/heart.png";
+import popularBeachImage1 from "../../assets/images/popularBeachImage1.png";
+import popularBeachImage2 from "../../assets/images/popularBeachImage2.png";
+import popularBeachImage3 from "../../assets/images/popularBeachImage3.png";
+import popularBeachImage4 from "../../assets/images/popularBeachImage4.png";
 
 const PopularBeach = () => {
   const data = [
     {
       title: "Swiss Apls",
-      img: "/popularBeachImage1.png",
+      img: popularBeachImage1,
     },
     {
       title: "Hallstatt",
-      img: "/popularBeachImage2.png",
+      img: popularBeachImage2,
     },
     {
       title: "Faroe Island",
-      img: "/popularBeachImage3.png",
+      img: popularBeachImage3,
     },
     {
       title: "Innsbruck",
-      img: "/popularBeachImage4.png",
+      img: popularBeachImage4,
     },
   ];
 
