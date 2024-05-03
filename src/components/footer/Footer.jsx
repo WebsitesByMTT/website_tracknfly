@@ -1,6 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import weaccept from "/cards.png";
+import weaccept from "../../assets/images/cards.png";
 
 const data = [
   {
@@ -286,7 +286,7 @@ const Footer = () => {
                   {item.title}
                 </h6>
                 <ul className="pt-4 text-white text-opacity-60 transition-all space-y-2 text-[1.3rem]">
-                  {item?.links.map((link,ind) => (
+                  {item?.links.map((link, ind) => (
                     <li key={ind} className=" uppercase cursor-pointer">
                       <Link
                         to={link.url}

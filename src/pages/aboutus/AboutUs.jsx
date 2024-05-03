@@ -3,6 +3,7 @@ import WhyTracknFly from "../../components/whyTracknFly/WhyTracknFly";
 import React from "react";
 import Hero from "../../components/hero/Hero";
 import AboutTrackenFly from "../../components/aboutTrackenFly/AboutTrackenFly";
+import aboutus from "../../assets/images/aboutus.png";
 
 const AboutUs = () => {
   return (
@@ -50,7 +51,7 @@ const AboutUs = () => {
             to increase your bucket list and plan your trip now with Trackn Fly
             exclusive offers.
           </div>
-          <img src="/aboutus.png" alt="img" className="object-cover" />
+          <img src={aboutus} alt="img" className="object-cover" />
         </div>
         <WhyTracknFly />
         <AboutTrackenFly />
