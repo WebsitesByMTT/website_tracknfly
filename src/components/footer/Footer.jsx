@@ -282,10 +282,10 @@ const Footer = () => {
                 }`}
                 key={item.id}
               >
-                <h6 className="text-white font-semibold text-[1.3rem] uppercase">
+                <h6 className="text-white font-semibold text-[1.4rem] uppercase">
                   {item.title}
                 </h6>
-                <ul className="pt-4 text-white text-opacity-60 transition-all space-y-2 text-[1.3rem]">
+                <ul className="pt-4 text-white text-opacity-60 transition-all space-y-2 text-[1.4rem]">
                   {item?.links.map((link,ind) => (
                     <li key={ind} className=" uppercase cursor-pointer">
                       <Link
@@ -301,7 +301,7 @@ const Footer = () => {
             ))}
           </div>
           <div>
-            <div className="text-center py-5 text-white text-[1.2rem]">
+            <div className="text-center py-5 text-white text-[1.4rem]">
               We Accept
             </div>
             <img
@@ -311,20 +311,20 @@ const Footer = () => {
             />
           </div>
           <div>
-            <div className="text-white text-[1.1rem] pt-5 text-center">
+            <div className="text-white text-[1.4rem] pt-5 text-center">
               Copyright &copy; 2024 TRACKNFLY.COM
             </div>
           </div>
-          <ul className="md:flex items-center text-center md:text-start space-y-3 md:space-y-0 md:space-x-3 justify-center text-white text-opacity-70 text-[1.1rem] pt-5">
+          <ul className="md:flex items-center text-center md:text-start space-y-3 md:space-y-0 md:space-x-3 justify-center text-white text-opacity-70 text-[1.4rem] pt-5">
             <li className="cursor-pointer hover:opacity-70 uppercase md:border-r-2 pr-4 border-gray-400">
               <Link to={"/privacy-policy"}> privacy policy</Link>
             </li>
-            <li className="cursor-pointer hover:opacity-70 uppercase border-r-2 pr-4 border-gray-400">
+            <li className="cursor-pointer hover:opacity-70 uppercase md:border-r-2 pr-4 border-gray-400">
               <Link to={"/cancellation-&-refund-policy"}>
                 CANCELLATION AND REFUND POLICY
               </Link>
             </li>
-            <li className="cursor-pointer hover:opacity-70 uppercase border-r-2 pr-4 border-gray-400">
+            <li className="cursor-pointer hover:opacity-70 uppercase md:border-r-2 pr-4 border-gray-400">
               <Link to={"/terms-&services"}>TERMS AND SERVICES</Link>
             </li>
             <li className="cursor-pointer hover:opacity-70 uppercase md:border-r-2 pr-4 border-gray-400">
@@ -339,7 +339,7 @@ const Footer = () => {
             <li className="cursor-pointer hover:opacity-70 uppercase md:border-r-2 pr-4 border-gray-400">
               <Link to={"/rewards"}>rewards</Link>
             </li>
-            <li className="cursor-pointer hover:opacity-70 uppercase border-r-2 pr-4 border-gray-400">
+            <li className="cursor-pointer hover:opacity-70 uppercase md:border-r-2 pr-4 border-gray-400">
               <Link to={"/contact-us"}>support</Link>
             </li>
             <li className="cursor-pointer hover:opacity-70 uppercase">

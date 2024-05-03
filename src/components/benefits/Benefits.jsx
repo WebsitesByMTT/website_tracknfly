@@ -35,7 +35,7 @@ const Benefits = () => {
                 </div>
                 <div className="text">
                   <p className="title">{item.title}</p>
-                  <p className="subtitle">{item.subtitle}<span className="read_more">read more</span></p>
+                  <p className="subtitle">{item.subtitle}{ind!==0&&<span className="read_more">read more</span>}</p>
                 </div>
               </div>
             ))

@@ -8,7 +8,6 @@ const images = ["/f-c-1.jpg", "f-c-2.jpg", "f-c-3.jpg", "f-c-4.jpg"];
 
 const Hero = ({ text, activeTab = "flight" }) => {
   const [iframeLoaded, setIframeLoaded] = useState(false);
-
   const [currentSlide, setCurrentSlide] = useState(0);
   const [active, setActive] = useState(activeTab);
   const [error, setError] = useState("");
