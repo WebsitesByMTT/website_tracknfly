@@ -58,7 +58,10 @@ const BestDeals = () => {
           content="Best deals, air flight deals, cheap hotels with Trackn Fly, Cars deals, Flights Booking, cheap deals, air flights deals, explore deals, great deals, offers"
         />
       </Helmet>
-      <div className="h-auto bg-[url(/bestdeals.png)] p-20 md:px-20 md:py-40">
+      <div
+        className="h-auto p-20 md:px-20 md:py-40 bg-cover bg-center"
+        style={{ backgroundImage: `url(${bestdealsbg})` }}
+      >
         <div className="grid grid-cols-12 gap-y-10 md:gap-y-0 md:items-center">
           <div className="col-span-12 order-2 md:order-1 pb-10 md:pb-0 md:col-span-6 lg:col-span-8">
             <div className="pl-10 md:pl-20 lg:pl-32">
