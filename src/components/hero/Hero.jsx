@@ -9,7 +9,6 @@ const images = [bg1, bg2, bg3, bg4];
 
 const Hero = ({ text, activeTab = "flight" }) => {
   const [iframeLoaded, setIframeLoaded] = useState(false);
-
   const [currentSlide, setCurrentSlide] = useState(0);
   const [active, setActive] = useState(activeTab);
   useEffect(() => {

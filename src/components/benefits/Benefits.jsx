@@ -34,23 +34,25 @@ const Benefits = () => {
       <div className="container">
         <div className="cards">
           {data?.map((item, ind) => (
-            <div className="card" key={ind}>
-              <div className="img">
-                <img
-                  src={item.image}
-                  className="easy-steps"
-                  alt="customer-care"
-                  loading="lazy"
-                />
+            <>
+              <div className="card" key={ind}>
+                <div className="img">
+                  <img
+                    src={item.image}
+                    className="easy-steps"
+                    alt="customer-care"
+                    loading="lazy"
+                  />
+                </div>
+                <div className="text">
+                  <p className="title">{item.title}</p>
+                  <p className="subtitle">
+                    {item.subtitle}
+                    {ind !== 0 && <span className="read_more">read more</span>}
+                  </p>
+                </div>
               </div>
-              <div className="text">
-                <p className="title">{item.title}</p>
-                <p className="subtitle">
-                  {item.subtitle}
-                  <span className="read_more">read more</span>
-                </p>
-              </div>
-            </div>
+            </>
           ))}
         </div>
       </div>

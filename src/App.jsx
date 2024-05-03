@@ -72,7 +72,7 @@ const data = {
 
 function App() {
   const location = useLocation();
-  const excludePaths = ["/flights", "/hotels", "/car-on-rent", "best-deals"];
+  const excludePaths = ["/flights", "/hotels", "/cars-on-rent", "best-deals"];
   const shouldRenderProductOffering = !excludePaths.includes(location.pathname);
   window.scrollTo({top: 0,behavior: 'smooth'})
   return (
