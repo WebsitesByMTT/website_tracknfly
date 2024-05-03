@@ -138,7 +138,7 @@ const Flights = () => {
           content="flights booking, flights online Booking, flight tickets, best deals, travel plans, Travel Ideas, cheap air, air-flight tickets, International Flight Online, Domestic flights Booking, Trackn Fly, Fly with Trackn Fly, united airlines, expedia flights, airline tickets, plane tickets, google flights"
         />
       </Helmet>
-      <Hero text={'Search Domestic and International Flight Online'}/>
+      <Hero text={"Search Domestic and International Flight Online"} />
       <Benefits />
       <WhatTracknFlyHaveForYou />
       <FrquentlyAskedQuestions
