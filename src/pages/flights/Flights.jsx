@@ -112,7 +112,7 @@ const Flights = () => {
     <>
       <Helmet>
         <title>
-          Trackn Fly gives the best deals on cheap air-flight tickets.
+           Trackn Fly gives the best deals on cheap air-flight tickets.
         </title>
         <meta
           name="description"
@@ -127,7 +127,7 @@ const Flights = () => {
         <meta property="og:site_name" content="FLIGHTS" />
         <meta
           property="og:description"
-          content="By visiting Trackn Fly, you will have the best deals on cheap air and book flight tickets on our flights page. Now you don't need to cancel your travel plans."
+          content="By visiting Trackn Fly, you will have the best deals on cheap air and book flight tickets on our flights page. Now you don't need to cancel your travel plans"
         />
         <meta
           property="og:image"

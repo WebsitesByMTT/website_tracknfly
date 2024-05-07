@@ -1,3 +1,4 @@
+import WhyTracknFly from "../../components/whyTracknFly/WhyTracknFly";
 import React, { useEffect } from "react";
 import { Helmet } from "react-helmet";
 
@@ -8,7 +9,7 @@ const RefundPolicy = () => {
   return (
     <>
       <Helmet>
-        <title> CANCELLATION AND REFUND POLICY - Trackn Fly</title>
+        <title>CANCELLATION AND REFUND POLICY - Trackn Fly</title>
         <meta
           name="description"
           content="Trackn Fly - Travel agency with exclusive discounts on cheap hotels, flights, and cars on rentals. It has the best cancellation and refund policy."
@@ -27,19 +28,16 @@ const RefundPolicy = () => {
           property="og:description"
           content="Trackn Fly - Travel agency with exclusive discounts on cheap hotels, flights, and cars on rentals. It has the best cancellation and refund policy."
         />
-        <meta
-          property="og:image"
-          content="https://i.im.ge/2024/04/30/ZPv6SY.Final-logo.jpeg"
-        />
+        <meta property="og:image" content="https://www.tracknfly.com/assets/tracknfly-logo-6b9305ee.png" />
       </Helmet>
-     
-    <div className={"px-[2rem] py-[3rem] md:p-[4rem] scroll-smooth"}>
-      <div className={" flex flex-col gap-[4rem]"}>
-        <div className={""}>
-          <h1 className="text-black text-left tracking-wide font-semibold  text-[4rem] capitalize">
-            Cancellation and refund policy
-          </h1>
-        </div>
+
+      <div className={"px-[2rem] py-[3rem] md:p-[4rem] scroll-smooth"}>
+        <div className={" flex flex-col gap-[4rem]"}>
+          <div className={""}>
+            <h1 className="text-black text-left tracking-wide font-semibold  text-[4rem] capitalize">
+              Cancellation and refund policy
+            </h1>
+          </div>
 
           <div className={` flex flex-col gap-[1rem]`}>
             <p className=" text-[1.6rem]">
@@ -61,6 +59,7 @@ const RefundPolicy = () => {
           </div>
         </div>
       </div>
+      <WhyTracknFly />
     </>
   );
 };
