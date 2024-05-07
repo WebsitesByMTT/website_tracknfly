@@ -8,13 +8,21 @@ const Header = () => {
   return (
     <div className="header">
       <div className="Container">
-        <nav className="top">
+        <nav className="top space-x-5">
           <ul className="left">
             <li>
               <Link to="/">
                 <img src={logo} alt="logo" className="logo" loading="lazy" />
               </Link>
             </li>
+            <a href="tel:+1(212) 000-0000" className="md:block hidden">
+              <li className="flex items-center bg-[#2E70AB]  text-white font-semibold text-[2rem] py-2 px-4 rounded-full space-x-2">
+                <button>
+                  Call Now : +1(212) 000-0000
+                </button>
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" className="lucide cursor-pointer hover:scale-105 transition-all lucide-phone-outgoing"><polyline points="22 8 22 2 16 2" /><line x1="16" x2="22" y1="8" y2="2" /><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z" /></svg>
+              </li>
+            </a>
           </ul>
           <div
             className={`mobile-menu-btn ${open && "opened"}`}
@@ -24,6 +32,7 @@ const Header = () => {
             <span></span>
             <span></span>
           </div>
+          
         </nav>
         <div className="bottom">
           <ul>
@@ -56,25 +65,25 @@ const Header = () => {
             <div className="mobile-menu-container">
               <ul>
                 <li>
-                  <Link to="/flights" className="flex items-center space-x-8"><span><img src="/flight.png" alt="error"/></span><span>FLIGHTS</span></Link>
+                  <Link to="/flights" className="flex items-center space-x-8"><span><img src="/flight.png" alt="error" /></span><span>FLIGHTS</span></Link>
                 </li>
                 <li>
-                  <Link to="/hotels" className="flex items-center space-x-8"><span><img src="/hotel.png" alt="error"/></span><span>HOTELS</span></Link>
+                  <Link to="/hotels" className="flex items-center space-x-8"><span><img src="/hotel.png" alt="error" /></span><span>HOTELS</span></Link>
                 </li>
                 <li>
-                  <Link to="/cars-on-rent" className="flex items-center space-x-8"><span><img src="/car.png" alt="error"/></span><span>CARS ON RENT</span></Link>
+                  <Link to="/cars-on-rent" className="flex items-center space-x-8"><span><img src="/car.png" alt="error" /></span><span>CARS ON RENT</span></Link>
                 </li>
                 <li>
-                  <Link to="/best-deals" className="flex items-center space-x-8"><span><img src="/deals.png" alt="error"/></span><span>BEST DEALS</span></Link>
+                  <Link to="/best-deals" className="flex items-center space-x-8"><span><img src="/deals.png" alt="error" /></span><span>BEST DEALS</span></Link>
                 </li>
                 <li>
-                  <Link to="/contact-us" className="flex items-center space-x-8"><span><img src="/contact.png" alt="error"/></span><span>CONTACT US</span></Link>
+                  <Link to="/contact-us" className="flex items-center space-x-8"><span><img src="/contact.png" alt="error" /></span><span>CONTACT US</span></Link>
                 </li>
                 <li>
-                  <Link to="/about-us" className="flex items-center space-x-8"><span><img src="/about.png" alt="error"/></span><span>ABOUT US</span></Link>
+                  <Link to="/about-us" className="flex items-center space-x-8"><span><img src="/about.png" alt="error" /></span><span>ABOUT US</span></Link>
                 </li>
                 <li>
-                  <Link to="/signin" className="flex items-center space-x-8"><span><img src="/login.png" alt="error"/></span><span>SIGN IN</span></Link>
+                  <Link to="/signin" className="flex items-center space-x-8"><span><img src="/login.png" alt="error" /></span><span>SIGN IN</span></Link>
                 </li>
               </ul>
             </div>

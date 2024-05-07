@@ -10,28 +10,24 @@ const Benefits = () => {
       image: Support,
       title: "24/7 Customer Support",
       subtitle:
-        "Get in touch with us:  we are always here to help -  reach us 24 hours a day, 7 Days  a Week...",
+        "Get in touch with us:  we are always here to help -  reach us 24 hours a day, 7 Days  a Week.",
     },
     {
       image: EasyStepsIMG,
       title: "Book effortlessly",
       subtitle:
-        "We at Trackn Fly give you the best opportunity to find the perfect flight and hotel for your next adventure...",
+        "We at Trackn Fly give you the best opportunity to find the perfect flight and hotel for your next adventure.",
     },
     {
       image: BestPriceIMG,
       title: "Exclusive deals on Trackn Fly",
       subtitle:
-        "By simply downloading the Trackn Fly, you can have access to all the exclusive deals and discounts while..",
+        "By simply downloading the Trackn Fly, you can have access to all the exclusive deals and discounts while.",
     },
   ];
   return (
     <div className="benefits">
-      <div className="benefits_title">
-        Explore and Save your money on Flights and Hotels
-        <br className="break_text" /> Discover. Book.Travel
-      </div>
-      <div className="container">
+      <div className="container pt-[3rem]">
         <div className="cards">
           {data?.map((item, ind) => (
             <>
@@ -48,7 +44,6 @@ const Benefits = () => {
                   <p className="title">{item.title}</p>
                   <p className="subtitle">
                     {item.subtitle}
-                    {ind !== 0 && <span className="read_more">read more</span>}
                   </p>
                 </div>
               </div>

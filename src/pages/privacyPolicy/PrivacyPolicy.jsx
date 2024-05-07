@@ -1,3 +1,4 @@
+import WhyTracknFly from "../../components/whyTracknFly/WhyTracknFly";
 import React, { useEffect } from "react";
 import { Helmet } from "react-helmet";
 
@@ -52,10 +53,7 @@ const PrivacyPolicy = () => {
           property="og:description"
           content="Trackn Fly - A travel agency that has huge discounts on cheap hotels, flights and coats on rentals. For more information visit its privacy policy."
         />
-        <meta
-          property="og:image"
-          content="https://i.im.ge/2024/04/30/ZPv6SY.Final-logo.jpeg"
-        />
+       <meta property="og:image" content="https://www.tracknfly.com/assets/tracknfly-logo-6b9305ee.png"/>
       </Helmet>
 
     <div className={" px-[2rem] py-[3rem] md:p-[4rem]"}>
@@ -73,6 +71,7 @@ const PrivacyPolicy = () => {
           ))}
         </div>
       </div>
+      <WhyTracknFly />
     </>
   );
 };

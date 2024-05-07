@@ -12,7 +12,7 @@ const AboutUs = () => {
         <title>About us - Trackn Fly</title>
         <meta
           name="description"
-          content="Trackn Fly - It is the best travel agency with exclusive discounts on cheap hotels, flights, and car on rentals.  Enjoy your trip without looking at your pocket."
+          content="Trackn Fly - It is the best travel agency with exclusive discounts on cheap hotels, flights, and car rentals.  Enjoy your trip without looking at your pocket."
         />
         <meta property="og:url" content="https://www.tracknfly.com/about-us" />
         <meta property="og:type" content="website" />
@@ -22,10 +22,7 @@ const AboutUs = () => {
           property="og:description"
           content="Trackn Fly - It is the best travel agency with exclusive discounts on cheap hotels, flights, and car on rentals. Visit our about us to know about the company."
         />
-        <meta
-          property="og:image"
-          content="https://i.im.ge/2024/04/30/ZPv6SY.Final-logo.jpeg"
-        />
+       <meta property="og:image" content="https://www.tracknfly.com/assets/tracknfly-logo-6b9305ee.png"/>
       </Helmet>
       <Hero text={"Explore Flights - Hotels Online & Cars on Rent"} />
 
