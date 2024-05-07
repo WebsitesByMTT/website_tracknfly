@@ -16,7 +16,7 @@ const Header = () => {
               </Link>
             </li>
             <a href="tel:+1(212) 000-0000" className="md:block hidden">
-              <li className="flex items-center bg-green-500 hover:bg-green-700 text-white font-semibold text-[2rem] py-2 px-4 rounded-full space-x-2">
+              <li className="flex items-center bg-[#2E70AB]  text-white font-semibold text-[2rem] py-2 px-4 rounded-full space-x-2">
                 <button>
                   Call Now : +1(212) 000-0000
                 </button>
