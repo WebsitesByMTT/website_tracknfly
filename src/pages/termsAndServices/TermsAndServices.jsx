@@ -1,3 +1,4 @@
+import WhyTracknFly from "../../components/whyTracknFly/WhyTracknFly";
 import React, { useEffect } from "react";
 import { Helmet } from "react-helmet";
 
@@ -25,10 +26,7 @@ const TermsAndServices = () => {
           property="og:description"
           content="Trackn Fly - Before booking cheap hotels, flights, and cars on rentals, you must agree with its terms and services. It is the best travel agency."
         />
-        <meta
-          property="og:image"
-          content="https://i.im.ge/2024/04/30/ZPv6SY.Final-logo.jpeg"
-        />
+        <meta property="og:image" content="https://www.tracknfly.com/assets/tracknfly-logo-6b9305ee.png"/>
       </Helmet>
     <div className={"px-[2rem] py-[3rem] md:p-[4rem] scroll-smooth"}>
       <div className={" flex flex-col gap-[4rem]"}>
@@ -70,6 +68,7 @@ const TermsAndServices = () => {
           </div>
         </div>
       </div>
+      <WhyTracknFly />
     </>
   );
 };

@@ -43,7 +43,7 @@ const Contact = () => {
         <title>CONTACT US - Trackn Fly</title>
         <meta
           name="description"
-          content="Trackn Fly -  Trackn Fly is the best travel agency around the world that offers cheap hotels, flights, and cars on rentals. It has some coupons where you can save money."
+          content="Trackn Fly is the best travel agency around the world that offers cheap hotels, flights, and cars on rentals. It has some coupons where you can save money."
         />
         <meta
           property="og:url"
@@ -56,10 +56,7 @@ const Contact = () => {
           property="og:description"
           content="Trackn Fly is the best travel agency around the world that offers cheap hotels, flights, and cars on rentals. For more information contact us anytime."
         />
-        <meta
-          property="og:image"
-          content="https://i.im.ge/2024/04/30/ZPv6SY.Final-logo.jpeg"
-        />
+        <meta property="og:image" content="https://www.tracknfly.com/assets/tracknfly-logo-6b9305ee.png"/>
       </Helmet>
       <Hero text={"Explore Flights - Hotels Online & Cars on Rent"} />
 

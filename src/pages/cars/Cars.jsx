@@ -105,7 +105,7 @@ const Cars = () => {
         <title>Trackn Fly has the best deals on cars on rent.</title>
         <meta
           name="description"
-          content=" Book affordable cars with Trackn fly. It has the best deals on cars on rent. If you have any doubt, then do visit our car on rent page."
+          content="Book affordable cars with Trackn fly. It has the best deals on cars on rent. If you have any doubt, then do visit our car on rent page."
         />
         <meta
           property="og:url"
@@ -121,16 +121,12 @@ const Cars = () => {
           property="og:description"
           content="Book affordable cars with Trackn fly. It has the best deals on cars on rent. If you have any doubt, then do visit our car on rent page."
         />
-        <meta
-          property="og:image"
-          content="https://i.im.ge/2024/04/30/ZPv6SY.Final-logo.jpeg"
-        />
+       <meta property="og:image" content="https://www.tracknfly.com/assets/tracknfly-logo-6b9305ee.png"/>
         <meta
           name="Keywords"
           content="cars on rent, rental cars, how much to rent a car, car rental san diego, google rental cars, rent a car with Tracknfly, rental agencies, last minute car rentals, cheap rental car delivered to you, airport rent a car, cheap automobile rentals, available car"
         />
       </Helmet>
-
       <Hero
         text={"Find Hundreds Of Cars on Rent At Your Destination"}
         activeTab="car"

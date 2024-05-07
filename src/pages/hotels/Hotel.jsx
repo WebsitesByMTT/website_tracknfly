@@ -94,12 +94,12 @@ const data = {
     },
     {
       title: "TOP HOTELS      ",
-      desc: "Paramount Hotel Dubai, Grand Hyatt Dubai, Jw Marriott Marquis Hotel Dubai, Gevora Hotel, Jumeirah Beach Hotel, Citymax Hotel Bur Dubai, Atana Hotel, Sheraton Grand Hotel Dubai, Millennium Airport Hotel Dubai, Media One Hotel, Grand Excelsior Hotel Bur Dubai, Ghaya Grand Hotel, Marco Polo Hotel, Copthorne Hotel Dubai, Kempinski Hotel Mall Of The Emirates, The Meydan Hotel, Park Regis Kris Kin Hotel, Armani Hotel Dubai, York International Hotel, Signature 1 Hotel Tecom, Park Regis Kris Kin Hotel, Armani Hotel Dubai, York International Hotel, Signature 1 Hotel Tecom  .",
+      desc: "Paramount Hotel Dubai, Grand Hyatt Dubai, Jw Marriott Marquis Hotel Dubai, Gevora Hotel, Jumeirah Beach Hotel, Citymax Hotel Bur Dubai, Atana Hotel, Sheraton Grand Hotel Dubai, Millennium Airport Hotel Dubai, Media One Hotel, Grand Excelsior Hotel Bur Dubai, Ghaya Grand Hotel, Marco Polo Hotel, Copthorne Hotel Dubai, Kempinski Hotel Mall Of The Emirates, The Meydan Hotel, Park Regis Kris Kin Hotel, Armani Hotel Dubai, York International Hotel, Signature 1 Hotel Tecom, Park Regis Kris Kin Hotel, Armani Hotel Dubai, York International Hotel, Signature 1 Hotel Tecom.",
       redirect: "",
     },
     {
       title: "MORE LINKS      ",
-      desc: "Hotels In Dubai, Hotels In Abu Dhabi, Hotels In Sharjah, Hotels In Ras Al Khaimah, Hotels In Ajman, Hotels In Fujairah, Hotels In Al Ain, Hotels In Kalba, Hotels In Singapore, Hotels In Bangkok, Hotels In Pattaya, Hotels In London, Hotels In Phuket, Hotels In Bali, Hotels In Hong Kong, Hotels In Paris, Hotels In Koh Samui, Hotels In New York, Hotels In Las Vegas, Hotels In Colombo, Hotels In Macau, Hotels In Kuala Lumpur, Hotels In Sydney, Hotels In Kathmandu, Hotels In Maldives, Hotels In Langkawi, Hotels In Istanbul, Hotels In Rome, Hotels in Tbilisi, Hotels in Baku, Hotels in Cairo, Hotels in Islamabad, Hotels in Muscat, Hotels in Mykonos, Hotels in Santorini, Hotels in Mykonos, Hotels in Yerevan, Hotels in Zanzibar, Hotels in Moscow      ",
+      desc: "Hotels In Dubai, Hotels In Abu Dhabi, Hotels In Sharjah, Hotels In Ras Al Khaimah, Hotels In Ajman, Hotels In Fujairah, Hotels In Al Ain, Hotels In Kalba, Hotels In Singapore, Hotels In Bangkok, Hotels In Pattaya, Hotels In London, Hotels In Phuket, Hotels In Bali, Hotels In Hong Kong, Hotels In Paris, Hotels In Koh Samui, Hotels In New York, Hotels In Las Vegas, Hotels In Colombo, Hotels In Macau, Hotels In Kuala Lumpur, Hotels In Sydney, Hotels In Kathmandu, Hotels In Maldives, Hotels In Langkawi, Hotels In Istanbul, Hotels In Rome, Hotels in Tbilisi, Hotels in Baku, Hotels in Cairo, Hotels in Islamabad, Hotels in Muscat, Hotels in Mykonos, Hotels in Santorini, Hotels in Mykonos, Hotels in Yerevan, Hotels in Zanzibar, Hotels in Moscow",
       redirect: "/hotels",
     },
   ],
@@ -112,7 +112,7 @@ const Hotel = () => {
         <title>Book Hotel rooms online and have the best deal on it.</title>
         <meta
           name="description"
-          content="At Trackn Fly book hotel rooms online and have the best deal on it. You can save more money with its coupons. Visit the hotels page for more information"
+          content="At Trackn Fly book hotel rooms online and have the best deal on it. You can save more money with its coupons. Visit the hotels page for more information."
         />
         <meta property="og:url" content="https://www.tracknfly.com/Hotels" />
         <meta property="og:type" content="website" />
@@ -125,10 +125,7 @@ const Hotel = () => {
           property="og:description"
           content="At Trackn Fly book hotel rooms online and have the best deal on it. You can save more money with its coupons. Visit the hotels page for more information."
         />
-        <meta
-          property="og:image"
-          content="https://i.im.ge/2024/04/30/ZPv6SY.Final-logo.jpeg"
-        />
+        <meta property="og:image" content="https://www.tracknfly.com/assets/tracknfly-logo-6b9305ee.png"/>
         <meta
           name="Keywords"
           content="Hotels Booking, Hotel online book, expedia hotels, Hotel Booking with Trackn fly, cheap hotels near me, cheap hotels, nyc hotels, hotels tonight, hotel booking sites, best hotel booking site, book hotel"
