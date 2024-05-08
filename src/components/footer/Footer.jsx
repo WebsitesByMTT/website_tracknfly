@@ -3,9 +3,6 @@ import { Link } from "react-router-dom";
 import weaccept from "../../assets/images/cards.png";
 import facebook from "../../assets/images/facebook.svg";
 import instagram from "../../assets/images/instagram.svg";
-import twitter from "../../assets/images/twitter.svg";
-import linkedin from "../../assets/images/linkedin.svg";
-
 
 const data = [
   {
@@ -13,20 +10,20 @@ const data = [
     title: "Our products",
     links: [
       {
-        name: "BEST DEALS",
+        name:"BEST DEALS",
         url: "/best-deals",
       },
       {
-        name: "Online flight booking",
-        url: "",
+        name:"Online flight booking",
+        url: "#",
       },
       {
-        name: "Domestic airlines",
-        url: "",
+        name:"Domestic airlines",
+        url: "#",
       },
       {
-        name: "Top airline routes",
-        url: "",
+        name:"Top airline routes",
+        url: "#",
       },
     ],
   },
@@ -66,43 +63,43 @@ const data = [
     links: [
       {
         name: "Delta Airlines",
-        url: "",
+        url: "#",
       },
       {
         name: "Alaska Airlines",
-        url: "",
+        url: "#",
       },
       {
         name: "American Airlines",
-        url: "",
+        url: "#",
       },
       {
         name: "United Airlines",
-        url: "",
+        url: "#",
       },
       {
         name: "Southwest Airlines",
-        url: "",
+        url: "#",
       },
       {
         name: "WestJet",
-        url: "",
+        url: "#",
       },
       {
         name: "Spirit Airlines",
-        url: "",
+        url: "#",
       },
       {
         name: "Frontier Airlines",
-        url: "",
+        url: "#",
       },
       {
         name: "JetBlue Airways",
-        url: "",
+        url: "#",
       },
       {
         name: "Air Canada",
-        url: "",
+        url: "#",
       }
     ],
   },
@@ -112,115 +109,93 @@ const data = [
     links: [
       {
         name: "Kahului(OGG - Honolulu (HNL)",
-        url: "",
+        url: "#",
       },
       {
         name: "Atlanta (ATL) to Orlando (MCO)",
-        url: "",
+        url: "#",
       },
       {
         name: "Denver (DEN) to Las Vegas (LAS)",
-        url: "",
+        url: "#",
       },
       {
         name: "Los Angeles (LAX) to Chicago O'Hare (ORD)",
-        url: "",
+        url: "#",
       },
       {
         name: "Los Angeles - Chicago O'Hare Flights",
-        url: "",
+        url: "#",
       },
       {
         name: "Atlanta - Fort Lauderdale Flights",
-        url: "",
+        url: "#",
       },
       {
         name: "Orlando - Atlanta Flights",
-        url: "",
+        url: "#",
       },
       {
         name: "Honolulu - Kahului flights",
-        url: "",
+        url: "#",
       },
       {
         name: "Denver - Phoenix flights ",
-        url: "",
+        url: "#",
       },
     ],
   },
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
   {
     id: 5,
     title: "International flight routes ",
     links: [
       {
         name: "New York (JFK) to New Delhi",
-        url: "",
+        url: "#",
       },
       {
         name: "Washington (IAD) to New Delhi (DEL)",
-        url: "",
+        url: "#",
       },
       {
         name: "Newark (EWR) to New Delhi (DEL)",
-        url: "",
+        url: "#",
       },
       {
         name: "New York JFK to London Heathrow Flights",
-        url: "",
+        url: "#",
       },
       {
         name: "Chicago (ORD) to New Delhi (DEL)",
-        url: "",
+        url: "#",
       },
       {
         name: "Bangkok to Hong Kong Flights",
-        url: "",
+        url: "#",
       },
       {
         name: "Chicago (ORD) to Hyderabad (HYD)",
-        url: ""
+        url: "#"
       },
       {
         name: "San Francisco (SFO) to New Delhi (DEL)",
-        url: "",
+        url: "#",
       },
       {
         name: "Los Angeles-London Heathrow",
-        url: "",
+        url: "#",
       },
       {
         name: "New York JFK-Santiago (DR)",
-        url: "",
+        url: "#",
       },
       {
         name: "New York JFK-Paris CDG",
-        url: "",
+        url: "#",
       },
       {
         name: "New York LaGuardia-Toronto Pearson",
-        url: "",
+        url: "#",
       },
     ],
   },
@@ -230,90 +205,81 @@ const data = [
     links: [
       {
         name: "Cheap Car Rental New York",
-        url: "/car-on-rent",
+        url: "#",
       },
       {
         name: "Cheap Car Rental Miami",
-        url: "/car-on-rent",
+        url: "#",
       },
       {
         name: "Car Rental Miami Airport",
-        url: "/car-on-rent",
+        url: "#",
       },
       {
         name: "Cheap Car Rental Los Angeles",
-        url: "/car-on-rent",
+        url: "#",
       },
       {
         name: "Cheap Car Rental Seattle",
-        url: "/car-on-rent",
+        url: "#",
       },
       {
         name: "Cheap Car Rental San Francisco",
-        url: "/car-on-rent",
+        url: "#",
       },
       {
         name: "Car Rental Phoenix Airport",
-        url: "/car-on-rent",
+        url: "#",
       },
       {
         name: "Cheap Car Rental Atlanta",
-        url: "/car-on-rent",
+        url: "#",
       },
       {
         name: "Car Rental Toronto Airport",
-        url: "/car-on-rent",
+        url: "#",
       },
     ],
   },
-
-
-
-
-
-
-
-
-
   {
     id: 6,
     title: "POPULAR HOTEL DESTINATION",
     links: [
       {
         name: "Hotels in Los Angeles",
-        url: "/hotels",
+        url: "#",
       },
       {
         name: "Hotels in Las Vegas",
-        url: "/hotels",
+        url: "#",
       },
       {
         name: "Hotels in New York City",
-        url: "/hotels",
+        url: "#",
       },
       {
         name: "Hotels in San Francisco",
-        url: "/hotels",
+        url: "#",
       },
       {
         name: "Hotels in Miami Beach",
-        url: "/hotels",
+        url: "#",
       },
       {
         name: "Hotels in London",
-        url: "/hotels",
+        url: "#",
       },
       {
         name: "Hotels in Washington, D.C.",
-        url: "/hotels",
+        url: "#",
       },
       {
         name: "Hotels in Orlando",
-        url: "/hotels",
+        url: "#",
       },
       {
         name: "Hotels in  Queens",
-        url: "/hotels",
+        url: "#",
       },
     ],
   },
@@ -324,26 +290,14 @@ const social = [
     id: 1,
     logo: facebook,
     name: "facebook",
-    url: "",
+    url: "#",
   },
   {
     id: 2,
     logo: instagram,
     name: "instagram",
-    url: "",
-  },
-  {
-    id: 3,
-    logo: twitter,
-    name: "twitter",
-    url: "",
-  },
-  {
-    id: 4,
-    logo: linkedin,
-    name: "linkedin",
-    url: "",
-  },
+    url: "#",
+  }
 ];
 
 const Footer = () => {
@@ -393,12 +347,6 @@ const Footer = () => {
                     </li>
                   ))}
                 </div>
-                <span className="inline-block w-[2px] h-[3.5rem] bg-white"></span>
-                <div className="flex items-center space-x-5">
-                  <a href="mailto:name@gmail.com"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" className="lucide cursor-pointer hover:scale-105 transition-all hover:text-red-600 lucide-mail"><rect width="20" height="16" x="2" y="4" rx="2" /><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7" /></svg> </a>
-                  <a href="tel:+1(212) 000-0000">  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" className="lucide cursor-pointer hover:scale-105 transition-all hover:text-green-600 lucide-phone-outgoing"><polyline points="22 8 22 2 16 2" /><line x1="16" x2="22" y1="8" y2="2" /><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z" /></svg> </a>
-
-                </div>
               </ul>
             </div>
             <div className="text-center py-5 text-white text-[1.4rem]">
@@ -417,7 +365,7 @@ const Footer = () => {
           </div>
           <ul className="md:flex items-center text-center md:text-start space-y-3 md:space-y-0 md:space-x-3 justify-center text-white text-opacity-70 text-[1.4rem] pt-5">
             <li className="cursor-pointer hover:opacity-70 uppercase md:border-r-2 pr-4 border-gray-400">
-              <Link to={"/privacy-policy"}> privacy policy</Link>
+              <Link to={"/privacy-policy"}>PRIVACY POLICY</Link>
             </li>
             <li className="cursor-pointer hover:opacity-70 uppercase md:border-r-2 pr-4 border-gray-400">
               <Link to={"/cancellation-&-refund-policy"}>
@@ -431,19 +379,19 @@ const Footer = () => {
               <Link to={"/frequently-asked-questions"}>FAQS</Link>
             </li>
             <li className="cursor-pointer hover:opacity-70 uppercase md:border-r-2 pr-4 border-gray-400">
-              <Link to={"/"}>Web chek in</Link>
+              <Link to={"#"}>WEB CHEK IN</Link>
             </li>
             <li className="cursor-pointer hover:opacity-70 uppercase md:border-r-2 pr-4 border-gray-400">
-              <Link to={"/refer-&-earn"}>refer & earn</Link>
+              <Link to={"#"}>REFER & EARN</Link>
             </li>
             <li className="cursor-pointer hover:opacity-70 uppercase md:border-r-2 pr-4 border-gray-400">
-              <Link to={"/rewards"}>rewards</Link>
+              <Link to={"#"}>REWARDS</Link>
             </li>
             <li className="cursor-pointer hover:opacity-70 uppercase md:border-r-2 pr-4 border-gray-400">
-              <Link to={"/contact-us"}>support</Link>
+              <Link to={"/contact-us"}>SUPPORT</Link>
             </li>
             <li className="cursor-pointer hover:opacity-70 uppercase">
-              <Link to={"/manage-trip"}>manage trip</Link>
+              <Link to={"#"}>MANAGE TRIP</Link>
             </li>
           </ul>
         </div>
