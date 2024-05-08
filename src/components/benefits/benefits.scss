@@ -23,9 +23,10 @@ $large: 992px;
 .benefits {
   background-color: #ececec;
   padding-bottom: 5rem;
+  padding-top: 5rem;
 
   @include for-small {
-    padding: 0 4px;
+    padding: 2.6rem 0rem 4px;
   }
 
   .benefits_title {

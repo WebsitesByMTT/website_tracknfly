@@ -1,14 +1,14 @@
-import React, { Suspense } from "react";
+import React, { Suspense, useEffect, useState } from "react";
 import "./App.css";
 import { Route, Routes, useLocation } from "react-router-dom";
 import PreLoader from "./utils/PreLoader";
 
-import Cars from "./pages/cars/Cars";
-import RefundPolicy from "./pages/refundPolicy/RefundPolicy";
-import TermsAndServices from "./pages/termsAndServices/TermsAndServices";
-import FAQS from "./pages/faq/FAQS";
-
 //Using React Lazy
+const TermsAndServices = React.lazy(()=>import("./pages/termsAndServices/TermsAndServices"))
+const FAQS = React.lazy(()=>import("./pages/faq/FAQS"))
+const Modal = React.lazy(()=>import("./components/modal/Modal"))
+const RefundPolicy = React.lazy(()=>import("./pages/refundPolicy/RefundPolicy"))
+const Cars = React.lazy(()=>import("./pages/cars/Cars"))
 const Hotel = React.lazy(() => import("./pages/hotels/Hotel"));
 const AboutUs = React.lazy(() => import("./pages/aboutus/AboutUs"));
 const BestDeals = React.lazy(() => import("./pages/bestdeals/BestDeals"));
@@ -17,12 +17,8 @@ const Header = React.lazy(() => import("./components/header/Header"));
 const Contact = React.lazy(() => import("./pages/contact/Contact"));
 const Footer = React.lazy(() => import("./components/footer/Footer"));
 const Flights = React.lazy(() => import("./pages/flights/Flights"));
-const PrivacyPolicy = React.lazy(() =>
-  import("./pages/privacyPolicy/PrivacyPolicy")
-);
-const ProductOffering = React.lazy(() =>
-  import("./components/productOffering/ProductOffering")
-);
+const PrivacyPolicy = React.lazy(() =>import("./pages/privacyPolicy/PrivacyPolicy"));
+const ProductOffering = React.lazy(() =>import("./components/productOffering/ProductOffering"));
 
 const data = {
   productOffering: [
@@ -71,13 +67,19 @@ const data = {
 };
 
 function App() {
+  const [modalstate,setModalState]=useState(false)
   const location = useLocation();
   const excludePaths = ["/flights", "/hotels", "/cars-on-rent", "best-deals","/contact-us","/privacy-policy","/cancellation-&-refund-policy","/terms-&services"];
   const shouldRenderProductOffering = !excludePaths.includes(location.pathname);
   window.scrollTo({top: 0,behavior: 'smooth'})
+  useEffect(()=>{
+    const timeState=setTimeout(()=>{
+       setModalState(false)
+    },1000)
+    return ()=>clearTimeout(timeState)
+  },[])
+  const closeModal=()=>{setModalState(false)}
 
-
-  
   return (
     <>
       <Suspense fallback={<PreLoader />}>
@@ -86,24 +88,18 @@ function App() {
           <Route path="/" element={<Home />} />
           <Route path="/flights" element={<Flights />} />
           <Route path="/hotels" element={<Hotel />} />
-
           <Route path="/cars-on-rent" element={<Cars />} />
           <Route path="/best-deals" element={<BestDeals />} />
           <Route path="/contact-us" element={<Contact />} />
           <Route path="/about-us" element={<AboutUs />} />
           <Route path="/privacy-policy" element={<PrivacyPolicy />} />
-          <Route
-            path="/cancellation-&-refund-policy"
-            element={<RefundPolicy />}
-          />
+          <Route path="/cancellation-&-refund-policy" element={<RefundPolicy />}/>
           <Route path="/terms-&services" element={<TermsAndServices />} />
           <Route path="/frequently-asked-questions" element={<FAQS />} />
-        </Routes>
-        {shouldRenderProductOffering && (
-          <ProductOffering data={data.productOffering} />
-        )}
+        </Routes> {shouldRenderProductOffering && (<ProductOffering data={data.productOffering} />)}
         <Footer />
       </Suspense>
+      <Modal isOpen={modalstate} onClose={closeModal}/>
     </>
   );
 }

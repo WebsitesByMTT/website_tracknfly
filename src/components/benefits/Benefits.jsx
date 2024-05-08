@@ -27,7 +27,7 @@ const Benefits = () => {
   ];
   return (
     <div className="benefits">
-      <div className="container pt-[3rem]">
+      <div className="container">
         <div className="cards">
           {data?.map((item, ind) => (
             <>
