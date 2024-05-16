@@ -1,7 +1,5 @@
 import { Helmet } from "react-helmet";
 import WhyTracknFly from "../../components/whyTracknFly/WhyTracknFly";
-import React from "react";
-import Hero from "../../components/hero/Hero";
 import AboutTrackenFly from "../../components/aboutTrackenFly/AboutTrackenFly";
 import aboutus from "../../assets/images/aboutus.png";
 
@@ -22,11 +20,14 @@ const AboutUs = () => {
           property="og:description"
           content="Trackn Fly - It is the best travel agency with exclusive discounts on cheap hotels, flights, and car on rentals. Visit our about us to know about the company."
         />
-       <meta property="og:image" content="https://www.tracknfly.com/assets/tracknfly-logo-6b9305ee.png"/>
+        <meta
+          property="og:image"
+          content="https://www.tracknfly.com/assets/tracknfly-logo-6b9305ee.png"
+        />
       </Helmet>
-      <Hero text={"Explore Flights - Hotels Online & Cars on Rent"} />
+      {/* <Hero text={"Explore Flights - Hotels Online & Cars on Rent"} /> */}
 
-      <div className="py-5">
+      <div className="py-[5rem]">
         <div className="py-5 px-[2rem] md:px-0">
           <div className="text-center text-[2.8rem] md:text-[3rem] lg:text-[4rem] font-semibold text-black">
             Trackn Fly has evolved as the most unique and wonderful in{" "}

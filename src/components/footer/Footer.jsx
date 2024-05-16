@@ -10,19 +10,19 @@ const data = [
     title: "Our products",
     links: [
       {
-        name:"BEST DEALS",
+        name: "BEST DEALS",
         url: "/best-deals",
       },
       {
-        name:"Online flight booking",
+        name: "Online flight booking",
         url: "#",
       },
       {
-        name:"Domestic airlines",
+        name: "Domestic airlines",
         url: "#",
       },
       {
-        name:"Top airline routes",
+        name: "Top airline routes",
         url: "#",
       },
     ],
@@ -100,7 +100,7 @@ const data = [
       {
         name: "Air Canada",
         url: "#",
-      }
+      },
     ],
   },
   {
@@ -108,39 +108,39 @@ const data = [
     title: "Domestic flights",
     links: [
       {
-        name: "Kahului(OGG - Honolulu (HNL)",
+        name: "Kahului(OGG to  Honolulu (HNL) Flights",
         url: "#",
       },
       {
-        name: "Atlanta (ATL) to Orlando (MCO)",
+        name: "Atlanta (ATL) to Orlando (MCO) Flights",
         url: "#",
       },
       {
-        name: "Denver (DEN) to Las Vegas (LAS)",
+        name: "Denver (DEN) to Las Vegas (LAS) Flights",
         url: "#",
       },
       {
-        name: "Los Angeles (LAX) to Chicago O'Hare (ORD)",
+        name: "Los Angeles (LAX) to Chicago O'Hare (ORD) Flights",
         url: "#",
       },
       {
-        name: "Los Angeles - Chicago O'Hare Flights",
+        name: "Los Angeles(LAX) to  Chicago O'Hare (ORD) Flights",
         url: "#",
       },
       {
-        name: "Atlanta - Fort Lauderdale Flights",
+        name: "Atlanta (ATL) to Fort Lauderdale (FLL) Flights",
         url: "#",
       },
       {
-        name: "Orlando - Atlanta Flights",
+        name: "Orlando (MCO) to Atlanta (ATL) Flights",
         url: "#",
       },
       {
-        name: "Honolulu - Kahului flights",
+        name: "Honolulu (HNL) to Kahului (OGG) Flights ",
         url: "#",
       },
       {
-        name: "Denver - Phoenix flights ",
+        name: "Denver (DEN) to Phoenix (AZA) Flights        ",
         url: "#",
       },
     ],
@@ -150,51 +150,55 @@ const data = [
     title: "International flight routes ",
     links: [
       {
-        name: "New York (JFK) to New Delhi",
+        name: "New York (JFK) to Santiago (DR) Flights        ",
         url: "#",
       },
       {
-        name: "Washington (IAD) to New Delhi (DEL)",
+        name: "Los Angeles (LAX) to London Heathrow (LHR) Flights        ",
         url: "#",
       },
       {
-        name: "Newark (EWR) to New Delhi (DEL)",
+        name: "New York LaGuardia (LGA) to Toronto Pearson (YYZ) Flights        ",
         url: "#",
       },
       {
-        name: "New York JFK to London Heathrow Flights",
+        name: "New York (JFK) -to London Heathrow (LHR) Flights        ",
         url: "#",
       },
       {
-        name: "Chicago (ORD) to New Delhi (DEL)",
+        name: "Chicago (ORD) to New Delhi (DEL) Flights        ",
         url: "#",
       },
       {
-        name: "Bangkok to Hong Kong Flights",
+        name: "Bangkok (BKK) to Hong Kong (HK) Flights        ",
         url: "#",
       },
       {
-        name: "Chicago (ORD) to Hyderabad (HYD)",
-        url: "#"
-      },
-      {
-        name: "San Francisco (SFO) to New Delhi (DEL)",
+        name: "Fort Lauderdale (FLL) to Port Au Prince (PAP) Flights        ",
         url: "#",
       },
       {
-        name: "Los Angeles-London Heathrow",
+        name: "San Francisco (SFO) to Cancun (CUN) Flights        ",
         url: "#",
       },
       {
-        name: "New York JFK-Santiago (DR)",
+        name: "Newark (EWR) to London (LCY) Flights        ",
         url: "#",
       },
       {
-        name: "New York JFK-Paris CDG",
+        name: "Washington (IAD) to Beijing (PEK) Flights        ",
         url: "#",
       },
       {
-        name: "New York LaGuardia-Toronto Pearson",
+        name: "New York (JFK) to Melbourne (MEL) Flights        ",
+        url: "#",
+      },
+      {
+        name: "New York (JFK) to Paris (CDG) Flights        ",
+        url: "#",
+      },
+      {
+        name: "San Jose  (SJO to Guadalajara (GDL) Flights        ",
         url: "#",
       },
     ],
@@ -297,7 +301,7 @@ const social = [
     logo: instagram,
     name: "instagram",
     url: "#",
-  }
+  },
 ];
 
 const Footer = () => {
@@ -308,10 +312,11 @@ const Footer = () => {
           <div className="space-y-8 md:space-y-0 md:gap-x-5 grid border-b-[1px] border-gray-400 pb-12  grid-cols-12">
             {data.map((item, index) => (
               <div
-                className={`col-span-12 md:col-span-2 ${[2, 3].includes(index + 1)
-                  ? " lg:col-span-1"
-                  : " lg:col-span-2"
-                  }`}
+                className={`col-span-12 md:col-span-2 ${
+                  [2, 3].includes(index + 1)
+                    ? " lg:col-span-1"
+                    : " lg:col-span-2"
+                }`}
                 key={item.id}
               >
                 <h6 className="text-white font-semibold text-[1.4rem] uppercase">
