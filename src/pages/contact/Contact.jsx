@@ -7,8 +7,6 @@ import { Helmet } from "react-helmet";
 import Hero from "../../components/hero/Hero";
 import facebook from "../../assets/images/facebook.svg";
 import instagram from "../../assets/images/instagram.svg";
-import twitter from "../../assets/images/twitter.svg";
-import linkedin from "../../assets/images/linkedin.svg";
 
 const social = [
   {
@@ -22,19 +20,7 @@ const social = [
     logo: instagram,
     name: "instagram",
     url: "",
-  },
-  {
-    id: 3,
-    logo: twitter,
-    name: "twitter",
-    url: "",
-  },
-  {
-    id: 4,
-    logo: linkedin,
-    name: "linkedin",
-    url: "",
-  },
+  }
 ];
 const Contact = () => {
   return (
@@ -56,10 +42,9 @@ const Contact = () => {
           property="og:description"
           content="Trackn Fly is the best travel agency around the world that offers cheap hotels, flights, and cars on rentals. For more information contact us anytime."
         />
-        <meta property="og:image" content="https://www.tracknfly.com/assets/tracknfly-logo-6b9305ee.png"/>
+        <meta property="og:image" content="https://www.tracknfly.com/assets/tracknfly-logo-6b9305ee.png" />
       </Helmet>
       <Hero text={"Explore Flights - Hotels Online & Cars on Rent"} />
-
       <div className="contact-us">
         <div className="Container py-[7rem] flex flex-col gap-[7rem]">
           <div className="px-[2rem] md:px-[4rem] flex items-center justify-center flex-col gap-[1rem] ">
@@ -83,7 +68,7 @@ const Contact = () => {
                 </h3>
 
                 <p className=" text-[2rem]">
-                  At FLYNFARE LLC we're constantly satisfied to get with both
+                  At TRACKNFLY LLC we're constantly satisfied to get with both
                   new and existing customers, So in the event that you have a
                   question or require any information, Please feel free to reach
                   on below contact details.
@@ -107,20 +92,22 @@ const Contact = () => {
                   </svg>
                   <span>Address: </span> Irving, TX 75038, USA.
                 </li>
-                <li className=" text-[2rem] flex items-center gap-[1rem]">
-                  <svg
-                    width="16"
-                    height="16"
-                    viewBox="0 0 16 16"
-                    fill="none"
-                    xmlns="http://www.w3.org/2000/svg"
-                  >
-                    <path
-                      d="M0 1C0 0.734784 0.105357 0.48043 0.292893 0.292893C0.48043 0.105357 0.734784 0 1 0H3.153C3.38971 0.000108969 3.6187 0.0841807 3.79924 0.23726C3.97979 0.390339 4.10018 0.602499 4.139 0.836L4.879 5.271C4.91436 5.48222 4.88097 5.69921 4.78376 5.89003C4.68655 6.08085 4.53065 6.23543 4.339 6.331L2.791 7.104C3.34611 8.47965 4.17283 9.72928 5.22178 10.7782C6.27072 11.8272 7.52035 12.6539 8.896 13.209L9.67 11.661C9.76552 11.4695 9.91994 11.3138 10.1106 11.2166C10.3012 11.1194 10.5179 11.0859 10.729 11.121L15.164 11.861C15.3975 11.8998 15.6097 12.0202 15.7627 12.2008C15.9158 12.3813 15.9999 12.6103 16 12.847V15C16 15.2652 15.8946 15.5196 15.7071 15.7071C15.5196 15.8946 15.2652 16 15 16H13C5.82 16 0 10.18 0 3V1Z"
-                      fill="#18181B"
-                    />
-                  </svg>
-                  <span>Phone : </span> 1-888-831-1814
+                <li className="text-[2rem]">
+                  <div className="flex items-center gap-[1rem]">
+                    <svg
+                      width="16"
+                      height="16"
+                      viewBox="0 0 16 16"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        d="M0 1C0 0.734784 0.105357 0.48043 0.292893 0.292893C0.48043 0.105357 0.734784 0 1 0H3.153C3.38971 0.000108969 3.6187 0.0841807 3.79924 0.23726C3.97979 0.390339 4.10018 0.602499 4.139 0.836L4.879 5.271C4.91436 5.48222 4.88097 5.69921 4.78376 5.89003C4.68655 6.08085 4.53065 6.23543 4.339 6.331L2.791 7.104C3.34611 8.47965 4.17283 9.72928 5.22178 10.7782C6.27072 11.8272 7.52035 12.6539 8.896 13.209L9.67 11.661C9.76552 11.4695 9.91994 11.3138 10.1106 11.2166C10.3012 11.1194 10.5179 11.0859 10.729 11.121L15.164 11.861C15.3975 11.8998 15.6097 12.0202 15.7627 12.2008C15.9158 12.3813 15.9999 12.6103 16 12.847V15C16 15.2652 15.8946 15.5196 15.7071 15.7071C15.5196 15.8946 15.2652 16 15 16H13C5.82 16 0 10.18 0 3V1Z"
+                        fill="#18181B"
+                      />
+                    </svg>
+                    <span>Phone : </span> +1 888-812-2145
+                  </div>
                 </li>
                 <li className=" text-[2rem] flex items-center gap-[1rem]">
                   <svg
@@ -139,10 +126,9 @@ const Contact = () => {
                       fill="#18181B"
                     />
                   </svg>
-                  <span>E-mail : </span> admin@flynfare.com
+                  <span>E-mail : </span>contact@tracknfly.com
                 </li>
               </ul>
-
               <ul className=" flex flex-row gap-[2rem]">
                 {social.map((item) => (
                   <li key={item?.id} className=" cursor-pointer">
@@ -160,7 +146,7 @@ const Contact = () => {
               <div className="titles">
                 <h2>Contact Form</h2>
                 <p>
-                  You can leave us your query below; our support team will be in
+                  You Can leave us your query below; our support team will be in
                   touch with you shortly.
                 </p>
               </div>
