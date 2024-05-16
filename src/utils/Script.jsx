@@ -1,8 +1,7 @@
 import { useEffect } from "react";
 
-const Script = ({ src, async = true, target }) => {
+const Script = ({ src, async = true, target, scriptId }) => {
   useEffect(() => {
-    const scriptId = "kiwi-script";
     if (!document.getElementById(scriptId)) {
       const script = document.createElement("script");
       script.id = scriptId;
