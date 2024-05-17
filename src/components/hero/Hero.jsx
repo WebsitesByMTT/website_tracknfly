@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import { useState, useEffect } from "react";
 import "./hero.scss";
 import Script from "../../utils/Script";
 import bg1 from "../../assets/images/f-c-1.jpg";
@@ -97,7 +97,7 @@ const Hero = ({ text, activeTab = "flight" }) => {
             >
               <Script
                 src={
-                  "https://tp.media/content?currency=usd&trs=321732&shmarker=368154&show_hotels=true&powered_by=false&locale=en&searchUrl=avia.tracknfly.com%2Fflights&primary_override=%23ABABF2ff&color_button=%23E66E38ff&color_icons=%230087D1ff&dark=%23000000ff&light=%23ECECECff&secondary=%23FFFFFFff&special=%23C4C4C4&color_focused=%230F1316ff&border_radius=11&no_labels=true&plain=true&promo_id=7879&campaign_id=100"
+                  "https://tp.media/content?currency=usd&trs=321732&shmarker=368154&show_hotels=false&powered_by=false&locale=en&searchUrl=avia.tracknfly.com%2Fflights&primary_override=%2332a8dd&color_button=%2332a8dd&color_icons=%2332a8dd&dark=%23262626&light=%23FFFFFF&secondary=%23FFFFFF&special=%23C4C4C4&color_focused=%2332a8dd&border_radius=11&no_labels=true&plain=true&promo_id=7879&campaign_id=100"
                 }
                 target={"flight"}
                 scriptId="flight-script"
