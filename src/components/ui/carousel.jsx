@@ -25,6 +25,7 @@ const Carousel = React.forwardRef(
       plugins,
       className,
       children,
+      onSlideChange,
       ...props
     },
     ref
@@ -39,14 +40,21 @@ const Carousel = React.forwardRef(
     const [canScrollPrev, setCanScrollPrev] = React.useState(false);
     const [canScrollNext, setCanScrollNext] = React.useState(false);
 
-    const onSelect = React.useCallback((api) => {
-      if (!api) {
-        return;
-      }
+    const onSelect = React.useCallback(
+      (api) => {
+        if (!api) {
+          return;
+        }
 
-      setCanScrollPrev(api.canScrollPrev());
-      setCanScrollNext(api.canScrollNext());
-    }, []);
+        const selectedIndex = api.selectedScrollSnap();
+        setCanScrollPrev(api.canScrollPrev());
+        setCanScrollNext(api.canScrollNext());
+        if (onSlideChange) {
+          onSlideChange(selectedIndex);
+        }
+      },
+      [onSlideChange]
+    );
 
     const scrollPrev = React.useCallback(() => {
       api?.scrollPrev();

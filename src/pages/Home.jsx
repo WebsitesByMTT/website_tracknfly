@@ -1,4 +1,3 @@
-import React from "react";
 import Benefits from "../components/benefits/Benefits";
 import TopFlightOffer from "../components/topFlights/TopFlightOffer";
 import WhyToChooseUs from "../components/why-choose-us/WhyToChooseUs";
@@ -9,6 +8,7 @@ import WhyTracknFly from "../components/whyTracknFly/WhyTracknFly";
 import AboutTrackenFly from "../components/aboutTrackenFly/AboutTrackenFly";
 import Blogs from "../components/blogs/Blogs";
 import Hero from "../components/hero/Hero";
+import ExploreHidden from "../components/exploreHidden/ExploreHidden";
 
 const data = {
   frquentlyAskedQuestions: [
@@ -59,6 +59,8 @@ const Home = () => {
       <Benefits />
       <PopularBeach />
       <TopFlightOffer />
+      <ExploreHidden />
+
       <HowWeCanHelp />
       <Blogs />
       <WhyToChooseUs />
