@@ -91,7 +91,7 @@ function App() {
   window.scrollTo({ top: 0, behavior: "smooth" });
   useEffect(() => {
     const timeState = setTimeout(() => {
-      setModalState(true);
+      setModalState(false);
     }, 1000);
     return () => clearTimeout(timeState);
   }, []);
