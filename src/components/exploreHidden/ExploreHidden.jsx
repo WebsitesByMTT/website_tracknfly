@@ -75,7 +75,11 @@ const ExploreHidden = () => {
                   key={idx}
                   className="sm:basis-1/2 md:basis-1/3 lg:basis-1/4 p-[1rem] bg-[white]"
                 >
-                  <HotelCard data={item} color="#0EB77A" />
+                  <HotelCard
+                    data={item}
+                    color="#0EB77A"
+                    button={"Check more"}
+                  />
                 </CarouselItem>
               ))}
             </CarouselContent>

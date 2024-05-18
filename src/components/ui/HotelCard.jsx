@@ -1,4 +1,4 @@
-const HotelCard = ({ data, color = "#2659C3" }) => {
+const HotelCard = ({ data, color = "#2659C3", button = "Book Now" }) => {
   return (
     <div
       className=" p-[2rem] flex flex-col items-start justify-center gap-[1rem] rounded-2xl "
@@ -10,7 +10,7 @@ const HotelCard = ({ data, color = "#2659C3" }) => {
       </div>
       <img
         src={data.img}
-        alt="alt"
+        alt={data.name}
         className=" w-full object-cover border  h-[19.7rem]"
       />
 
@@ -18,7 +18,7 @@ const HotelCard = ({ data, color = "#2659C3" }) => {
         <button
           className={` bg-[${color}] text-white py-[1.2rem] px-[3rem] rounded-[3rem] text-[1.4rem]`}
         >
-          Book Now
+          {button}
         </button>{" "}
       </a>
     </div>

@@ -5,7 +5,7 @@ export const FlightCard = ({ data }) => {
       style={{ boxShadow: "0px 4.43px 17.71px 0px #9E9E9E40" }}
     >
       <div className=" flex flex-col gap-[1rem]">
-        <span className=" text-[gray] text-[1.6rem]">{data.date}</span>
+        {/* <span className=" text-[gray] text-[1.6rem]">{data.date}</span> */}
         <div className=" ml-3">
           <h6 className=" font-[500] text-[2rem]">{data.from}</h6>
           <svg

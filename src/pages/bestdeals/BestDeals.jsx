@@ -3,15 +3,9 @@ import bestdealAboutIMG from "../../assets/images/best-deal-about.png";
 import bestDealBannerCardIMG from "../../assets/images/bestDealBannerCard-1.png";
 import fligthTimelineIMG from "../../assets/images/flight-timeline.jpg";
 
-// import { Carousel } from "react-responsive-carousel";
-// import "react-responsive-carousel/lib/styles/carousel.min.css";
 import { Helmet } from "react-helmet";
-import AboutTrackenFly from "../../components/aboutTrackenFly/AboutTrackenFly";
 import Autoplay from "embla-carousel-autoplay";
-import hotelDeal1IMG from "../../assets/images/hotelDeal-1.png";
-import hotelDeal2IMG from "../../assets/images/hotelDeal-2.png";
-import hotelDeal3IMG from "../../assets/images/hotelDeal-3.png";
-import hotelDeal4IMG from "../../assets/images/hotelDeal-4.png";
+
 import carDeal1IMG from "../../assets/images/carDeal-1.png";
 import carDeal2IMG from "../../assets/images/carDeal-2.png";
 import carDeal3IMG from "../../assets/images/carDeal-3.png";
@@ -29,6 +23,29 @@ import { Link } from "react-router-dom";
 import { useState } from "react";
 import HotelCard from "../../components/ui/HotelCard";
 import { FlightCard } from "../../components/ui/FlightCard";
+
+import londonHotel from "../../assets/images/london-hotels.jpg";
+import lasVegas from "../../assets/images/las-vegas-hotels.jpg";
+import sanDiego from "../../assets/images/san-diego-hotels.jpg";
+import losAngeles from "../../assets/images/los-angeles-hotels.jpg";
+import miamiBeach from "../../assets/images/miami-beach-hotels.jpg";
+import oceanCity from "../../assets/images/ocean-city-hotels.jpeg";
+import myrtleBeach from "../../assets/images/myrtle-beach-hotels.jpg";
+import medina from "../../assets/images/medina-hotels.jpeg";
+import sanJuan from "../../assets/images/san-juan-hotels.jpeg";
+import washington from "../../assets/images/washington-dc-hotels.jpeg";
+
+import laVegasCar from "../../assets/images/las-vegas-cars.jpeg";
+import sanJoseCar from "../../assets/images/san-jose-car.jpeg";
+import sanDiegoCar from "../../assets/images/san-diego-car.jpeg";
+import losAngelesCar from "../../assets/images/los-angeles-car.webp";
+import mianiBeachCar from "../../assets/images/miami-beach-car.jpeg";
+import oceanCityCar from "../../assets/images/ocean-city-car.jpeg";
+import myrtleBeachCar from "../../assets/images/myrtle-beach-car.jpeg";
+import medinaCar from "../../assets/images/medina-car.webp";
+import sanJuanCar from "../../assets/images/san-juan-car.jpeg";
+import miamiBeachCar from "../../assets/images/miami-beach-car.jpeg";
+import washingtonCar from "../../assets/images/washington-dc-car.webp";
 
 const BestDeals = () => {
   const [currentSlide, setCurrentSlide] = useState(0);
@@ -106,30 +123,51 @@ const BestDeals = () => {
     },
     {
       date: "Thu, 23 May",
-      from: "Honolulu (HNL)",
-      to: "Kahului (OGG)",
-      discount: "upto 15%",
+      from: "Denver (DEN)",
+      to: "Las Vegas (LAS)",
+      discount: "upto 25%",
       url: "",
     },
     {
       date: "Sun, 26 May",
       from: "Atlanta (ATL) ",
-      to: "Orlando (MCO)",
-      discount: "upto 10%",
+      to: "Fort Lauderdale",
+      discount: "upto 26%",
       url: "",
     },
     {
       date: "Sun, 26 May",
-      from: "Las Vegas (LAS)",
-      to: "Los Angeles (LAX)",
-      discount: "upto 20%",
+      from: "Denver (DEN) ",
+      to: "Las Vegas (LAS)      ",
+      discount: "upto 22%",
       url: "",
     },
     {
       date: "Sun, 26 May",
-      from: "New York (JFK) ",
-      to: "Los Angeles (LAX)",
-      discount: "upto 30%",
+      from: "Denver (DEN)",
+      to: "Phoenix ",
+      discount: "upto 35%",
+      url: "",
+    },
+    {
+      date: "Sun, 26 May",
+      from: "San Francisco (SFO)",
+      to: "Los Angeles (LAX) ",
+      discount: "upto 40%",
+      url: "",
+    },
+    {
+      date: "Sun, 26 May",
+      from: "New York (LGA) ",
+      to: "Chicago (ORD)      ",
+      discount: "upto 35%",
+      url: "",
+    },
+    {
+      date: "Sun, 26 May",
+      from: "Los Angeles (LAX) ",
+      to: "Chicago (ORD)      ",
+      discount: "upto 25%",
       url: "",
     },
   ];
@@ -139,56 +177,77 @@ const BestDeals = () => {
       id: 1,
       name: "London hotels",
       discount: "Flat 20%",
-      img: hotelDeal1IMG,
+      img: londonHotel,
       url: "",
     },
     {
       id: 2,
       name: "Las Vegas hotels",
       discount: "Flat 16%",
-      img: hotelDeal2IMG,
+      img: lasVegas,
       url: "",
     },
     {
       id: 3,
       name: "San Diego hotels",
       discount: "Flat 25%",
-      img: hotelDeal3IMG,
+      img: sanDiego,
       url: "",
     },
     {
       id: 4,
       name: "Los Angeles hotels",
       discount: "Flat 12%",
-      img: hotelDeal4IMG,
+      img: losAngeles,
       url: "",
     },
     {
       id: 5,
-      name: "London hotels",
-      discount: "Flat 20%",
-      img: hotelDeal1IMG,
+      name: "Miami Beach hotels",
+      discount: "Flat 22%",
+      img: miamiBeach,
       url: "",
     },
     {
       id: 6,
-      name: "Las Vegas hotels",
-      discount: "Flat 16%",
-      img: hotelDeal2IMG,
+      name: "Ocean City hotels",
+      discount: "Flat 33%",
+      img: oceanCity,
       url: "",
     },
     {
       id: 7,
-      name: "San Diego hotels",
-      discount: "Flat 25%",
-      img: hotelDeal3IMG,
+      name: "Myrtle Beach hotels",
+      discount: "Flat 28%",
+      img: myrtleBeach,
       url: "",
     },
     {
       id: 8,
-      name: "Los Angeles hotels",
-      discount: "Flat 12%",
-      img: hotelDeal4IMG,
+      name: "Medina hotels",
+      discount: "Flat 25%",
+      img: medina,
+      url: "",
+    },
+    {
+      id: 9,
+      name: "San Juan hotels",
+      discount: "Flat 18%",
+      img: sanJuan,
+      url: "",
+    },
+    {
+      id: 10,
+      name: "Miami Beach hotels",
+      discount: "Flat 30%",
+      img: miamiBeach,
+      url: "",
+    },
+    {
+      id: 10,
+      name: "Washington, D.C. hotels",
+      discount: "Flat 22%",
+      img: washington,
       url: "",
     },
   ];
@@ -197,57 +256,78 @@ const BestDeals = () => {
     {
       id: 1,
       name: "Las Vegas Car Rentals",
-      discount: "Flat 15%",
-      img: carDeal1IMG,
+      discount: "Upto 15%",
+      img: laVegasCar,
       url: "",
     },
     {
       id: 2,
       name: "San Jose Car Rentals",
-      discount: "Flat 16%",
-      img: carDeal2IMG,
+      discount: "Upto 10%",
+      img: sanJoseCar,
       url: "",
     },
     {
       id: 3,
       name: "San Diego Car Rentals",
-      discount: "Flat 25%",
-      img: carDeal3IMG,
+      discount: "Upto 20%",
+      img: sanDiegoCar,
       url: "",
     },
     {
       id: 4,
       name: "Los Angeles Car Rentals",
-      discount: "Flat 12%",
-      img: carDeal4IMG,
+      discount: "Upto 30%",
+      img: losAngelesCar,
       url: "",
     },
     {
       id: 5,
-      name: "Las Vegas Car Rentals",
-      discount: "Flat 15%",
-      img: carDeal1IMG,
+      name: "Miami Beach Car Rentals",
+      discount: "Upto 25%",
+      img: mianiBeachCar,
       url: "",
     },
     {
       id: 6,
-      name: "San Jose Car Rentals",
-      discount: "Flat 16%",
-      img: carDeal2IMG,
+      name: "Ocean City Car Rentals",
+      discount: "Upto 26%",
+      img: oceanCityCar,
       url: "",
     },
     {
       id: 7,
-      name: "San Diego Car Rentals",
-      discount: "Flat 25%",
-      img: carDeal3IMG,
+      name: "Myrtle Beach Car Rentals",
+      discount: "Upto 22%",
+      img: myrtleBeachCar,
       url: "",
     },
     {
       id: 8,
-      name: "Los Angeles Car Rentals",
-      discount: "Flat 12%",
-      img: carDeal4IMG,
+      name: "Medina Car Rentals",
+      discount: "Upto 35%",
+      img: medinaCar,
+      url: "",
+    },
+    {
+      id: 9,
+      name: "San Juan Car Rentals",
+      discount: "Upto 40%",
+      img: sanJuanCar,
+      url: "",
+    },
+    {
+      id: 10,
+      name: "Miami Beach Car Rentals",
+      discount: "Upto 35%",
+      img: miamiBeachCar,
+      url: "",
+    },
+    {
+      id: 11,
+      name: "Washington, D.C. Car Rentals",
+      discount: "Upto 25%",
+      img: washingtonCar,
       url: "",
     },
   ];

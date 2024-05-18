@@ -1,4 +1,12 @@
 import { FlightCard } from "../ui/FlightCard";
+import {
+  Carousel,
+  CarouselContent,
+  CarouselItem,
+  CarouselNext,
+  CarouselPrevious,
+} from "../ui/carousel";
+import Autoplay from "embla-carousel-autoplay";
 
 const PopularBeach = () => {
   const data = [
@@ -11,14 +19,14 @@ const PopularBeach = () => {
     },
     {
       date: "Sun, 26 May",
-      from: "Atlanta (ATL) ",
+      from: "Atlanta (ATL)  ",
       to: "Orlando (MCO)",
       discount: "upto 10%",
       url: "",
     },
     {
       date: "Sun, 26 May",
-      from: "Las Vegas (LAS)",
+      from: "Las Vegas (LAS) ",
       to: "Los Angeles (LAX)",
       discount: "upto 20%",
       url: "",
@@ -28,6 +36,55 @@ const PopularBeach = () => {
       from: "New York (JFK) ",
       to: "Los Angeles (LAX)",
       discount: "upto 30%",
+      url: "",
+    },
+    {
+      date: "Sun, 26 May",
+      from: "Denver (DEN)",
+      to: "Las Vegas (LAS)",
+      discount: "upto 25%",
+      url: "",
+    },
+    {
+      date: "Sun, 26 May",
+      from: "Atlanta (ATL) ",
+      to: "Fort Lauderdale (FLL)",
+      discount: "upto 26%",
+      url: "",
+    },
+    {
+      date: "Sun, 26 May",
+      from: "Denver (DEN) ",
+      to: "Las Vegas (LAS)",
+      discount: "upto 22%",
+      url: "",
+    },
+    {
+      date: "Sun, 26 May",
+      from: "Denver (DEN) ",
+      to: "Phoenix (PHX)",
+      discount: "upto 35%",
+      url: "",
+    },
+    {
+      date: "Sun, 26 May",
+      from: "San Francisco (SFO) ",
+      to: "Los Angeles (LAX)",
+      discount: "upto 40%",
+      url: "",
+    },
+    {
+      date: "Sun, 26 May",
+      from: "New York (LGA) ",
+      to: "Chicago (ORD)",
+      discount: "upto 35%",
+      url: "",
+    },
+    {
+      date: "Sun, 26 May",
+      from: "Los Angeles (LAX) ",
+      to: "Chicago (ORD)",
+      discount: "upto 25%",
       url: "",
     },
   ];
@@ -41,10 +98,31 @@ const PopularBeach = () => {
             on flights, hotels, and car rentals?
           </span>
         </h2>
-        <div className=" grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-[4rem]">
-          {data.map((item) => (
-            <FlightCard data={item} key={item.id} />
-          ))}
+        <div className=" ">
+          <Carousel
+            opts={{
+              align: "start",
+            }}
+            plugins={[
+              Autoplay({
+                delay: 2000,
+              }),
+            ]}
+            className="w-full "
+          >
+            <CarouselContent>
+              {data.map((item, idx) => (
+                <CarouselItem
+                  key={idx}
+                  className="sm:basis-1/2 md:basis-1/3 lg:basis-1/4 p-[1rem] "
+                >
+                  <FlightCard data={item} />
+                </CarouselItem>
+              ))}
+            </CarouselContent>
+            <CarouselPrevious />
+            <CarouselNext />
+          </Carousel>
         </div>
       </div>
     </div>
