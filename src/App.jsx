@@ -122,6 +122,7 @@ function App() {
         {shouldRenderProductOffering && (
           <ProductOffering data={data.productOffering} />
         )}
+        
         <Footer />
       </Suspense>
       <Modal isOpen={modalstate} onClose={closeModal} />
