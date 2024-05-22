@@ -114,7 +114,7 @@ const Hero = ({ text, activeTab = "flight" }) => {
             >
               <Script
                 src={
-                  "https://tp.media/content?currency=usd&trs=321732&shmarker=368154&show_hotels=true&powered_by=false&locale=en&searchUrl=search.hotellook.com&primary_override=%23ABABF2ff&color_button=%23E66E38ff&color_icons=%230087D1ff&secondary=%23FFFFFFff&dark=%23000000ff&light=%23ECECECff&special=%23C4C4C4&color_focused=%230F1316ff&border_radius=11&no_labels=true&plain=true&promo_id=7873&campaign_id=101"
+                  "https://tp.media/content?currency=usd&trs=321732&shmarker=368154&show_hotels=false&powered_by=false&locale=en&searchUrl=search.hotellook.com&primary_override=%23FF8E01&color_button=%23FF8E01&color_icons=%23FF8E01&secondary=%23FFFFFF&dark=%23262626&light=%23FFFFFF&special=%23C4C4C4&color_focused=%23FF8E01&border_radius=5&no_labels=true&plain=true&promo_id=7873&campaign_id=101"
                 }
                 target={"hotel"}
                 scriptId="hotel-script"
