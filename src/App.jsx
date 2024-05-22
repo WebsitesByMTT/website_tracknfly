@@ -2,6 +2,7 @@ import React, { Suspense, useEffect, useState } from "react";
 import "./App.css";
 import { Route, Routes, useLocation } from "react-router-dom";
 import PreLoader from "./utils/PreLoader";
+import BlogsPage from "./pages/blogs/BlogsPage";
 
 //Using React Lazy
 const TermsAndServices = React.lazy(() =>
@@ -105,6 +106,8 @@ function App() {
         <Header />
         <Routes>
           <Route path="/" element={<Home />} />
+          <Route path="/:blogPath" element={<BlogsPage />} />
+
           <Route path="/flights" element={<Flights />} />
           <Route path="/hotels" element={<Hotel />} />
           <Route path="/cars-on-rent" element={<Cars />} />
@@ -122,7 +125,6 @@ function App() {
         {shouldRenderProductOffering && (
           <ProductOffering data={data.productOffering} />
         )}
-        
         <Footer />
       </Suspense>
       <Modal isOpen={modalstate} onClose={closeModal} />
