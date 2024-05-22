@@ -60,9 +60,8 @@ const Home = () => {
       <PopularBeach />
       <TopFlightOffer />
       <ExploreHidden />
-
       <HowWeCanHelp />
-      <Blogs />
+      <Blogs/>
       <WhyToChooseUs />
       <WhyTracknFly />
       <AboutTrackenFly />

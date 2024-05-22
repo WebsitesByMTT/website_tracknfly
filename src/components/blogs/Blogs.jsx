@@ -1,63 +1,56 @@
 import React from "react";
-import blogs1 from "../../assets/images/blogs1.png";
-import blogs2 from "../../assets/images/blogs2.png";
-import blogs3 from "../../assets/images/blogs3.png";
+import { BlogsData } from "./BlogsJson";
+import { Link } from "react-router-dom";
+import {
+  Carousel,
+  CarouselContent,
+  CarouselItem,
+  CarouselNext,
+  CarouselPrevious,
+} from "../ui/carousel";
+import Autoplay from "embla-carousel-autoplay";
 
 const Blogs = () => {
-  const data = [
-    {
-      id: 1,
-      image: blogs1,
-      title: "Sydeny’s 10 most fashionable 5 star hotels",
-      para: "Browse the fastest growing tourism sector in the heart of Australia tourism capital ....",
-    },
-    {
-      id: 2,
-      image: blogs2,
-      title: "Top cities for Vegan Travellers",
-      para: "Top sites where you do not have to worry about being a vegan. Our tourist guide is here...",
-    },
-    {
-      id: 3,
-      image: blogs3,
-      title: "World’s top destinations during and post covid timeline",
-      para: "Pandemic is still intact and will be here for a longer time. Here’s where your next destination...",
-    },
-    {
-      id: 4,
-      image: blogs1,
-      title: "Sydeny’s 10 most fashionable 5 star hotels",
-      para: "Browse the fastest growing tourism sector in the heart of Australia tourism capital ....",
-    },
-  ];
-
   return (
     <div className="bg-white py-8">
       <div className="text-[4rem] pb-12 text-center font-semibold">Blogs</div>
-      <div className="w-[96%] 2xl:w-[90%] mx-auto">
-        <div className="grid grid-cols-12 space-y-5 md:space-y-0  gap-5 2xl:gap-10">
-          {data?.map((item) => (
-            <div
-              key={item.id}
-              className="group rounded-3xl overflow-hidden md:col-span-6 transition-all cursor-pointer col-span-12 lg:col-span-3 relative"
-            >
-              <img src={item.image} alt="img" className="w-full object-cover" />
-              <div className="absolute -bottom-[7%] group-hover:bottom-0 bg-opacity-50 transition-all group-hover:h-[60%] h-[40%] md:h-[50%] lg:h-[50%] 2xl:h-[55%] px-4 w-[100%] rounded-2xl bg-black">
-                <div className="text-white font-semibold text-[2rem] lg:text-[1.5rem] 2xl:text-[2rem]">
-                  {item.title}
+      <div className="w-[95%] 2xl:w-[90%] mx-auto">
+        <Carousel autoplay={true}>
+          <CarouselContent>
+            {BlogsData?.map((item) => (
+              <CarouselItem
+                key={item.id}
+                className="sm:basis-1/2 md:basis-1/3 lg:basis-1/3 p-[1rem] "
+              >
+                <div className="group rounded-3xl overflow-hidden md:col-span-6 transition-all cursor-pointer col-span-12 lg:col-span-3 relative">
+                  <img
+                    src={item.image}
+                    alt="img"
+                    className="w-full object-cover"
+                  />
+                  <div className="absolute -bottom-[7%] group-hover:bottom-0 bg-opacity-50 transition-all group-hover:h-[60%] h-[40%] md:h-[50%] lg:h-[50%] 2xl:h-[55%] px-4 w-[100%] rounded-2xl bg-black">
+                    <div className="text-white mt-2 font-semibold text-[2rem] lg:text-[1.5rem] 2xl:text-[2rem]">
+                      {item.title}
+                    </div>
+                    <div className="lg:text-[1rem] text-[1.2rem] 2xl:text-[1.2rem] text-white text-opacity-70">
+                      {item.metaDescription}
+                    </div>
+                    <div className=" pb-[10%] pt-[5%] group-hover:block hidden text-[1.2rem] text-white">
+                      <Link
+                        to={`${item.path}`}
+                        className="bg-blue-500 px-4 py-1.5 rounded-lg"
+                      >
+                        Read More
+                      </Link>
+                    </div>
+                  </div>
                 </div>
-                <div className="lg:text-[1rem] text-[1.2rem] 2xl:text-[1.2rem] text-white text-opacity-70">
-                  {item.para}
-                </div>
-                <div className=" pb-[10%] pt-[5%] group-hover:block hidden text-[1.2rem] text-white">
-                  <span className="bg-blue-500 px-4 py-1.5 rounded-lg">
-                    Read More
-                  </span>
-                </div>
-              </div>
-            </div>
-          ))}
-        </div>
+              </CarouselItem>
+            ))}
+          </CarouselContent>
+          <CarouselNext />
+          <CarouselPrevious />
+        </Carousel>
       </div>
     </div>
   );
