@@ -1,4 +1,3 @@
-import React from "react";
 import "./flight.scss";
 
 import { WhatTracknFlyHaveForYou } from "../../components/whatTracknFlyHaveForYou/WhatTracknFlyHaveForYou";
@@ -112,7 +111,7 @@ const Flights = () => {
     <>
       <Helmet>
         <title>
-           Trackn Fly gives the best deals on cheap air-flight tickets.
+          Trackn Fly gives the best deals on cheap air-flight tickets.
         </title>
         <meta
           name="description"

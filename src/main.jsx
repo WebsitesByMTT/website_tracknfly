@@ -9,7 +9,6 @@ ReactDOM.createRoot(document.getElementById("root")).render(
   <React.StrictMode>
     <FlightProvider>
       <BrowserRouter>
-
         <App />
       </BrowserRouter>
     </FlightProvider>
