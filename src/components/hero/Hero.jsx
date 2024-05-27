@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import { useState, useEffect } from "react";
 import "./hero.scss";
 import Script from "../../utils/Script";
 import bg1 from "../../assets/images/f-c-1.jpg";
@@ -8,7 +8,6 @@ import bg4 from "../../assets/images/f-c-4.jpg";
 const images = [bg1, bg2, bg3, bg4];
 
 const Hero = ({ text, activeTab = "flight" }) => {
-  const [iframeLoaded, setIframeLoaded] = useState(false);
   const [currentSlide, setCurrentSlide] = useState(0);
   const [active, setActive] = useState(activeTab);
   useEffect(() => {
@@ -86,49 +85,46 @@ const Hero = ({ text, activeTab = "flight" }) => {
               </div>
             </div>
 
-            {!iframeLoaded && (
-              <div className="relative">
-                <div className="absolute top-0 left-0 h-full w-full bg-opacity-40 animate-pulse bg-white animate-shine"></div>
-                <div className="flex items-center justify-center h-[42rem] md:h-[9.3rem]  rounded-lg shadow-md"></div>
-              </div>
-            )}
+            {/* <iframe className=" hidden"></iframe> */}
 
-            <iframe
-              scrolling="no"
-              frameBorder="0"
-              src={
-                "//www.travelpayouts.com/widgets/22205c47ab682a18e67bf3138082cce3.html?v=2203"
-              }
-              allowFullScreen={true}
-              onLoad={() => setIframeLoaded(true)}
-              // className={(active === "flight" || iframeLoaded) ? 'h-[70rem] md:h-[20rem] lg:h-[15rem]' : 'hidden'}
+            <div
+              id="flight"
               className={`${
-                active != "flight" || !iframeLoaded
+                active != "flight"
                   ? "hidden"
                   : "h-[70rem] md:h-[20rem] lg:h-[15rem]"
               }`}
-              title="Flights"
-            ></iframe>
+            >
+              <Script
+                src={
+                  "https://tp.media/content?currency=usd&trs=321732&shmarker=368154&show_hotels=false&powered_by=false&locale=en&searchUrl=avia.tracknfly.com%2Fflights&primary_override=%2332a8dd&color_button=%2332a8dd&color_icons=%2332a8dd&dark=%23262626&light=%23FFFFFF&secondary=%23FFFFFF&special=%23C4C4C4&color_focused=%2332a8dd&border_radius=11&no_labels=true&plain=true&promo_id=7879&campaign_id=100"
+                }
+                target={"flight"}
+                scriptId="flight-script"
+              />
+            </div>
 
-            <iframe
-              scrolling="no"
-              frameBorder="0"
-              onLoad={() => setIframeLoaded(true)}
-              src="//www.travelpayouts.com/widgets/c2fcc9c9f099c9a7e5502aa4dea71d3d.html?v=2267"
+            <div
+              id="hotel"
               className={`${
-                active != "hotel" || !iframeLoaded
+                active != "hotel"
                   ? "hidden"
                   : "h-[70rem] md:h-[20rem] lg:h-[15rem]"
               }`}
-              title="Hotels"
-            ></iframe>
+            >
+              <Script
+                src={
+                  "https://tp.media/content?currency=usd&trs=321732&shmarker=368154&show_hotels=false&powered_by=false&locale=en&searchUrl=search.hotellook.com&primary_override=%23FF8E01&color_button=%23FF8E01&color_icons=%23FF8E01&secondary=%23FFFFFF&dark=%23262626&light=%23FFFFFF&special=%23C4C4C4&color_focused=%23FF8E01&border_radius=5&no_labels=true&plain=true&promo_id=7873&campaign_id=101"
+                }
+                target={"hotel"}
+                scriptId="hotel-script"
+              />
+            </div>
 
             <div
               id="cars-rental"
               className={`${
-                active != "car" || !iframeLoaded
-                  ? "hidden"
-                  : "lg:h-[21.4rem] overflow-hidden"
+                active != "car" ? "hidden" : "lg:h-[21.4rem] overflow-hidden"
               }`}
             >
               <Script
@@ -136,6 +132,7 @@ const Hero = ({ text, activeTab = "flight" }) => {
                   "//c1.travelpayouts.com/content?promo_id=1486&shmarker=368154&trs=174684&language=en&currency=USD&from=&to=&theme=1&powered_by=true"
                 }
                 target={"cars-rental"}
+                scriptId="kiwi-script"
               />
             </div>
           </div>

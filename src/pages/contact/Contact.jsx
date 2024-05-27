@@ -1,10 +1,8 @@
-import React from "react";
 import "./contact.scss";
 import AboutTrackenFly from "../../components/aboutTrackenFly/AboutTrackenFly";
 import { Link } from "react-router-dom";
 import WhyTracknFly from "../../components/whyTracknFly/WhyTracknFly";
 import { Helmet } from "react-helmet";
-import Hero from "../../components/hero/Hero";
 import facebook from "../../assets/images/facebook.svg";
 import instagram from "../../assets/images/instagram.svg";
 
@@ -47,7 +45,7 @@ const Contact = () => {
           content="https://www.tracknfly.com/assets/tracknfly-logo-6b9305ee.png"
         />
       </Helmet>
-      <Hero text={"Explore Flights - Hotels Online & Cars on Rent"} />
+      {/* <Hero text={"Explore Flights - Hotels Online & Cars on Rent"} /> */}
       <div className="contact-us">
         <div className="Container py-[7rem] flex flex-col gap-[7rem]">
           <div className="px-[2rem] md:px-[4rem] flex items-center justify-center flex-col gap-[1rem] ">
