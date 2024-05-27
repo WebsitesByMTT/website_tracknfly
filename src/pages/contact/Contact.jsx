@@ -20,7 +20,7 @@ const social = [
     logo: instagram,
     name: "instagram",
     url: "",
-  }
+  },
 ];
 const Contact = () => {
   return (
@@ -42,7 +42,10 @@ const Contact = () => {
           property="og:description"
           content="Trackn Fly is the best travel agency around the world that offers cheap hotels, flights, and cars on rentals. For more information contact us anytime."
         />
-        <meta property="og:image" content="https://www.tracknfly.com/assets/tracknfly-logo-6b9305ee.png" />
+        <meta
+          property="og:image"
+          content="https://www.tracknfly.com/assets/tracknfly-logo-6b9305ee.png"
+        />
       </Helmet>
       <Hero text={"Explore Flights - Hotels Online & Cars on Rent"} />
       <div className="contact-us">
@@ -92,7 +95,7 @@ const Contact = () => {
                   </svg>
                   <span>Address: </span> Irving, TX 75038, USA.
                 </li>
-                <li className="text-[2rem]">
+                {/* <li className="text-[2rem]">
                   <div className="flex items-center gap-[1rem]">
                     <svg
                       width="16"
@@ -108,7 +111,7 @@ const Contact = () => {
                     </svg>
                     <span>Phone : </span> +1 888-812-2145
                   </div>
-                </li>
+                </li> */}
                 <li className=" text-[2rem] flex items-center gap-[1rem]">
                   <svg
                     width="20"
