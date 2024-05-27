@@ -21,7 +21,7 @@ const Modal = ({ isOpen, onClose }) => {
           <div className="uppercase text-white  mx-auto font-bold text-[1.2rem] md:text-[1.6rem] lg:text-[2.1rem]  text-center">
             You can freely contact us for exclusive deals and offers
           </div>
-          <div className="pt-1.5 md:pt-3">
+          {/* <div className="pt-1.5 md:pt-3">
             <a href="tel:+1 888-812-2145" className="flex justify-center">
               <div className="bg-[#FB4A2A] px-5 md:px-10 py-2 rounded-full hover:scale-110 transition-all space-x-3 inline-flex  items-center">
                 <img
@@ -34,7 +34,7 @@ const Modal = ({ isOpen, onClose }) => {
                 </div>
               </div>
             </a>
-          </div>
+          </div> */}
         </div>
 
         <button
