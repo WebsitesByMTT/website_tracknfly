@@ -93,7 +93,7 @@ const Contact = () => {
                   </svg>
                   <span>Address: </span> Irving, TX 75038, USA.
                 </li>
-                <li className="text-[2rem]">
+                {/* <li className="text-[2rem]">
                   <div className="flex items-center gap-[1rem]">
                     <svg
                       width="16"
@@ -109,7 +109,7 @@ const Contact = () => {
                     </svg>
                     <span>Phone : </span> +1 888-812-2145
                   </div>
-                </li>
+                </li> */}
                 <li className=" text-[2rem] flex items-center gap-[1rem]">
                   <svg
                     width="20"
