@@ -3,9 +3,15 @@ import { useParams } from "react-router-dom";
 import { Helmet } from "react-helmet";
 import { BlogsData } from "../../components/blogs/BlogsJson";
 import FlightTable from "../../components/BusyFlightTable/BusyFlightTable";
+import Blogs from "../../components/blogs/Blogs";
 const BlogsPage = () => {
   const { blogPath } = useParams();
   const selectedBlog = BlogsData.find((blog) => blog.path.includes(blogPath));
+  const isBlogPage = blogPath.includes("blogs");
+
+  if (isBlogPage) {
+    return <Blogs />;
+  }
   return (
     <>
       {selectedBlog && (
