@@ -19,7 +19,7 @@ export const BlogsData = [
     },
     image: blogs1,
     imageAlt: "Plan A Tour Today",
-    title: "Plan A Tour Today: Your Blueprint for Planning an Adventure",
+    title: "Plan a Tour Today: Your Blueprint for Planning an Adventure",
     content: [
       {
         title: "",
@@ -34,15 +34,15 @@ export const BlogsData = [
       {
         title: "Observe Good Hygiene and Health",
         description:
-          "If the epidemic has taught us anything, we must prioritize maintaining our hygiene and health. The focus of modern travel is maintaining your health while doing a tour. One precaution to guarantee excellent health is wearing a mask and cleaning your hands. You can get comprehensive information on the affordable tour destination you want to visit, including its weather, on many websites that arrange tours and book flights. This will help you plan and take care of your health. Such steps become more necessary when you are traveling with your family. Conduct thorough research before traveling to a new city or co ",
+          "<span>If the epidemic has taught us anything, we must prioritize maintaining our hygiene and health. The focus of modern travel is maintaining your health while doing a tour. One precaution to guarantee excellent health is wearing a mask and cleaning your hands. You can get comprehensive information on the <a href='https://www.tracknfly.com/' class='text-blue-500'> affordable tour </a> destination you want to visit, including its weather, on many websites that arrange tours and book flights. This will help you plan and take care of your health. Such steps become more necessary when you are traveling with your family. Conduct thorough research before traveling to a new city or co </span>",
       },
       {
         title: "Take Advantage of the Most Fantastic Offers",
         description:
-          "Travel firms worldwide are keen to provide travelers with attractive offers as the world opens up again. Youll have many opportunities to schedule inexpensive hotel stays and get cheap airline tickets. All you need to do is watch for the lucrative offers and bundles that could come your way. Budget-friendly travel to some of the worlds most popular destinations is possible, so take advantage of the chance while it lasts! You will undoubtedly have a trip of a lifetime if you keep the previously mentioned things in mind and get comfortable with the thought of traveling once more. Plan a tour today and bring some action and adventure back into your life. There is no need to panic or hide from the world. Its time to explore a little and free yourself from work stress, personal stress, and some unachievable commitments.",
+          "<span>Travel firms worldwide are keen to provide travelers with <a href='https://www.tracknfly.com/best-deals' class='text-blue-500'>attractive offers</a> as the world opens up again. Youll have many opportunities to schedule inexpensive hotel stays and get cheap airline tickets. All you need to do is watch for the lucrative offers and bundles that could come your way. Budget-friendly travel to some of the worlds most popular destinations is possible, so take advantage of the chance while it lasts! You will undoubtedly have a trip of a lifetime if you keep the previously mentioned things in mind and get comfortable with the thought of traveling once more. Plan a tour today and bring some action and adventure back into your life. There is no need to panic or hide from the world. Its time to explore a little and free yourself from work stress, personal stress, and some unachievable commitments.</span>",
       },
     ],
-    path: "Plan-A-Tour-Today-Your-Blueprin-for-Plannin-an-Adventure",
+    path: "plan-a-tour-today-your-blueprint-for-planing-an-adventure",
   },
   {
     id: 2,
@@ -105,7 +105,7 @@ export const BlogsData = [
     content: [
       {
         title: "",
-        description: `<span>In the fast-paced world of air travel, specific flight routes stand out as exceptionally busy, serving as vital links between key destinations across the globe. Traversed by millions of passengers and tons of cargo every year, these <a href="https://www.tracknfly.com/flights">busiest</a> flight routes play a crucial role in connecting people, businesses, and cultures. From bustling cities to remote islands, these flight routes epitomize the interconnectedness of our modern world. In this article, we'll look at some of the busiest flight routes worldwide, delving into what makes them so popular and their impact on global travel and commerce</span>`,
+        description: `<span>In the fast-paced world of air travel, specific flight routes stand out as exceptionally busy, serving as vital links between key destinations across the globe. Traversed by millions of passengers and tons of cargo every year, these <a href="https://www.tracknfly.com/flights" class="text-blue-500">busiest</a> flight routes play a crucial role in connecting people, businesses, and cultures. From bustling cities to remote islands, these flight routes epitomize the interconnectedness of our modern world. In this article, we'll look at some of the busiest flight routes worldwide, delving into what makes them so popular and their impact on global travel and commerce</span>`,
       },
       {
         title: "Global Top 10 Busiest Domestic Airlines Routes ",
@@ -127,7 +127,7 @@ export const BlogsData = [
       },
       {
         title: "Global Top 10 International Domestic Airline",
-        description: `<span>The global busiest international flight routes paint a vivid picture of the bustling connectivity between major cities across continents. The Hong Kong to Taipei route (HKG-TPE) is topping the list, facilitating an impressive 539,133 seats. The Cairo to Jeddah route (CAI-JED) is followed closely behind, with 461,296 seats, highlighting the significant travel between the Middle East and North Africa. The route between Kuala Lumpur and Singapore Changi (KUL-SIN) comes in third place, with 459,746 seats reflecting the strong ties between these two Southeast Asian hubs.  Seoul Incheon to Tokyo Narita (ICN-NRT) ranks fourth, with 456,478 seats, while Seoul Incheon to Osaka Kansai (ICN-KIX) follows closely with 431,888 seats. The Dubai to Riyadh route (DXB-RUH) is another busiest flight routes, with 369,696 seats, underscoring the importance of air travel in the Middle East.  Transatlantic routes also feature prominently, with New York JFK to London Heathrow (JFK-LHR) serving 358,794 passengers. Tokyo Narita to Taipei (NRT-TPE) follows suit with 350,015 seats, while Bangkok to Hong Kong (BKK-HKG) and Bangkok to Singapore Changi (BKK-SIN) complete the list, demonstrating the bustling international air travel landscape across Asia and beyond. These are some of the busiest flight routes both domestically and internationally. We hope they help in <a href="https://www.tracknfly.com/">booking the next flight</a>  and confirming the flight routes</span>`,
+        description: `<span>The global busiest international flight routes paint a vivid picture of the bustling connectivity between major cities across continents. The Hong Kong to Taipei route (HKG-TPE) is topping the list, facilitating an impressive 539,133 seats. The Cairo to Jeddah route (CAI-JED) is followed closely behind, with 461,296 seats, highlighting the significant travel between the Middle East and North Africa. The route between Kuala Lumpur and Singapore Changi (KUL-SIN) comes in third place, with 459,746 seats reflecting the strong ties between these two Southeast Asian hubs.  Seoul Incheon to Tokyo Narita (ICN-NRT) ranks fourth, with 456,478 seats, while Seoul Incheon to Osaka Kansai (ICN-KIX) follows closely with 431,888 seats. The Dubai to Riyadh route (DXB-RUH) is another busiest flight routes, with 369,696 seats, underscoring the importance of air travel in the Middle East.  Transatlantic routes also feature prominently, with New York JFK to London Heathrow (JFK-LHR) serving 358,794 passengers. Tokyo Narita to Taipei (NRT-TPE) follows suit with 350,015 seats, while Bangkok to Hong Kong (BKK-HKG) and Bangkok to Singapore Changi (BKK-SIN) complete the list, demonstrating the bustling international air travel landscape across Asia and beyond. These are some of the busiest flight routes both domestically and internationally. We hope they help in <a href="https://www.tracknfly.com/" class="text-blue-500">booking the next flight</a>  and confirming the flight routes</span>`,
       },
     ],
     path: "BUSIEST-FLIGHT-ROUTES-IN-THE-WORLD",

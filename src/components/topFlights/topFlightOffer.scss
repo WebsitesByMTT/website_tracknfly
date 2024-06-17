@@ -141,14 +141,23 @@ $large: 992px;
             }
           }
         }
+
         .right {
           flex: 1;
           display: flex;
           flex-wrap: wrap;
           gap: 2rem;
+          border: 2px solid blue;
+          flex-direction: row;
+
+
+          @include for-small {
+            flex-direction: column;
+          }
 
           .card {
             flex: 1;
+            height: 100px;
             &-container {
               .text {
                 p {

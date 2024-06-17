@@ -36,7 +36,7 @@ const BlogsPage = () => {
       <div className="w-[90%] mx-auto my-10 px-4 sm:px-8 md:px-16 py-10 sm:py-16 md:py-20 bg-gray-100 rounded-lg shadow-lg">
         {selectedBlog && (
           <>
-            <h1 className="text-4xl sm:text-5xl md:text-6xl font-medium mb-6  text-black uppercase text-center pb-8">
+            <h1 className="text-4xl  sm:text-5xl md:text-6xl font-medium mb-6  text-black  text-center pb-8">
               {selectedBlog.title}
             </h1>
             <img

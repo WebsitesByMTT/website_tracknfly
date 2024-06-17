@@ -64,7 +64,7 @@ const WhyToChooseUs = () => {
               </div>
               <div className="primary-img">
                 <div className="primary-img-container">
-                  <img src={WtcuPrimaryIMG} alt="wtcu-primary" loading="lazy" />
+                  <img src={WtcuPrimaryIMG} alt="wtcu-primary"  loading="lazy" />
                 </div>
               </div>
               <div className="secondary-img">

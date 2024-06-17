@@ -8,7 +8,6 @@ import {
   CarouselNext,
   CarouselPrevious,
 } from "../ui/carousel";
-import Autoplay from "embla-carousel-autoplay";
 
 const Blogs = () => {
   return (
@@ -22,14 +21,14 @@ const Blogs = () => {
                 key={item.id}
                 className="sm:basis-1/2 md:basis-1/3 lg:basis-1/3 p-[1rem] "
               >
-                <div className="group rounded-3xl overflow-hidden md:col-span-6 transition-all cursor-pointer col-span-12 lg:col-span-3 relative">
+                <Link  to={`${item.path}`} className="group inline-block rounded-3xl overflow-hidden md:col-span-6 transition-all cursor-pointer col-span-12 lg:col-span-3 relative">
                   <img
                     src={item.image}
                     alt="img"
                     className="w-full object-cover"
                   />
                   <div className="absolute -bottom-[7%] group-hover:bottom-0 bg-opacity-50 transition-all group-hover:h-[60%] h-[40%] md:h-[50%] lg:h-[50%] 2xl:h-[55%] px-4 w-[100%] rounded-2xl bg-black">
-                    <div className="text-white mt-2 font-semibold text-[2rem] lg:text-[1.5rem] 2xl:text-[2rem]">
+                    <div className="text-white  mt-2 font-semibold text-[2rem] lg:text-[1.5rem] 2xl:text-[2rem]">
                       {item.title}
                     </div>
                     <div className="lg:text-[1rem] text-[1.2rem] 2xl:text-[1.2rem] text-white text-opacity-70">
@@ -44,7 +43,7 @@ const Blogs = () => {
                       </Link>
                     </div>
                   </div>
-                </div>
+                </Link>
               </CarouselItem>
             ))}
           </CarouselContent>
