@@ -33,7 +33,7 @@ const data = {
   productOffering: [
     {
       title: "PRODUCT OFFERING ",
-      desc: "Flights, International Flights, Charter Flights, Hotels, International Hotels, Book Flights From US, Book Flights From UAE, Trip Ideas, Travel Blog, flight booking, cheap flights, airline tickets, plane tickets, cheap airline tickets, flight ticket, cheap flight tickets, last minute flights, car on rent, cheap cars for rent, rent a car for a day, cheapest car hire, hire a car for a day, hotel booking, cheap hotels, last minute hotels hotwire hotels, hotel booking sites.      ",
+      desc: "<span><a href='/flights'>Flights</a>, International Flights, Charter Flights, Hotels, International Hotels, Book Flights From US, Book Flights From UAE, <a href='/blogs'>Trip Ideas</a>, <a href='/blogs'>Travel Blog</a>, <a href='/flights'>flight booking</a>, cheap flights, airline tickets, plane tickets, cheap airline tickets, flight ticket, cheap flight tickets, <a href='/flights'>last minute flights</a>, <a href='/cars-on-rent'>car on rent</a>, cheap cars for rent, rent a car for a day, cheapest car hire, hire a car for a day, <a href='/hotel'>hotel booking</a>, cheap hotels, last minute hotels hotwire hotels, <a href='/hotel'>hotel booking sites.</a></span>",
       redirect: "",
     },
     {
@@ -82,13 +82,16 @@ function App() {
     "/flights",
     "/hotels",
     "/cars-on-rent",
-    "best-deals",
+    "/best-deals",
     "/contact-us",
     "/privacy-policy",
     "/cancellation-&-refund-policy",
     "/terms-&services",
   ];
-  const shouldRenderProductOffering = !excludePaths.includes(location.pathname);
+  const isExcludedPath = excludePaths.includes(location.pathname);
+  const isBlogPage = /^\/[^\/]+$/.test(location.pathname) && !excludePaths.includes(location.pathname); 
+
+  const shouldRenderProductOffering = !isExcludedPath && !isBlogPage;
   window.scrollTo({ top: 0, behavior: "smooth" });
   useEffect(() => {
     const timeState = setTimeout(() => {

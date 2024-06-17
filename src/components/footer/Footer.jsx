@@ -14,8 +14,16 @@ const data = [
         url: "/best-deals",
       },
       {
-        name: "Online flight booking",
-        url: "#",
+        name: "Online flights booking",
+        url: "/flights",
+      },
+      {
+        name: "Online Hotels booking",
+        url: "/hotels",
+      },
+      {
+        name: "Cars On Rental",
+        url: "/cars-on-rent",
       },
       {
         name: "Domestic airlines",
@@ -216,7 +224,7 @@ const data = [
         url: "#",
       },
       {
-        name: "Car Rental Miami Airport",
+        name: "Cheap Car Rental Miami Airport",
         url: "#",
       },
       {
@@ -232,7 +240,7 @@ const data = [
         url: "#",
       },
       {
-        name: "Car Rental Phoenix Airport",
+        name: "Cheap Car Rental Phoenix Airport",
         url: "#",
       },
       {
@@ -240,7 +248,7 @@ const data = [
         url: "#",
       },
       {
-        name: "Car Rental Toronto Airport",
+        name: "Cheap Car Rental Toronto Airport",
         url: "#",
       },
     ],
