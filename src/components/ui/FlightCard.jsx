@@ -23,7 +23,7 @@ export const FlightCard = ({ data }) => {
 
           <h6 className=" font-[500] text-[2rem]">{data.to}</h6>
         </div>
-        <span className="text-[gray] text-red-500 text-[1.6rem] font-normal capitalize">
+        <span className="animatepulse text-[2rem] font-normal capitalize">
           {data.discount}
         </span>
       </div>
