@@ -82,9 +82,9 @@ function App() {
     "/flights",
     "/hotels",
     "/cars-on-rent",
-    "/best-deals",
     "/contact-us",
     "/privacy-policy",
+    "/best-deals",
     "/cancellation-&-refund-policy",
     "/terms-&services",
   ];

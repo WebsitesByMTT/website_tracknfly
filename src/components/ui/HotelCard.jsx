@@ -6,12 +6,12 @@ const HotelCard = ({ data, color = "#2659C3", button = "Book Now" }) => {
     >
       <div className=" flex flex-col ">
         <h6 className=" font-[500] text-[2rem]">{data.name}</h6>
-        <p className=" text-[1.6rem] text-[gray] capitalize">{data.discount}</p>
+        <p className=" text-[2rem]  animatepulse capitalize">{data.discount}</p>
       </div>
       <img
         src={data.img}
         alt={data.name}
-        className=" w-full object-cover border  h-[19.7rem]"
+        className=" w-full object-cover rounded-2xl border border-red  h-[19.7rem]"
       />
 
       <a href={data.url} className=" mt-[1rem]">

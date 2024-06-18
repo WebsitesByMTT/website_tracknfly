@@ -5,15 +5,10 @@ import card2Img from "../../assets/images/top-flight-card-2.webp";
 import card3Img from "../../assets/images/top-flight-card-3.webp";
 import card4Img from "../../assets/images/top-flight-card-4.webp";
 import card5Img from "../../assets/images/top-flight-card-5.webp";
-import card6Img from "../../assets/images/top-flight-card-6.jpg";
-import { Link, useNavigate } from "react-router-dom";
+import card6Img from "../../assets/images/top-flight-card-6.webp";
+import { Link} from "react-router-dom";
 
 const TopFlightOffer = () => {
-  const navigate = useNavigate()
-  const handelNavigate = () => {
-    navigate('/best-deals')
-  }
-
   const data = {
     cards: [
       {
