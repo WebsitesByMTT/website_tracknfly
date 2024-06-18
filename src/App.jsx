@@ -89,7 +89,7 @@ function App() {
     "/terms-&services",
   ];
   const isExcludedPath = excludePaths.includes(location.pathname);
-  const isBlogPage = /^\/[^\/]+$/.test(location.pathname) && !excludePaths.includes(location.pathname); 
+  const isBlogPage = location.pathname.startsWith("/blogs");
 
   const shouldRenderProductOffering = !isExcludedPath && !isBlogPage;
   window.scrollTo({ top: 0, behavior: "smooth" });
@@ -109,7 +109,8 @@ function App() {
         <Header />
         <Routes>
           <Route path="/" element={<Home />} />
-          <Route path="/:blogPath" element={<BlogsPage />} />
+          <Route path="/blogs/:blogPath" element={<BlogsPage />} />
+          <Route path="/blogs" element={<BlogsPage />} />
 
           <Route path="/flights" element={<Flights />} />
           <Route path="/hotels" element={<Hotel />} />

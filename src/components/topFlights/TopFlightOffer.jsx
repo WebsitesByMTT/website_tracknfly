@@ -6,7 +6,7 @@ import card3Img from "../../assets/images/top-flight-card-3.webp";
 import card4Img from "../../assets/images/top-flight-card-4.webp";
 import card5Img from "../../assets/images/top-flight-card-5.webp";
 import card6Img from "../../assets/images/top-flight-card-6.jpg";
-import { useNavigate } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 
 const TopFlightOffer = () => {
   const navigate = useNavigate()
@@ -72,8 +72,8 @@ const TopFlightOffer = () => {
         <div className="grid grid-cols-12 gap-5">
           {
             data?.cards?.map((item, ind) => (
-              <div
-                onClick={handelNavigate}
+              <Link
+                to={'/best-deals'}
                 key={ind}
                 className={`relative rounded-2xl overflow-hidden ${item.gridCols} cursor-pointer group 
               h-[200px] md:h-[300px] lg:h-[400px]`}
@@ -88,7 +88,7 @@ const TopFlightOffer = () => {
                     {item?.text}
                   </p>
                 </div>
-              </div>
+              </Link>
             ))
           }
 

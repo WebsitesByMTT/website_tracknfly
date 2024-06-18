@@ -21,7 +21,7 @@ const Blogs = () => {
                 key={item.id}
                 className="sm:basis-1/2 md:basis-1/3 lg:basis-1/3 p-[1rem] "
               >
-                <Link  to={`${item.path}`} className="group inline-block rounded-3xl overflow-hidden md:col-span-6 transition-all cursor-pointer col-span-12 lg:col-span-3 relative">
+                <Link  to={`/blogs/${item.path}`} className="group inline-block rounded-3xl overflow-hidden md:col-span-6 transition-all cursor-pointer col-span-12 lg:col-span-3 relative">
                   <img
                     src={item.image}
                     alt="img"
