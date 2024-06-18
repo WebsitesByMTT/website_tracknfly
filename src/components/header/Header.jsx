@@ -51,22 +51,22 @@ const Header = () => {
         <div className="bottom">
           <ul>
             <li>
-              <NavLink to="/flights">FLIGHTS</NavLink>
+              <Link to="/flights">FLIGHTS</Link>
             </li>
             <li>
-              <NavLink to="/hotels">HOTELS</NavLink>
+              <Link to="/hotels">HOTELS</Link>
             </li>
             <li>
-              <NavLink to="/cars-on-rent">CARS ON RENT</NavLink>
+              <Link to="/cars-on-rent">CARS ON RENT</Link>
             </li>
             <li>
-              <NavLink to="/best-deals">BEST DEALS</NavLink>
+              <Link to="/best-deals">BEST DEALS</Link>
             </li>
             <li>
-              <NavLink to="/contact-us">CONTACT US</NavLink>
+              <Link to="/contact-us">CONTACT US</Link>
             </li>
             <li>
-              <NavLink to="/about-us">ABOUT US</NavLink>
+              <Link to="/about-us">ABOUT US</Link>
             </li>
           </ul>
         </div>

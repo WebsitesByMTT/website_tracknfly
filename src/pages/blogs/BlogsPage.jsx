@@ -7,13 +7,10 @@ import Blogs from "../../components/blogs/Blogs";
 const BlogsPage = () => {
   const { blogPath } = useParams();
   const selectedBlog = BlogsData.find((blog) => blog.path.includes(blogPath));
-  const isBlogPage = blogPath.includes("blogs");
-
-  if (isBlogPage) {
-    return <Blogs />;
-  }
   return (
     <>
+      
+      {!selectedBlog&&<Blogs />}
       {selectedBlog && (
         <Helmet>
           <title>{selectedBlog.title}</title>
@@ -33,7 +30,7 @@ const BlogsPage = () => {
         </Helmet>
       )}
 
-      <div className="w-[90%] mx-auto my-10 px-4 sm:px-8 md:px-16 py-10 sm:py-16 md:py-20 bg-gray-100 rounded-lg shadow-lg">
+      {selectedBlog&&<div className="w-[90%] mx-auto my-10 px-4 sm:px-8 md:px-16 py-10 sm:py-16 md:py-20 bg-gray-100 rounded-lg shadow-lg">
         {selectedBlog && (
           <>
             <h1 className="text-4xl  sm:text-5xl md:text-6xl font-medium mb-6  text-black  text-center pb-8">
@@ -72,7 +69,7 @@ const BlogsPage = () => {
             </ul>
           </>
         )}
-      </div>
+      </div>}
     </>
   );
 };

@@ -2,15 +2,8 @@ import bestdealsbg from "../../assets/images/bestdeals.png";
 import bestdealAboutIMG from "../../assets/images/best-deal-about.png";
 import bestDealBannerCardIMG from "../../assets/images/bestDealBannerCard-1.png";
 import fligthTimelineIMG from "../../assets/images/flight-timeline.jpg";
-
 import { Helmet } from "react-helmet";
 import Autoplay from "embla-carousel-autoplay";
-
-import carDeal1IMG from "../../assets/images/carDeal-1.png";
-import carDeal2IMG from "../../assets/images/carDeal-2.png";
-import carDeal3IMG from "../../assets/images/carDeal-3.png";
-import carDeal4IMG from "../../assets/images/carDeal-4.png";
-
 import {
   Carousel,
   CarouselContent,
@@ -23,7 +16,6 @@ import { Link } from "react-router-dom";
 import { useState } from "react";
 import HotelCard from "../../components/ui/HotelCard";
 import { FlightCard } from "../../components/ui/FlightCard";
-
 import londonHotel from "../../assets/images/london-hotels.jpg";
 import lasVegas from "../../assets/images/las-vegas-hotels.jpg";
 import sanDiego from "../../assets/images/san-diego-hotels.jpg";
@@ -57,39 +49,28 @@ const BestDeals = () => {
     {
       id: 1,
       image: bestDealBannerCardIMG,
-      title: "Innsbruck get 20% off on pre booking",
-      para: "Now book flight and get a free meal & save BIG bucks on our journey.",
+      para: "Find Better Hotel Price Anywhere Else & Get Double Refund on the Price Difference.",
     },
     {
       id: 2,
       image: bestDealBannerCardIMG,
-      title: "Innsbruck get 20% off on pre booking",
-      para: "Now book flight and get a free meal & save BIG bucks on our journey.",
+      para: "Get complimentary flight cancellation insurance on every flight booking",
     },
     {
       id: 3,
       image: bestDealBannerCardIMG,
-      title: "Innsbruck get 20% off on pre booking",
-      para: "Now book flight and get a free meal & save BIG bucks on our journey.",
+      para: "Get Discount up to 35% on Booking Flights Tickets.",
     },
     {
       id: 4,
       image: bestDealBannerCardIMG,
-      title: "Innsbruck get 20% off on pre booking",
-      para: "Now book flight and get a free meal & save BIG bucks on our journey.",
+      para: "Enjoy the contrasting beauty of many locations at the most affordable price tags.",
     },
     {
       id: 5,
       image: bestDealBannerCardIMG,
-      title: "Innsbruck get 20% off on pre booking",
-      para: "Now book flight and get a free meal & save BIG bucks on our journey.",
-    },
-    {
-      id: 6,
-      image: bestDealBannerCardIMG,
-      title: "Innsbruck get 20% off on pre booking",
-      para: "Now book flight and get a free meal & save BIG bucks on our journey.",
-    },
+      para: "Book Your Flight in a Call, Save Time and Travel Happy!.",
+    }
   ];
 
   const bestFlightData = [
@@ -405,12 +386,12 @@ const BestDeals = () => {
         <div className=" flex flex-row">
           <div className="flex items-start justify-center flex-col gap-[4rem]">
             <div className="text-white font-bold text-[5rem]">
-              Now plan your trip with <br className="md:hidden block" />
+              Now Plan your trip with<br className="md:hidden block" />
               us and create memories.
             </div>
-            <button className="bg-[#0EB77A] text-white text-[1.6rem] py-[1rem] px-[2.5rem] rounded-[3rem]  hover:scale-90 transition-all">
+            <Link to={'/contact-us'} className="bg-[#0EB77A] text-white text-[1.6rem] py-[1rem] px-[2.5rem] rounded-[3rem]  hover:scale-90 transition-all">
               Contact us now{" "}
-            </button>
+            </Link>
           </div>
           <div className=" w-1/2  relative hidden sm:flex">
             <div className="p-[4rem]"></div>
@@ -430,19 +411,14 @@ const BestDeals = () => {
                   <CarouselItem key={idx} className="basis-1/3 lg:basis-1/2">
                     <div
                       key={idx}
-                      className=" bg-white p-[2rem] rounded-[2rem]"
+                      className=" bg-white p-[2rem]  h-[350px] rounded-[2rem]"
                     >
                       <img src={item.image} alt="img" className="w-full" />
-                      <div className="py-8 text-black font-bold text-[2.3rem] text-start ">
-                        {item.title}
-                      </div>
-                      <div className="text-black text-opacity-50 text-[1.5rem] text-start">
+                      <p className="text-black pt-8 text-opacity-50 text-[1.5rem] text-start">
                         {item.para}
-                      </div>
-                      <div className="flex items-center pt-8 justify-between">
-                        <div className="text-black text-[1.3rem]">
-                          EXPIRING SOON
-                        </div>
+                      </p>
+                      <div className="flex items-center pt-4 justify-between">
+                      
                         <button className="bg-[#FB4A2A] text-white text-[1.4rem] py-1.5 px-5 rounded-full hover:bg-red-800 hover:scale-90 transition-all">
                           BOOK NOW
                         </button>
