@@ -53,7 +53,7 @@ const Contact = () => {
               We are here to help
             </h2>
             <p className=" text-[2rem] w-full md:w-[80%] text-center">
-              Are you struggling to find flights or hotels? or do you need
+              Are you struggling to <a href="/" className="text-blue-500">find flights or hotels?</a> or do you need
               another help regarding the website? we have our most experienced
               staff who will provide you with guidance at any time. You can ask
               anything at any time with our expert team via phone and email.

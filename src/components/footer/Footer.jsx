@@ -45,7 +45,7 @@ const data = [
       },
       {
         name: "Terms & conditions",
-        url: "/terms-&services",
+        url: "/terms-and-services",
       },
       {
         name: "privacy",
@@ -302,13 +302,13 @@ const social = [
     id: 1,
     logo: facebook,
     name: "facebook",
-    url: "#",
+    url: "https://www.facebook.com/people/Trackn-Fly/61559426010883/",
   },
   {
     id: 2,
     logo: instagram,
     name: "instagram",
-    url: "#",
+    url: "https://www.instagram.com/trackn_fly/",
   },
 ];
 
@@ -351,7 +351,7 @@ const Footer = () => {
                 <div className="flex justify-center space-x-5">
                   {social.map((item) => (
                     <li key={item?.id} className=" cursor-pointer">
-                      <Link to={item?.url}>
+                      <Link target="blank" to={item?.url}>
                         <img
                           src={item?.logo}
                           className=" w-[3.5rem] h-[3.5rem]"
@@ -386,25 +386,25 @@ const Footer = () => {
               </Link>
             </li>
             <li className="cursor-pointer hover:opacity-70 uppercase md:border-r-2 pr-4 border-gray-400">
-              <Link to={"/terms-&services"}>TERMS AND SERVICES</Link>
+              <Link to={"/terms-and-services"}>TERMS AND SERVICES</Link>
             </li>
             <li className="cursor-pointer hover:opacity-70 uppercase md:border-r-2 pr-4 border-gray-400">
               <Link to={"/frequently-asked-questions"}>FAQS</Link>
             </li>
             <li className="cursor-pointer hover:opacity-70 uppercase md:border-r-2 pr-4 border-gray-400">
-              <Link to={"#"}>WEB CHEK IN</Link>
+               WEB CHEK IN
             </li>
             <li className="cursor-pointer hover:opacity-70 uppercase md:border-r-2 pr-4 border-gray-400">
-              <Link to={"#"}>REFER & EARN</Link>
+               REFER & EARN
             </li>
             <li className="cursor-pointer hover:opacity-70 uppercase md:border-r-2 pr-4 border-gray-400">
-              <Link to={"#"}>REWARDS</Link>
+                REWARDS
             </li>
             <li className="cursor-pointer hover:opacity-70 uppercase md:border-r-2 pr-4 border-gray-400">
               <Link to={"/contact-us"}>SUPPORT</Link>
             </li>
             <li className="cursor-pointer hover:opacity-70 uppercase">
-              <Link to={"#"}>MANAGE TRIP</Link>
+               MANAGE TRIP
             </li>
           </ul>
         </div>

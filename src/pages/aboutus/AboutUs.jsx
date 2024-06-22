@@ -42,7 +42,7 @@ const AboutUs = () => {
             to assist you in the simplest way.
           </div>
           <div className="text-black text-[1.5rem] text-center w-full tracking-wide pt-5 pb-10 md:pb-20 md:w-[70%] mx-auto">
-            Trackn Fly is the most renowned travel agency around the world that
+            Trackn Fly is the most renowned <a href="/" className="text-blue-500">travel agency</a> around the world that
             offers the best deals on flights, air tickets, budgetary hotels, and
             cars on rent. We also send notifications to our customers so that
             they can get the best deal at the right time. So, now you don’t have
