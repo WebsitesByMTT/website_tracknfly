@@ -86,7 +86,7 @@ function App() {
     "/privacy-policy",
     "/best-deals",
     "/cancellation-&-refund-policy",
-    "/terms-&services",
+    "/terms-and-services",
   ];
   const isExcludedPath = excludePaths.includes(location.pathname);
   const isBlogPage = location.pathname.startsWith("/blogs");
@@ -123,7 +123,7 @@ function App() {
             path="/cancellation-&-refund-policy"
             element={<RefundPolicy />}
           />
-          <Route path="/terms-&services" element={<TermsAndServices />} />
+          <Route path="/terms-and-services" element={<TermsAndServices />} />
           <Route path="/frequently-asked-questions" element={<FAQS />} />
         </Routes>{" "}
         {shouldRenderProductOffering && (

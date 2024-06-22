@@ -21,7 +21,7 @@ const ProductOffering = ({ data }) => {
                   ))}
                 </div>
               ) : (
-                <p className="desc">{item?.desc}</p>
+                <p className="desc" dangerouslySetInnerHTML={{ __html: item.desc }}></p>
               )}
               {item?.more && (
                 <>
