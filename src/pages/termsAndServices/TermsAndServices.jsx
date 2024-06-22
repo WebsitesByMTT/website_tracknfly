@@ -41,7 +41,7 @@ const TermsAndServices = () => {
               To use our website, you must be at least 18 years of age and to
               continue you need to agree to our terms and conditions. All the
               information you are giving while booking should be correct and
-              accurate. Trackn Fly is protected by copyright, trademark, and
+              accurate. <a href="/" className="text-blue-500">Trackn Fly</a> is protected by copyright, trademark, and
               other laws. It is not allowed to use our logo or copy our
               trademarks without our permission. As it is against the law and
               can lead to legal action.

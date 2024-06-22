@@ -1,16 +1,15 @@
 import bestdealsbg from "../../assets/images/bestdeals.png";
 import bestdealAboutIMG from "../../assets/images/best-deal-about.png";
-import bestDealBannerCardIMG from "../../assets/images/bestDealBannerCard-1.png";
-import fligthTimelineIMG from "../../assets/images/flight-timeline.jpg";
+import bestDealBannerCardIMG from "../../assets/images/bestDealBannerCard-1.webp";
+import bestDealBannerCardIMG2 from "../../assets/images/bestDealBannerCard-2.webp";
+import bestDealBannerCardIMG3 from "../../assets/images/bestDealBannerCard-3.webp";
+import bestDealBannerCardIMG4 from "../../assets/images/bestDealBannerCard-4.webp";
+import bestDealBannerCardIMG5 from "../../assets/images/bestDealBannerCard-5.webp";
 
+
+import fligthTimelineIMG from "../../assets/images/flight-timeline.jpg";
 import { Helmet } from "react-helmet";
 import Autoplay from "embla-carousel-autoplay";
-
-import carDeal1IMG from "../../assets/images/carDeal-1.png";
-import carDeal2IMG from "../../assets/images/carDeal-2.png";
-import carDeal3IMG from "../../assets/images/carDeal-3.png";
-import carDeal4IMG from "../../assets/images/carDeal-4.png";
-
 import {
   Carousel,
   CarouselContent,
@@ -23,7 +22,6 @@ import { Link } from "react-router-dom";
 import { useState } from "react";
 import HotelCard from "../../components/ui/HotelCard";
 import { FlightCard } from "../../components/ui/FlightCard";
-
 import londonHotel from "../../assets/images/london-hotels.jpg";
 import lasVegas from "../../assets/images/las-vegas-hotels.jpg";
 import sanDiego from "../../assets/images/san-diego-hotels.jpg";
@@ -46,8 +44,10 @@ import medinaCar from "../../assets/images/medina-car.webp";
 import sanJuanCar from "../../assets/images/san-juan-car.jpeg";
 import miamiBeachCar from "../../assets/images/miami-beach-car.jpeg";
 import washingtonCar from "../../assets/images/washington-dc-car.webp";
+import ProductOffering from "../../components/productOffering/ProductOffering";
 
 const BestDeals = () => {
+  const [state, setState] = useState('all')
   const [currentSlide, setCurrentSlide] = useState(0);
   const handleSlideChange = (selectedIndex) => {
     setCurrentSlide(selectedIndex);
@@ -56,40 +56,34 @@ const BestDeals = () => {
   const bannerCardData = [
     {
       id: 1,
+      heading: 'Best Price Guarantee',
       image: bestDealBannerCardIMG,
-      title: "Innsbruck get 20% off on pre booking",
-      para: "Now book flight and get a free meal & save BIG bucks on our journey.",
+      para: "Find Better Hotel Price Anywhere Else & Get Double Refund on the Price Difference.",
     },
     {
       id: 2,
-      image: bestDealBannerCardIMG,
-      title: "Innsbruck get 20% off on pre booking",
-      para: "Now book flight and get a free meal & save BIG bucks on our journey.",
+      heading: 'Insurance Coverage',
+      image: bestDealBannerCardIMG2,
+      para: "Get complimentary flight cancellation insurance on every flight booking",
     },
     {
       id: 3,
-      image: bestDealBannerCardIMG,
-      title: "Innsbruck get 20% off on pre booking",
-      para: "Now book flight and get a free meal & save BIG bucks on our journey.",
+      heading: 'Flight Deal',
+      image: bestDealBannerCardIMG3,
+      para: "Get Discount up to 35% on Booking Flights Tickets.",
     },
     {
       id: 4,
-      image: bestDealBannerCardIMG,
-      title: "Innsbruck get 20% off on pre booking",
-      para: "Now book flight and get a free meal & save BIG bucks on our journey.",
+      heading: 'Exciting Summer Deals',
+      image: bestDealBannerCardIMG4,
+      para: "Enjoy the contrasting beauty of many locations at the most affordable price tags.",
     },
     {
       id: 5,
-      image: bestDealBannerCardIMG,
-      title: "Innsbruck get 20% off on pre booking",
-      para: "Now book flight and get a free meal & save BIG bucks on our journey.",
-    },
-    {
-      id: 6,
-      image: bestDealBannerCardIMG,
-      title: "Innsbruck get 20% off on pre booking",
-      para: "Now book flight and get a free meal & save BIG bucks on our journey.",
-    },
+      heading: 'Speak With Tracknfly',
+      image: bestDealBannerCardIMG5,
+      para: "Book Your Flight in a Call, Save Time and Travel Happy!",
+    }
   ];
 
   const bestFlightData = [
@@ -332,40 +326,203 @@ const BestDeals = () => {
     },
   ];
 
-  const frquentlyAskedQuestions = [
-    {
-      id: 1,
-      question: "How do I find travel deals on Tracknfly?      ",
-      answer:
-        "On our best deals page, you will get all the latest discounts and offers on flight, hotels and car rentals.        ",
-    },
-    {
-      id: 2,
-      question: "How can I use Tracknfly to manage my travel bookings?        ",
-      answer:
-        "To manage your travel bookings, you need to sign up and add all your travel bookings like flights, hotels, and car rentals. Then enter the details including dates, times, and confirmation numbers. It will help you to keep everything organized. If there are any changes like the flight delay or the deals. We will notify you.         ",
-    },
-    {
-      id: 3,
-      question: "How do I find cheap airplane tickets?      ",
-      answer:
-        "For cheap airplane tickets, just visit our flight offers page and enter your destination and travel dates. There will be numerious option on flights tickets. Now you can compare the prices and book cheapest airplane tickets with Trackn Fly.        ",
-    },
-    {
-      id: 4,
-      question:
-        "What things should we consider before buying an air ticket for a first time air travel?      ",
-      answer:
-        "While booking air tickets for the first time, you need to consider a few things like your destination and travel dates. Decide your budget as budget is the most important thing for traveling including additional costs like meals and baggage fees. Compare different airlines and flight options and find the best deal on it. Check baggage allowance and avoid unexpected fees and ensure that you have all necessary travel documents such as a valid passport and visa. We will help you to have the offers so that you can enjoy a hassle-free vacation.        ",
-    },
-    {
-      id: 5,
-      question:
-        "Can I negotiate the price of an airplane ticket if I want to buy 300 tickets?      ",
-      answer:
-        "Yes, you can but it depends on your negotiating skills, airlines, and the circumstances.         ",
-    },
-  ];
+  const frquentlyAskedQuestions = {
+    
+      faqall: [
+        {
+          id: 1,
+          question: "How do I find travel deals on Tracknfly?      ",
+          answer:
+            "On our best deals page, you will get all the latest discounts and offers on flight, hotels and car rentals.        ",
+        },
+        {
+          id: 2,
+          question: "How can I use Tracknfly to manage my travel bookings?        ",
+          answer:
+            "To manage your travel bookings, you need to sign up and add all your travel bookings like flights, hotels, and car rentals. Then enter the details including dates, times, and confirmation numbers. It will help you to keep everything organized. If there are any changes like the flight delay or the deals. We will notify you.         ",
+        },
+        {
+          id: 3,
+          question: "How do I find cheap airplane tickets?      ",
+          answer:
+            "For cheap airplane tickets, just visit our flight offers page and enter your destination and travel dates. There will be numerious option on flights tickets. Now you can compare the prices and book cheapest airplane tickets with Trackn Fly.        ",
+        },
+        {
+          id: 4,
+          question:
+            "What things should we consider before buying an air ticket for a first time air travel?      ",
+          answer:
+            "While booking air tickets for the first time, you need to consider a few things like your destination and travel dates. Decide your budget as budget is the most important thing for traveling including additional costs like meals and baggage fees. Compare different airlines and flight options and find the best deal on it. Check baggage allowance and avoid unexpected fees and ensure that you have all necessary travel documents such as a valid passport and visa. We will help you to have the offers so that you can enjoy a hassle-free vacation.        ",
+        },
+        {
+          id: 5,
+          question:
+            "Can I negotiate the price of an airplane ticket if I want to buy 300 tickets?      ",
+          answer:
+            "Yes, you can but it depends on your negotiating skills, airlines, and the circumstances.         ",
+        },
+      ],
+      faqhotel: [
+        {
+          id: 1,
+          question: "How do I get my hotel to show up on Tracknfly?",
+          answer:
+            "It is very simple, it’s just you need to visit our hotel offers page and get your hotel. We have the best variety of hotels on one page.",
+        },
+        {
+          id: 2,
+          question: "How do I find the hotel's contact details?        ",
+          answer:
+            "When you search for your hotel, select the hotel you choose. You will find its contact and other details below.",
+        },
+        {
+          id: 3,
+          question: "When I click a deal on your site it tells me the price has gone up! What's up with that?",
+          answer:
+            "Prices for hotels can fluctuate due to their high demand, availability, and time. So, the deal you were looking for may have expired. In that case, we recommend you search for alternative options and you can book a hotel instantly.",
+        },
+        {
+          id: 4,
+          question:
+            "Help! I need to change/cancel my reservation!",
+          answer:
+            "In case you want to cancel your reservation due to some reasons. Then you can cancel or change your reservation. Remember after cancellation you will get your refund in 7 to 14 days. ",
+        },
+        {
+          id: 5,
+          question:
+            "What are the best sites for getting last minute hotel deals?",
+          answer:
+            "On our hotel offers or best deals page, you will find last-minute hotel deals.",
+        },
+      ],
+      faqcars: [
+        {
+          id: 1,
+          question: "How does Tracknfly find such low rental car prices?",
+          answer:
+            "We have multiple sources that give the cheapest rental car prices on one page.",
+        },
+        {
+          id: 2,
+          question: "How do I find the best car rental deals on Tracknfly? ",
+          answer:
+            "On our cars on rental offers page, you will find the best deals on it.",
+        },
+        {
+          id: 3,
+          question: "What kind of cars can I rent on Tracknfly?",
+          answer:
+            "You can rent any type of car on rent with us.",
+        },
+        {
+          id: 4,
+          question:
+            "What do I need to know before booking a car rental?",
+          answer:
+            "Before booking a car on rent, you need to check what type of vehicle you want to book, budget, availability, requirements, insurance, rental period, and many more things.",
+        },
+        {
+          id: 5,
+          question:
+            "Is it cheaper to rent a car at the airport or off-site?",
+          answer:
+            "Yes, it is cheaper to rent a car at the airport or off-site.",
+        },
+      ]
+  }
+
+  const data = {
+    productOffering: [
+      {
+        title: "PRODUCT OFFERING ",
+        desc: "<span><a href='/flights'>Flights</a>, International Flights, Charter Flights, Hotels, International Hotels, Book Flights From US, Book Flights From UAE, <a href='/blogs'>Trip Ideas</a>, <a href='/blogs'>Travel Blog</a>, <a href='/flights'>flight booking</a>, cheap flights, airline tickets, plane tickets, cheap airline tickets, flight ticket, cheap flight tickets, <a href='/flights'>last minute flights</a>, <a href='/cars-on-rent'>car on rent</a>, cheap cars for rent, rent a car for a day, cheapest car hire, hire a car for a day, <a href='/hotel'>hotel booking</a>, cheap hotels, last minute hotels hotwire hotels, <a href='/hotel'>hotel booking sites.</a></span>",
+        redirect: "",
+      },
+      {
+        title:
+          "Trackn Fly gives exclusive discounts on Flights, Hotels and Car on Rent      ",
+        desc: "We at Trackn Fly offer the best deal on airline tickets in one place where you can not find cheap flight tickets and a hotel booking at a low price. Here you will also get a car on rent at a very cheap price. We also have affordable and customized holiday packages. For us, our customer satisfaction is the top most priority and we have our dedicated staff who will be there to help you at any time. For the past few years, we are very happy to fulfill the dreams of many travelers who love to explore different places. So, with Trackn Fly discover the whole world without breaking your pocket.      ",
+        redirect: "",
+      },
+      {
+        title: "Domestic Flight Routes within USA",
+        desc: "Honolulu (HNL) – Kahului (OGG), Atlanta (ATL) – Orlando (MCO), Las Vegas (LAS) - Los Angeles (LAX), New York (JFK) – Los Angeles (LAX), Denver (DEN) – Las Vegas (LAS), Atlanta (ATL) - Fort Lauderdale, Denver (DEN) – Las Vegas (LAS), Denver (DEN - Phoenix, San Francisco (SFO) – Los Angeles (LAX), New York (LGA) – Chicago (ORD), Los Angeles (LAX) – Chicago (ORD)",
+        redirect: "",
+      },
+      {
+        title: "TOP DOMESTIC HOTELS IN USA ",
+        desc: "Acqualina Resort & Residences, Four Seasons Hotel at The Surf Club, Surfside, Florida, The Langham, Chicago, The Peninsula Chicago, Montage Laguna Beach, Mauna Lani, Auberge Resorts Collection, Faena Hotel Miami Beach, The Setai Miami Beach, Mandarin Oriental, Boston, planet hollywood las vegas, circus circus reno, opryland hotel, the venetian las vegashilton, hawaiian village, universal hotels, quality inn, ritz carlton, fontainebleau miami, comfort inn, yosemite valley lodge, universal studios hotels, excalibur hotel, park mgm, camelback resort, palazzo las vegas, hilton garden inn, hotels near universal studios, encore las vegas, bonvoy marriott, grand sierra resort, radisson blu, radisson, hotel washington, palazzo, luxor hotel, ala moana hotel",
+        redirect: "/hotels",
+      },
+      {
+        title: "TOP INTERNATIONAL HOTELS      ",
+        desc: "Armani Hotel Dubai, Baur au Lac, Belmond Copacabana Palace, Carlisle Bay, Ciragan Palace Kempinski Istanbul, Excelsior Palace Hotel Rapallo, Fairmont Le Chateau Frontenac, Hotel Vier Jahreszeiten Kempinski Munich, Fairmont Jaipur, Taj Rishikesh, Taj Lake Palace Udaipur, The Taj Mahal Palace Mumbai, Kimpton Hotels & Restaurants, Hyatt Hotels & Resorts, Marriott International, Four Seasons, Hotels & Resorts, Wyndham Hotels & Resorts, IHG Hotels and Resorts, Jin Jiang International, Best Western International, Six Senses Fort Barwara, Taj West End Bengaluru, Grand Hyatt Mumbai, The Ritz Carlton Bengaluru, The Oberoi Gurgaon, Le Meridien Goa, Jai Mahal Palace Jaipur, St Regis Goa",
+        redirect: "/hotels",
+      },
+      {
+        title: "Popular US Destinations for Car Rentals",
+        desc: "Car Rental Las Vegas, Car Rental NYC, Car Rental Chicago, Car Rental Orlando Car Rental Los Angeles, Car Rental Orlando Airport, Car Rental Fort Myers Airport, Car Rental Tampa Airport, Car Rental Miami Airport, Car Rental Phoenix Airport, Car Rental Denver Airport, Car Rental Las Vegas Airport, Car Rental Toronto Airport, Car Rental Dallas Airport, Car Rental Nashville Airport, Car Rental Palm Springs Airport, Car Rental Edmonton Airport, Car Rental Newark Airport, Car Rental LAX Airport, Car Rental SJO Airport, Cheap Car Rental Orlando, Cheap Car Rental Miam",
+        redirect: "/car-on-rent",
+      },
+      {
+        title: "Popular Rental Cars ",
+        desc: "Barcelona, Milan, Cape Town, Durban, Lima, Peru, Kraków, Poland, Moscow, Russia, Los Angeles, Luxury Car Rental, Budget cars, Family cars, Car rentals that fit your budget, SUV Rental, All Car/Sedan Sizes, Van Rental, ",
+        redirect: "",
+      },
+      {
+        title: "QUICK LINKS",
+        desc: "Flights from USA to India (US - IN), Flights from New York to Miami (NYC - MIA), Flights from New York to Florida (NYC - FL), Flights from Chicago to Las Vegas (CHI - LAS), Flights from New York to Atlanta (NYC - ATL), Flights from New York to Orlando (NYC - ORL), Flights from Los Angeles to Manila (LAX - MNL), Flights from New York to Los Angeles (NYC - LAX), Flights from Los Angeles to Las Vegas (LAX - LAS), Flights from Dallas to Las Vegas (DFW - LAS), Flights from Atlanta to Miami (ATL - MIA), Flights from New York to Las Vegas (NYC - LAS), Flights from San Francisco to India (SFO - IN), Flights from Chicago to Los Angeles (CHI - LAX), Flights from Los Angeles to Hawaii (LAX - HI), Flights from USA to Philippines (US - PH), Flights from Chicago to Miami (CHI - MIA), Flights from New York to London (NYC - LON), Flights from Miami to The Bahamas (MIA - BS), Flights from New York to Chicago (NYC - CHI), Flights from Atlanta to Las Vegas (ATL - LAS), Flights from Los Angeles to New York (LAX - NYC), Flights from Dallas to Los Angeles (DFW - LAX), Flights from New York to California (NYC - CA)",
+        redirect: "/flights",
+      },
+    ],
+    hotel:[
+      {
+        title: "PRODUCT OFFERING ",
+        desc: "<span><a href='/flights'>Flights</a>, International Flights, Charter Flights, Hotels, International Hotels, Book Flights From US, Book Flights From UAE, <a href='/blogs'>Trip Ideas</a>, <a href='/blogs'>Travel Blog</a>, <a href='/flights'>flight booking</a>, cheap flights, airline tickets, plane tickets, cheap airline tickets, flight ticket, cheap flight tickets, <a href='/flights'>last minute flights</a>, <a href='/cars-on-rent'>car on rent</a>, cheap cars for rent, rent a car for a day, cheapest car hire, hire a car for a day, <a href='/hotel'>hotel booking</a>, cheap hotels, last minute hotels hotwire hotels, <a href='/hotel'>hotel booking sites.</a></span>",
+        redirect: "",
+      },
+      {
+        title:
+          "Trackn Fly gives exclusive discounts on Flights, Hotels and Car on Rent      ",
+        desc: "We at Trackn Fly offer the best deal on airline tickets in one place where you can not find cheap flight tickets and a hotel booking at a low price. Here you will also get a car on rent at a very cheap price. We also have affordable and customized holiday packages. For us, our customer satisfaction is the top most priority and we have our dedicated staff who will be there to help you at any time. For the past few years, we are very happy to fulfill the dreams of many travelers who love to explore different places. So, with Trackn Fly discover the whole world without breaking your pocket.      ",
+        redirect: "",
+      },
+      {
+        title: "TOP DOMESTIC HOTELS IN USA ",
+        desc: "Acqualina Resort & Residences, Four Seasons Hotel at The Surf Club, Surfside, Florida, The Langham, Chicago, The Peninsula Chicago, Montage Laguna Beach, Mauna Lani, Auberge Resorts Collection, Faena Hotel Miami Beach, The Setai Miami Beach, Mandarin Oriental, Boston, planet hollywood las vegas, circus circus reno, opryland hotel, the venetian las vegashilton, hawaiian village, universal hotels, quality inn, ritz carlton, fontainebleau miami, comfort inn, yosemite valley lodge, universal studios hotels, excalibur hotel, park mgm, camelback resort, palazzo las vegas, hilton garden inn, hotels near universal studios, encore las vegas, bonvoy marriott, grand sierra resort, radisson blu, radisson, hotel washington, palazzo, luxor hotel, ala moana hotel",
+        redirect: "/hotels",
+      },
+      {
+        title: "TOP INTERNATIONAL HOTELS      ",
+        desc: "Armani Hotel Dubai, Baur au Lac, Belmond Copacabana Palace, Carlisle Bay, Ciragan Palace Kempinski Istanbul, Excelsior Palace Hotel Rapallo, Fairmont Le Chateau Frontenac, Hotel Vier Jahreszeiten Kempinski Munich, Fairmont Jaipur, Taj Rishikesh, Taj Lake Palace Udaipur, The Taj Mahal Palace Mumbai, Kimpton Hotels & Restaurants, Hyatt Hotels & Resorts, Marriott International, Four Seasons, Hotels & Resorts, Wyndham Hotels & Resorts, IHG Hotels and Resorts, Jin Jiang International, Best Western International, Six Senses Fort Barwara, Taj West End Bengaluru, Grand Hyatt Mumbai, The Ritz Carlton Bengaluru, The Oberoi Gurgaon, Le Meridien Goa, Jai Mahal Palace Jaipur, St Regis Goa",
+        redirect: "/hotels",
+      },
+    ],
+    cars:[
+      {
+        title: "PRODUCT OFFERING ",
+        desc: "<span><a href='/flights'>Flights</a>, International Flights, Charter Flights, Hotels, International Hotels, Book Flights From US, Book Flights From UAE, <a href='/blogs'>Trip Ideas</a>, <a href='/blogs'>Travel Blog</a>, <a href='/flights'>flight booking</a>, cheap flights, airline tickets, plane tickets, cheap airline tickets, flight ticket, cheap flight tickets, <a href='/flights'>last minute flights</a>, <a href='/cars-on-rent'>car on rent</a>, cheap cars for rent, rent a car for a day, cheapest car hire, hire a car for a day, <a href='/hotel'>hotel booking</a>, cheap hotels, last minute hotels hotwire hotels, <a href='/hotel'>hotel booking sites.</a></span>",
+        redirect: "",
+      },
+      {
+        title:
+          "Trackn Fly gives exclusive discounts on Flights, Hotels and Car on Rent      ",
+        desc: "We at Trackn Fly offer the best deal on airline tickets in one place where you can not find cheap flight tickets and a hotel booking at a low price. Here you will also get a car on rent at a very cheap price. We also have affordable and customized holiday packages. For us, our customer satisfaction is the top most priority and we have our dedicated staff who will be there to help you at any time. For the past few years, we are very happy to fulfill the dreams of many travelers who love to explore different places. So, with Trackn Fly discover the whole world without breaking your pocket.      ",
+        redirect: "",
+      },
+      {
+        title: "Popular US Destinations for Car Rentals",
+        desc: "Car Rental Las Vegas, Car Rental NYC, Car Rental Chicago, Car Rental Orlando Car Rental Los Angeles, Car Rental Orlando Airport, Car Rental Fort Myers Airport, Car Rental Tampa Airport, Car Rental Miami Airport, Car Rental Phoenix Airport, Car Rental Denver Airport, Car Rental Las Vegas Airport, Car Rental Toronto Airport, Car Rental Dallas Airport, Car Rental Nashville Airport, Car Rental Palm Springs Airport, Car Rental Edmonton Airport, Car Rental Newark Airport, Car Rental LAX Airport, Car Rental SJO Airport, Cheap Car Rental Orlando, Cheap Car Rental Miam",
+        redirect: "/car-on-rent",
+      },
+      {
+        title: "Popular Rental Cars ",
+        desc: "Barcelona, Milan, Cape Town, Durban, Lima, Peru, Kraków, Poland, Moscow, Russia, Los Angeles, Luxury Car Rental, Budget cars, Family cars, Car rentals that fit your budget, SUV Rental, All Car/Sedan Sizes, Van Rental, ",
+        redirect: "",
+      },
+    ]
+  };
 
   return (
     <>
@@ -399,18 +556,18 @@ const BestDeals = () => {
         />
       </Helmet>
       <div
-        className=" bg-cover bg-center px-[6rem] py-[10rem] overflow-hidden"
+        className=" bg-cover  bg-center md:px-[6rem] py-[10rem] overflow-hidden"
         style={{ backgroundImage: `url(${bestdealsbg})` }}
       >
         <div className=" flex flex-row">
-          <div className="flex items-start justify-center flex-col gap-[4rem]">
-            <div className="text-white font-bold text-[5rem]">
-              Now plan your trip with <br className="md:hidden block" />
+          <div className="flex items-start justify-center flex-col md:gap-[4rem]">
+            <div className="text-white pl-4 md:pl-0 font-bold text-[5rem]">
+              Now Plan your trip with<br className="md:hidden block" />
               us and create memories.
             </div>
-            <button className="bg-[#0EB77A] text-white text-[1.6rem] py-[1rem] px-[2.5rem] rounded-[3rem]  hover:scale-90 transition-all">
+            <Link to={'/contact-us'} className="bg-[#0EB77A] ml-4 md:ml-0 text-white text-[1.6rem] py-[1rem] px-[2.5rem] rounded-[3rem]  hover:scale-90 transition-all">
               Contact us now{" "}
-            </button>
+            </Link>
           </div>
           <div className=" w-1/2  relative hidden sm:flex">
             <div className="p-[4rem]"></div>
@@ -430,22 +587,20 @@ const BestDeals = () => {
                   <CarouselItem key={idx} className="basis-1/3 lg:basis-1/2">
                     <div
                       key={idx}
-                      className=" bg-white p-[2rem] rounded-[2rem]"
+                      className=" bg-white p-[2rem]  h-[380px] rounded-[2rem]"
                     >
-                      <img src={item.image} alt="img" className="w-full" />
-                      <div className="py-8 text-black font-bold text-[2.3rem] text-start ">
-                        {item.title}
-                      </div>
-                      <div className="text-black text-opacity-50 text-[1.5rem] text-start">
-                        {item.para}
-                      </div>
-                      <div className="flex items-center pt-8 justify-between">
-                        <div className="text-black text-[1.3rem]">
-                          EXPIRING SOON
-                        </div>
-                        <button className="bg-[#FB4A2A] text-white text-[1.4rem] py-1.5 px-5 rounded-full hover:bg-red-800 hover:scale-90 transition-all">
+                      <img src={item.image} alt={item.heading} className="w-full rounded-2xl scale-110" />
+                      <div className="flex items-start justify-between h-[38%] mt-10 flex-col">
+                        <h6 className="text-[2rem]">{item.heading}</h6>
+
+                        <p className="text-black text-opacity-50 text-[1.5rem] text-start">
+                          {item.para}
+                        </p>
+                        {idx === 4 ? <button className="bg-[#FB4A2A] text-white text-[1.4rem] py-1.5 px-5 rounded-full hover:bg-red-800 hover:scale-90 transition-all">
+                          CALL NOW <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" className="lucide lucide-phone inline-block"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z" /></svg>
+                        </button> : <button className="bg-[#FB4A2A] text-white text-[1.4rem] py-1.5 px-5 rounded-full hover:bg-red-800 hover:scale-90 transition-all">
                           BOOK NOW
-                        </button>
+                        </button>}
                       </div>
                     </div>
                   </CarouselItem>
@@ -455,19 +610,34 @@ const BestDeals = () => {
                 {bannerCardData.map((_, index) => (
                   <span
                     key={index}
-                    className={` inline-block mr-2 w-2 h-2 rounded-full transition-all ${
-                      index === currentSlide ? "bg-red-500" : "bg-white"
-                    }`}
+                    className={` inline-block mr-2 w-2 h-2 rounded-full transition-all ${index === currentSlide ? "bg-red-500" : "bg-white"
+                      }`}
                   ></span>
                 ))}
               </div>
             </Carousel>
           </div>
         </div>
+
+        {/* Tabs is Here  */}
+        <ul className="flex flex-wrap space-x-3 md:space-x-10  space-y-4 md:space-y-0 text-sm absolute mt-8 md:mt-14 py-3 justify-center  font-normal w-full  md:w-[50%]  md:mx-[25%] backdrop-blur-2xl text-center text-gray-500 dark:text-gray-400">
+          <li className="mt-4 md:mt-0">
+            <button onClick={() => setState('all')} className={`inline-block px-10 py-3   ${state === 'all' ? 'bg-[#2659C3] text-white' : 'bg-white text-black'}  text-3xl rounded-xl`} aria-current="page">All</button>
+          </li>
+          <li>
+            <button onClick={() => setState('flight')} className={`inline-block px-10 py-3   ${state === 'flight' ? 'bg-[#2659C3] text-white' : 'bg-white text-black'}  text-3xl rounded-xl`} aria-current="page">Flight Offers</button>
+          </li>
+          <li>
+            <button onClick={() => setState('hotel')} className={`inline-block px-10 py-3   ${state === 'hotel' ? 'bg-[#2659C3] text-white' : 'bg-white text-black'}  text-3xl rounded-xl`} aria-current="page">Hotel Offers</button>
+          </li>
+          <li>
+            <button onClick={() => setState('cars')} className={`inline-block px-10 py-3  ${state === 'cars' ? 'bg-[#2659C3] text-white' : 'bg-white text-black'}  text-3xl rounded-xl`} aria-current="page">Cars on Rent Offers</button>
+          </li>
+        </ul>
       </div>
 
       {/* Books Flights And Have The Best Deals Upto 10% to 40% Off */}
-      <div className="px-[4rem] py-[6rem] flex flex-col gap-[4rem]">
+      {(state === 'all' || state === 'flight') && (<div className="px-[4rem] py-[6rem] flex flex-col gap-[4rem]">
         <div>
           <h2 className="text-black text-left tracking-wide font-semibold  text-[2.5rem]">
             Books Flights And Have The Best Deals Upto 10% to 40% Off
@@ -498,10 +668,20 @@ const BestDeals = () => {
           <CarouselPrevious />
           <CarouselNext />
         </Carousel>
-      </div>
-
+      </div>)}
+      {(state === 'flight') && <div className="w-[95%] mx-auto">
+        <h6 className="text-black font-semibold text-[2.6rem]">Online Flight Booking Offers</h6>
+        <div className="text-black font-semibold text-[2rem] pt-3">Have a look at our best offers on flights</div>
+        <ul className="list-disc text-[1.9rem] space-y-3 pt-5">
+          <li>• Save up to 15% to 40% on flights.</li>
+          <li>• Have Upto 40% discounts on domestic flights.</li>
+          <li>• Get 30% discounts on international flights.</li>
+          <li>• Get up to 25% discounts on your first booking.</li>
+        </ul>
+        <div className="text-black font-semibold text-[2.6rem] pt-5">Save Money On Your First Booking With Us</div>
+      </div>}
       {/* Bumper Deal On Your Hotel Bookings */}
-      <div className="px-[4rem] py-[6rem] flex flex-col gap-[4rem]">
+      {(state === 'all' || state === 'hotel') && (<div className="px-[4rem] py-[6rem] flex flex-col gap-[4rem]">
         <div>
           <h2 className="text-black text-left tracking-wide font-semibold  text-[2.5rem]">
             Bumper Deal On Your Hotel Bookings
@@ -532,10 +712,18 @@ const BestDeals = () => {
           <CarouselPrevious />
           <CarouselNext />
         </Carousel>
-      </div>
+      </div>)}
+       {(state === 'hotel')&&<div className="w-[95%] mx-auto">
+          <h6 className="text-black font-semibold text-[2.6rem] pb-2">Know More About Trackn Fly Hotel Offers</h6>
+          <p className="text-[1.6rem] w-[80%]">Are you looking for a hotel booking offers? then you are in the right place. As while traveling finding the best hotel is a big task, but don't worry as in Trackn Fly there are multiple options. So, whether it is your sudden business trip or a weekend gateway with your loved ones, just plan your trip without any hassle and leave all your worries with us. We will give you the best hotel options around the world. There are multiple hotel offers on domestic and international.</p>
+          <h6 className="text-black font-semibold text-[2.6rem] pt-8 pb-2">Save More Money With Trackn Fly</h6>
+          <p className="text-[1.6rem] w-[80%]">Now with Trackn Fly you can save more money on hotel booking. We have some exciting offers and coupons for everyone. So, don't waste time and find hotel booking offers online within seconds.</p>
+          <h6 className="text-black font-semibold text-[2.6rem] pt-8 pb-2">Book Hotels With Trackn Fly</h6>
+          <p className="text-[1.6rem] w-[80%]">Booking hotels with us is like a piece of cake. You just need to enter your destination and your check-in and check-out dates along with the people. We will automatically show you the best choices with the cheapest price. Whether you are visiting with your partner or family, we have the best deals on hotels.</p>
+       </div>}
 
       {/* Unlock Your Remarkable Savings On Your Car Rental Bookings */}
-      <div className="px-[4rem] py-[6rem] flex flex-col gap-[4rem]">
+      {(state === 'all' || state === 'cars') && (<div className="px-[4rem] py-[6rem] flex flex-col gap-[4rem]">
         <div>
           <h2 className="text-black text-left tracking-wide font-semibold  text-[2.5rem]">
             Unlock Your Remarkable Savings On Your Car Rental Bookings{" "}
@@ -568,7 +756,14 @@ const BestDeals = () => {
           <CarouselPrevious />
           <CarouselNext />
         </Carousel>
-      </div>
+      </div>)}
+      {(state === 'cars')&&<div className="w-[95%] mx-auto">
+          <h6 className="text-black font-semibold text-[2.6rem] pb-2">Search Cheap Car With Trackn Fly</h6>
+          <p className="text-[1.6rem] w-[80%]">Now, save your money by hiring cars with Trackn Fly. We search for the rental car on the best deals and help you to find the cheapest cars. Whether you want to book a car at the airport site location or nearby, you will the huge discounts on it. We also compare the deals with so many different car types and give you the best. Don't wait for too long and book your type of vehicle now with Trackn Fly.</p>
+          <h6 className="text-black font-semibold text-[2.6rem] pt-8 pb-2">Best Offers On Car On Rent</h6>
+          <p className="text-[1.6rem] w-[80%]">By visiting Trackn Fly, you can get the best offers on any vehicle. We give exclusive discounts up to 15% to 40% on any car that you want to rent.</p>
+       </div>}
+
 
       <div className="w-[95%] py-5 md:py-24 mx-auto">
         <div className="relative  rounded-[2rem]">
@@ -594,22 +789,22 @@ const BestDeals = () => {
       </div>
 
       <div className=" px-[4rem] py-[6rem] flex flex-col gap-[4rem]">
-        <div className=" flex items-center justify-center flex-col">
-          <h6 className="text-black text-left tracking-wide font-semibold  text-[2.5rem]">
+        <div className=" flex   flex-col">
+          <h6 className="text-black  tracking-wide font-semibold  text-[2.5rem]">
             Trackn Fly Wallet
           </h6>
-          <p className=" text-[1.6rem] text-center">
+          <p className=" text-[1.6rem]">
             Trackn Fly has a virtual wallet that allows users to earn and redeem
             it for flight, hotel, and car rental bookings. There is no limit on
             its money like how much money you can spend on your flight, hotel,
             and car rental booking, you can utilize 100% money to book.
           </p>
         </div>
-        <div className="flex items-center justify-center flex-col">
-          <h6 className="text-black text-left tracking-wide font-semibold  text-[2.5rem]">
+        <div className="flex flex-col">
+          <h6 className="text-black  tracking-wide font-semibold  text-[2.5rem]">
             Trackn Fly Exclusive Discounts
           </h6>
-          <p className=" text-[1.6rem] text-center">
+          <p className=" text-[1.6rem]">
             At Trackn Fly there are several offers for flights, hotels, and car
             rentals. To save more money, you can also use a coupon code during
             your checkout to have significant discounts on your flight and hotel
@@ -623,7 +818,36 @@ const BestDeals = () => {
         </div>
       </div>
 
-      <FrquentlyAskedQuestions data={frquentlyAskedQuestions} sidebar={false} />
+      {/* Table */}
+      {(state === 'all' || state === 'flight') && <div className="w-[95%] py-5 md:py-12 mx-auto">
+        <table className="w-full md:w-[50%] mr-auto border border-black">
+          <thead>
+            <tr className="text-[2rem] ">
+              <th className="border border-black font-normal">Category</th>
+              <th className="border border-black font-normal">Offer</th>
+              <th className="border border-black font-normal">Get a Deal on Call</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr className="text-[1.7rem] text-center">
+              <td className="border py-2 border-black font-normal">First Flight Booking</td>
+              <td className="border py-2 border-black font-normal">Get up to 50$ Off on Flight Bookings</td>
+              <td className=" py-2  font-normal"></td>
+            </tr>
+            <tr className="text-[1.7rem] text-center">
+              <td className="border py-2 border-black font-normal">Domestic Flights</td>
+              <td className="border py-2 border-black font-normal">Get up 30% Off on Domestic Flight Bookings</td>
+              <td className=" py-2  font-normal bg-red-500 animate text-white rounded-2xl px-6 md:px-12 inline-block">Call Us Now <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" className="animate-call text-red-500 lucide lucide-phone inline-block"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z" /></svg></td>
+            </tr>
+            <tr className="text-[1.7rem] text-center">
+              <td className="border py-2 border-black font-normal">International Flights</td>
+              <td className="border py-2 border-black font-normal">Get up to 40% Off on Flight Bookings</td>
+              <td className="py-2 font-normal"></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>}
+      <FrquentlyAskedQuestions data={state=='hotel'?frquentlyAskedQuestions.faqhotel:state=="cars"?frquentlyAskedQuestions.faqcars:frquentlyAskedQuestions.faqall} sidebar={false} />
 
       <div className=" p-[4rem]">
         <div
@@ -682,6 +906,7 @@ const BestDeals = () => {
           </div>
         </div>
       </div>
+      <ProductOffering data={state=='cars'?data?.cars:state=='hotel'?data?.hotel:data?.productOffering}/>
     </>
   );
 };

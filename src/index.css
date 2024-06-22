@@ -84,3 +84,65 @@ body {
  animation-iteration-count: infinite;
 }
 
+.animatepulse{
+  animation: pulse 1s 2s infinite;
+  transition: 1s;
+}
+
+@keyframes pulse {
+  0%{
+    color: gray;
+  }
+
+  50%{
+    color: red;
+  }
+
+  100%{
+    color: gray;
+  }
+}
+
+
+.animate{
+  animation: callbtn 2s 2s infinite;
+  transition: 1s;
+  cursor: pointer;
+}
+
+@keyframes callbtn {
+  0%{
+    background-color: red;
+    color: white;
+  }
+
+  50%{
+    background-color: white;
+    color: red;
+  }
+
+  100%{
+    background-color: red;
+    color: white;
+  }
+}
+
+.animate-call{
+  animation: call .2s 2s infinite;
+  transition: 1s;
+  color: #fff;
+}
+
+@keyframes call {
+  0%{
+    transform: rotate(20deg);
+  }
+
+  50%{
+    transform: rotate(0deg);
+  }
+
+  100%{
+    transform: rotate(20deg);
+  }
+}
