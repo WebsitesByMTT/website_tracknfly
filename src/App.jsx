@@ -2,7 +2,7 @@ import React, { Suspense, useEffect, useState } from "react";
 import "./App.css";
 import { Route, Routes, useLocation } from "react-router-dom";
 import PreLoader from "./utils/PreLoader";
-import BlogsPage from "./pages/blogs/BlogsPage";
+import BlogsPage2 from "./pages/blogs/BlogsPage2";
 
 //Using React Lazy
 const TermsAndServices = React.lazy(() =>
@@ -109,8 +109,9 @@ function App() {
         <Header />
         <Routes>
           <Route path="/" element={<Home />} />
-          <Route path="/blogs/:blogPath" element={<BlogsPage />} />
-          <Route path="/blogs" element={<BlogsPage />} />
+
+          <Route path="/blogs/:blogPath" element={<BlogsPage2 />} />
+          <Route path="/blogs" element={<BlogsPage2 />} />
 
           <Route path="/flights" element={<Flights />} />
           <Route path="/hotels" element={<Hotel />} />

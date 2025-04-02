@@ -1,15 +1,15 @@
-"use client"
+"use client";
 
-import { useState } from "react"
-import { useParams } from "react-router-dom"
-import { Helmet } from "react-helmet"
-import { BlogsData } from "../../components/blogs/BlogsJson"
-import FlightTable from "../../components/BusyFlightTable/BusyFlightTable"
-import Blogs from "../../components/blogs/Blogs"
+import { useState } from "react";
+import { useParams } from "react-router-dom";
+import { Helmet } from "react-helmet";
+import { BlogsData } from "../../components/blogs/BlogsJson";
+import FlightTable from "../../components/BusyFlightTable/BusyFlightTable";
+import Blogs from "../../components/blogs/Blogs";
 
 // Custom Accordion Item Component
 const AccordionItem = ({ question, answer }) => {
-  const [isOpen, setIsOpen] = useState(false)
+  const [isOpen, setIsOpen] = useState(false);
 
   return (
     <div className="border-b border-gray-200">
@@ -17,19 +17,27 @@ const AccordionItem = ({ question, answer }) => {
         className="flex justify-between items-center w-full py-8 px-2 text-left focus:outline-none"
         onClick={() => setIsOpen(!isOpen)}
       >
-        <span className="text-xl sm:text-lg md:text-xl lg:text-2xl text-gray-800 font-medium">{question}</span>
+        <span className="text-xl sm:text-lg md:text-xl lg:text-2xl text-gray-800 font-medium">
+          {question}
+        </span>
         <span className="text-2xl">{isOpen ? "−" : "+"}</span>
       </button>
-      <div className={`overflow-hidden transition-all duration-300 ${isOpen ? "max-h-96 pb-4 px-2" : "max-h-0"}`}>
-        <p className="text-lg sm:text-base md:text-lg lg:text-xl text-gray-700">{answer}</p>
+      <div
+        className={`overflow-hidden transition-all duration-300 ${
+          isOpen ? "max-h-96 pb-4 px-2" : "max-h-0"
+        }`}
+      >
+        <p className="text-lg sm:text-base md:text-lg lg:text-xl text-gray-700">
+          {answer}
+        </p>
       </div>
     </div>
-  )
-}
+  );
+};
 
 const BlogsPage = () => {
-  const { blogPath } = useParams()
-  const selectedBlog = BlogsData.find((blog) => blog.path.includes(blogPath))
+  const { blogPath } = useParams();
+  const selectedBlog = BlogsData.find((blog) => blog.path.includes(blogPath));
 
   return (
     <>
@@ -39,11 +47,17 @@ const BlogsPage = () => {
           <title>{selectedBlog.title}</title>
           <meta name="description" content={selectedBlog.metaDescription} />
           <meta property="og:title" content={selectedBlog.openGraph.title} />
-          <meta property="og:description" content={selectedBlog.openGraph.description} />
+          <meta
+            property="og:description"
+            content={selectedBlog.openGraph.description}
+          />
           <meta property="og:image" content={selectedBlog.openGraph.image} />
           <meta property="og:url" content={selectedBlog.openGraph.url} />
           <meta property="og:type" content={selectedBlog.openGraph.type} />
-          <meta property="og:site_name" content={selectedBlog.openGraph.site_name} />
+          <meta
+            property="og:site_name"
+            content={selectedBlog.openGraph.site_name}
+          />
         </Helmet>
       )}
 
@@ -108,7 +122,7 @@ const BlogsPage = () => {
               {selectedBlog?.questions && selectedBlog?.answers && (
                 <div className="mt-20">
                   <h2 className="font-semibold text-left text-black uppercase text-2xl sm:text-3xl md:text-4xl mb-10">
-                  Questions & Answers
+                    Questions & Answers
                   </h2>
                   <div className="w-full border-t ml-10 border-gray-200 rounded-md">
                     {selectedBlog.questions.map((question, qIndex) => (
@@ -126,8 +140,7 @@ const BlogsPage = () => {
         </div>
       )}
     </>
-  )
-}
+  );
+};
 
-export default BlogsPage
-
+export default BlogsPage;
