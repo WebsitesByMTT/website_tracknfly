@@ -31,7 +31,7 @@ const BlogsPage2 = () => {
 
   if (blogPath && loading) {
     return (
-      <div className="bg-white py-8">
+      <div className="bg-white py-8 h-screen flex items-center justify-center">
         <div className="text-[4rem] pb-12 text-center font-semibold">
           Loading...
         </div>
